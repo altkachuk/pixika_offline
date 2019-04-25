@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/card_view"
+    android:layout_gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    card_view:cardElevation="0dp"
+    card_view:cardCornerRadius="4dp"
+    card_view:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp">
+
+            <ImageView
+                android:id="@+id/event_image_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:background="@color/DarkGray"/>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/progressive_black_gradient_inverse"
+                android:paddingLeft="@dimen/contextual_default_margin"
+                android:paddingRight="@dimen/contextual_default_margin"
+                android:paddingTop="@dimen/contextual_small_margin"
+                android:paddingBottom="@dimen/contextual_default_margin">
+
+                <TextView
+                    android:id="@+id/same_day_event_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="left|center_vertical"
+                    android:layout_gravity="center|left"
+                    style="@style/TextAppearance.AppCompat.Subhead.Inverse"/>
+
+                <LinearLayout
+                    android:id="@+id/several_days_event_date_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="left|center_vertical"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/start_event_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|left"
+                        style="@style/TextAppearance.AppCompat.Subhead.Inverse"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" - "
+                        style="@style/TextAppearance.AppCompat.Subhead.Inverse"/>
+                    <TextView
+                        android:id="@+id/end_event_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|left"
+                        style="@style/TextAppearance.AppCompat.Subhead.Inverse"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/several_days_event_time_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_gravity="right">
+                    <TextView
+                        android:id="@+id/start_event_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        style="@style/TextAppearance.AppCompat.Subhead.Inverse"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text=" - "
+                        style="@style/TextAppearance.AppCompat.Subhead.Inverse"/>
+                    <TextView
+                        android:id="@+id/end_event_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        style="@style/TextAppearance.AppCompat.Subhead.Inverse"/>
+                </LinearLayout>
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/progressive_black_gradient">
+
+                <TextView
+                    android:id="@+id/event_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:paddingLeft="@dimen/contextual_default_margin"
+                    android:paddingRight="@dimen/contextual_default_margin"
+                    android:paddingTop="@dimen/contextual_default_margin"
+                    android:paddingBottom="@dimen/contextual_small_margin"
+                    style="@style/TextAppearance.AppCompat.Subhead.Inverse"
+                    />
+
+            </FrameLayout>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/event_location"
+                android:layout_width="0dp"
+                android:layout_weight="0.5"
+                android:gravity="left|center_vertical"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/contextual_default_margin"
+                android:layout_marginRight="@dimen/contextual_small_margin"
+                android:lines="1"
+                android:ellipsize="end"
+                style="@style/TextAppearance.AppCompat.Subhead" />
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_weight="0.5"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|right">
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/event_learn_more_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:text="@string/more"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_marginLeft="@dimen/contextual_small_margin"
+                    android:layout_marginRight="@dimen/contextual_default_margin"
+                    style="@style/Widget.AppCompat.Button.Borderless"/>
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

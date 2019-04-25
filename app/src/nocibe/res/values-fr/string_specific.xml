@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="product_id">P%s</string>
+    <string name="favorite">Envies</string>
+    <string name="add_to_favorite">Ajouter\naux envies</string>
+    <string name="remove_from_favorite">Supprimer\ndes envies</string>
+    <string name="share_wishlist">Envoyer par e-mail</string>
+
+    <!-- Wishlist -->
+    <string name="product_added_to_wishlist_success">Produit ajouté à la liste d\'envies avec succès </string>
+    <string name="product_wishlist_failure">Echec de mise à jour de la liste d\'envies</string>
+    <string name="product_removed_to_wishlist_success">Produit supprimé de la liste d\'envies avec succès </string>
+    <string name="wishlist_sharing_failure">Echec du partage de la liste d\'envies</string>
+    <string name="wishlist_sharing_success">Liste d\'envies partagée avec succès</string>
+    <!-- !Wishlist -->
+    
+    <!-- Availabilities -->
+    <string name="product_in_stock">En stock</string>
+    <string name="product_out_of_stock">Rupture de stock</string>
+    <!-- !Availabilities -->
+    
+</resources>

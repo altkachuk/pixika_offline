@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Screen orientation PORTRAIT:1 LANSCAPE:0   -->
+    <integer name="screen_orientation">-1</integer>
+    <integer name="screen_orientation_gallery">@integer/screen_orientation</integer>
+
+    <!-- Product Thumbnail -->
+    <integer name="product_thumbnail_brand_visibility">@integer/view_visible</integer>
+    <integer name="product_thumbnail_assortment_visibility">@integer/view_gone</integer>
+
+    <!-- Product header -->
+    <integer name="product_header_product_name_visibility">@integer/view_visible</integer>
+    <integer name="product_header_sku_name_visibility">@integer/view_visible</integer>
+
+    <!-- Ska -->
+    <integer name="warehouse_web_address_visibility">@integer/view_invisible</integer>
+    <integer name="warehouse_web_phone_visibility">@integer/view_invisible</integer>
+
+    <!-- SSL -->
+    <integer name="api_ssl_certifcate_type">@integer/self_signed_certificate</integer>
+
+</resources>

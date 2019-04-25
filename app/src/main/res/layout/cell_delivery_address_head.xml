@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/header_background_fill"
+            android:padding="@dimen/contextual_default_margin">
+
+            <TextView
+                android:id="@+id/delivery_address_type"
+                style="@style/delivery_address_head_text_style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/delivery_address"
+                android:textSize="20sp"
+                android:textColor="@color/header_title" />
+
+            <TextView
+                android:id="@+id/create_new_address"
+                style="@style/delivery_address_head_text_style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="@string/create_new_delivery_address"
+                android:textSize="20sp"
+                android:textColor="@color/action_button_color" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/cell_bottom_line_fill" />
+
+</LinearLayout>

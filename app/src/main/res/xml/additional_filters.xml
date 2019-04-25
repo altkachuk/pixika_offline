@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<map linked="true">
+    <entry key="availabilities__price">product_filter_prices</entry>
+    <entry key="brand">product_filter_brands</entry>
+</map>

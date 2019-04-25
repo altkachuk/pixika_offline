@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/coordinator_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <moshimoshi.cyplay.com.doublenavigation.ui.custom.LoadingView xmlns:loadingView="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/loading_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        loadingView:failed_ref="@+id/default_loadfailed_view"
+        loadingView:loaded_ref="@+id/payment_summary_container"
+        loadingView:loading_ref="@+id/payment_summary_loading_view"
+        loadingView:no_result_ref="@+id/default_noresult_view">
+
+        <LinearLayout xmlns:summary="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/payment_summary_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/payment_status_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/payment_status"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="@dimen/contextual_default_margin"
+                    android:textColor="@color/White"
+                    android:textSize="20sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/divider_color" />
+
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/payment_transactions"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/cell_bottom_line_fill" />
+
+            <moshimoshi.cyplay.com.doublenavigation.ui.custom.PaymentSummaryLayout
+                android:id="@+id/payment_summary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                summary:needBottomLine="true" />
+
+
+            <LinearLayout
+                android:id="@+id/payment_summary_share_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/cell_bottom_line_fill" />
+
+                <include layout="@layout/payment_share_choice" />
+
+                <TextView
+                    android:id="@+id/paiment_summary_ok"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_positive_accent_color"
+                    android:enabled="false"
+                    android:gravity="center"
+                    android:padding="@dimen/contextual_default_margin"
+                    android:text="@string/send"
+                    android:textAllCaps="true"
+                    android:textColor="@color/button_text_positive_accent_color"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/payment_summary_loading_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/window_black_translucent"
+            android:clickable="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ProgressBar
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/loading_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/contextual_default_margin"
+                android:textColor="@color/LightGrey" />
+
+        </LinearLayout>
+
+        <include layout="@layout/default_noresult_view" />
+
+        <include layout="@layout/default_loadfailed_view" />
+
+    </moshimoshi.cyplay.com.doublenavigation.ui.custom.LoadingView>
+</android.support.design.widget.CoordinatorLayout>

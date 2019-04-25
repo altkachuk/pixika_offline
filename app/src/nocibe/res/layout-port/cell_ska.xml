@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ska_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/contextual_default_margin"
+        android:paddingLeft="@dimen/contextual_big_margin"
+        android:paddingRight="@dimen/contextual_big_margin"
+        android:paddingTop="@dimen/contextual_default_margin"
+        android:baselineAligned="false">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/ska_shop_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/contextual_small_margin"
+                android:ellipsize="end"
+                android:lines="1"
+                style="@style/cell_ska_title"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/contextual_small_margin"
+                android:orientation="horizontal"
+                android:id="@+id/ska_shop_address_container">
+
+                <ImageView
+                    android:id="@+id/ska_shop_address_icon"
+                    android:layout_width="12dp"
+                    android:layout_height="16dp"
+                    android:layout_marginRight="@dimen/contextual_small_margin"
+                    android:layout_marginTop="@dimen/contextual_small_margin"
+                    android:src="@drawable/ic_position"
+                    android:tint="@color/colorAccent"/>
+
+                <TextView
+                    android:id="@+id/ska_shop_address"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    style="@style/cell_ska_body"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ska_landline_phone_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/ska_landline_phone_icon"
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:layout_marginRight="@dimen/contextual_small_margin"
+                    android:src="@drawable/ic_phone"
+                    android:tint="@color/colorAccent"/>
+
+                <TextView
+                    android:id="@+id/ska_landline_phone"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left|center_vertical"
+                    style="@style/cell_ska_body" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical|right">
+                <TextView
+                    android:id="@+id/ska_stock_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/product_stocks"
+                    style="@style/cell_ska_stock_label"
+                    android:gravity="right|center_vertical"
+                    android:textAllCaps="true"
+                    android:textSize="17sp" />
+                <TextView
+                    android:id="@+id/ska_stock"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/cell_ska_stock_value"
+                    android:gravity="right|center_vertical"
+                    android:textAllCaps="true"
+                    android:textSize="17sp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ska_shop_distance_container"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/ska_shop_distance"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:gravity="right|center_vertical"
+                    android:textAllCaps="true"
+                    style="@style/cell_ska_body"/>
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_marginLeft="@dimen/contextual_small_margin"
+                    android:src="@drawable/ic_proximity"
+                    android:tint="@color/colorAccent"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ska_restocking"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:gravity="right|center_vertical"
+                    android:text="@string/product_restocking"
+                    android:textAllCaps="true"
+                    style="@style/cell_ska_body"/>
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_marginLeft="@dimen/contextual_small_margin"
+                    android:src="@drawable/ic_restocking_checked"
+                    android:tint="@color/colorAccent"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#60414141" />
+</LinearLayout>
+

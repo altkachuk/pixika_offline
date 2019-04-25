@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/product_suggestion_margin"
+    android:layout_marginRight="@dimen/product_suggestion_margin"
+    app:cardBackgroundColor="@android:color/white"
+    app:cardElevation="4dp">
+    <!-- Suggestions START-->
+    <LinearLayout
+        android:id="@+id/product_suggestions_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/contextual_default_margin">
+
+        <!-- Product suggestions START-->
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/product_suggestion_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <!-- Product suggestions STOP-->
+
+        <!-- Brand & category suggestions START -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/overriden_activity_background"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/contextual_default_margin"
+            android:paddingRight="@dimen/contextual_default_margin"
+            android:baselineAligned="false">
+            <!-- Category suggestions START-->
+            <LinearLayout
+                android:id="@+id/category_suggestions_container"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/contextual_small_margin"
+                    android:text="@string/product_categories_label"
+                    android:textColor="@color/GreyishBrown"
+                    android:textSize="20sp" />
+
+                <moshimoshi.cyplay.com.doublenavigation.ui.custom.LoadingView xmlns:loadingView="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/categories_loading_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    loadingView:loaded_ref="@+id/categories_recycler_view"
+                    loadingView:no_result_ref="@+id/categories_no_results">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/categories_recycler_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/overriden_activity_background"
+                        android:paddingLeft="@dimen/activity_horizontal_margin"
+                        android:paddingRight="@dimen/activity_horizontal_margin" />
+
+                    <TextView
+                        android:id="@+id/categories_no_results"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/contextual_small_margin"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:padding="@dimen/contextual_small_margin"
+                        android:text="@string/no_suggestions"
+                        android:textAppearance="@style/CellRecommendedProduct"
+                        android:textColor="@color/DarkGray"
+                        android:textStyle="italic"
+                        android:textSize="20sp" />
+
+                </moshimoshi.cyplay.com.doublenavigation.ui.custom.LoadingView>
+                <!-- Category suggestions STOP-->
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/brand_suggestions_container"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <!-- Brand suggestions START-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/contextual_small_margin"
+                    android:text="@string/product_brands_label"
+                    android:textColor="@color/GreyishBrown"
+                    android:textSize="20sp" />
+
+                <moshimoshi.cyplay.com.doublenavigation.ui.custom.LoadingView xmlns:loadingView="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/brands_loading_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    loadingView:loaded_ref="@+id/categories_recycler_view"
+                    loadingView:no_result_ref="@+id/brands_no_results">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/brands_recycler_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/overriden_activity_background"
+                        android:paddingLeft="@dimen/activity_horizontal_margin"
+                        android:paddingRight="@dimen/activity_horizontal_margin" />
+
+                    <TextView
+                        android:id="@+id/brands_no_results"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/contextual_small_margin"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:padding="@dimen/contextual_small_margin"
+                        android:text="@string/no_suggestions"
+                        android:textAppearance="@style/CellRecommendedProduct"
+                        android:textColor="@color/DarkGray"
+                        android:textStyle="italic"
+                        android:textSize="20sp" />
+
+                </moshimoshi.cyplay.com.doublenavigation.ui.custom.LoadingView>
+                <!-- Brand suggestions STOP-->
+            </LinearLayout>
+        </LinearLayout>
+        <!-- Brand & category suggestions STOP-->
+
+
+    </LinearLayout><!-- Suggestions STOP-->
+</android.support.v7.widget.CardView>

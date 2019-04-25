@@ -1,0 +1,10 @@
+<resources>
+    <!-- toolbar height -->
+    <dimen name="toolbar_double_height">96dp</dimen>
+
+    <dimen name="filter_sort_size">448dp</dimen>
+    <dimen name="filter_resources_width">384dp</dimen>
+
+    <dimen name="product_suggestion_margin">@dimen/contextual_small_margin</dimen>
+
+</resources>

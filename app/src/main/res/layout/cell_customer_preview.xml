@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:clickable="true"
+    android:focusable="true"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackground"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:paddingTop="@dimen/contextual_default_margin"
+    android:paddingBottom="@dimen/contextual_default_margin">
+
+    <ImageView
+        android:id="@+id/customer_gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/contextual_default_margin"
+        android:layout_marginRight="@dimen/contextual_default_margin"
+        />
+
+    <TextView
+        android:id="@+id/customer_name"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        style="@style/Base.TextAppearance.AppCompat.Subhead"
+        />
+
+    <TextView
+        android:id="@+id/customer_city"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/contextual_default_margin"
+        android:layout_marginRight="@dimen/contextual_default_margin"
+        android:ellipsize="end"
+        android:maxLines="1"
+        style="@style/Base.TextAppearance.AppCompat.Subhead"
+        />
+
+</LinearLayout>

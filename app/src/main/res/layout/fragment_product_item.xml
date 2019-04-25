@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<moshimoshi.cyplay.com.doublenavigation.ui.custom.LoadingView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:loadingView="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/resource_loading_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    loadingView:failed_ref="@+id/default_loadfailed_view"
+    loadingView:loaded_ref="@+id/product_loaded"
+    loadingView:loading_ref="@+id/default_loading_view"
+    loadingView:no_result_ref="@+id/default_noresult_view">
+
+    <LinearLayout
+        android:id="@+id/product_loaded"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- Product Block -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:padding="@dimen/contextual_default_margin">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@color/White"
+                android:orientation="vertical">
+
+                <!-- Product info, price, ... -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:baselineAligned="false">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <LinearLayout
+                                android:id="@+id/shop_price_container"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/product_sku_shop_price_label"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingLeft="@dimen/contextual_default_margin"
+                                    android:paddingRight="@dimen/contextual_big_margin"
+                                    android:text="@string/product_shop_price"
+                                    android:textAllCaps="true"
+                                    android:textColor="#616161"
+                                    android:textSize="22sp"
+                                    android:textStyle="bold" />
+
+                                <LinearLayout
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:orientation="horizontal">
+
+
+                                    <TextView
+                                        android:id="@+id/product_sku_shop_price"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textSize="22sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/product_sku_shop_price_per_unit"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:paddingLeft="@dimen/contextual_default_margin"
+                                        android:textColor="#757575"
+                                        android:textSize="16sp" />
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/web_price_container"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:visibility="gone">
+
+
+                                <TextView
+                                    android:id="@+id/product_sku_web_price_label"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingLeft="@dimen/contextual_default_margin"
+                                    android:paddingRight="@dimen/contextual_big_margin"
+                                    android:text="@string/product_web_price"
+                                    android:textAllCaps="true"
+                                    android:textColor="#616161"
+                                    android:textSize="22sp"
+                                    android:textStyle="bold" />
+
+
+                                <LinearLayout
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:orientation="horizontal">
+
+
+                                    <TextView
+                                        android:id="@+id/product_sku_web_price"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textSize="22sp"
+                                        android:textStyle="bold" />
+
+
+                                    <TextView
+                                        android:id="@+id/product_sku_web_price_per_unit"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:paddingLeft="@dimen/contextual_default_margin"
+                                        android:textColor="#757575"
+                                        android:textSize="16sp" />
+
+                                </LinearLayout>
+                            </LinearLayout>
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right">
+
+                        <ImageView
+                            android:id="@+id/product_sku_price_type_switch"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/contextual_default_margin"
+                            android:src="@drawable/arrow_more" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <!-- Image Gallery -->
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+
+                    <moshimoshi.cyplay.com.doublenavigation.ui.custom.HeightWrappingViewPager
+                        android:id="@+id/product_images_gallery"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+
+                </FrameLayout>
+
+                <ScrollView
+                    android:id="@+id/product_images_gallery_thumbnails_scrollview"
+                    android:layout_width="match_parent"
+                    android:layout_height="116dp">
+
+                    <LinearLayout
+                        android:id="@+id/product_images_gallery_thumbnails"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal" />
+                </ScrollView>
+                <!-- !Image Gallery -->
+
+            </LinearLayout>
+
+            <!-- Sku Spinner -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/contextual_default_margin"
+                android:background="@color/White">
+
+                <Spinner
+                    android:id="@+id/product_sku_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/White" />
+            </LinearLayout>
+            <!-- Sku Spinner -->
+
+        </LinearLayout>
+        <!-- !Product Block -->
+
+
+    </LinearLayout>
+
+
+    <include layout="@layout/default_loading_view" />
+
+    <include layout="@layout/default_loadfailed_view" />
+
+    <include layout="@layout/default_noresult_view" />
+</moshimoshi.cyplay.com.doublenavigation.ui.custom.LoadingView>

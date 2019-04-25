@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <moshimoshi.cyplay.com.doublenavigation.ui.custom.LoadingView xmlns:loadingView="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/resource_loading_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        loadingView:failed_ref="@+id/default_loadfailed_view"
+        loadingView:loaded_ref="@+id/customer_search_results_container"
+        loadingView:loading_ref="@+id/default_loading_view"
+        loadingView:no_result_ref="@+id/default_noresult_view">
+
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/customer_search_results_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/customer_search_results"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@color/overriden_activity_background" />
+
+                <TextView
+                    android:id="@+id/specify_customer_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="@dimen/contextual_default_margin"
+                    android:textSize="14sp"
+                    android:visibility="gone"></TextView>
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+
+        <include layout="@layout/default_loading_view" />
+
+        <include layout="@layout/default_loadfailed_view" />
+
+        <include layout="@layout/default_noresult_view" />
+
+    </moshimoshi.cyplay.com.doublenavigation.ui.custom.LoadingView>
+</merge>

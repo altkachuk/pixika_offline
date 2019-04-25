@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true"
+    android:gravity="center_vertical"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/contextual_big_margin"
+        android:paddingLeft="@dimen/contextual_big_margin"
+        android:paddingRight="@dimen/contextual_big_margin"
+        android:paddingTop="@dimen/contextual_big_margin">
+
+        <TextView
+            android:id="@+id/customer_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/contextual_default_margin"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textAppearance="@style/customerNameSearch" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right|center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/customer_first_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/contextual_small_margin"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textAppearance="@style/customerEmailSearch" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/contextual_default_margin"
+        android:background="#e7e7e7"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/contextual_small_margin"
+        android:paddingLeft="@dimen/contextual_big_margin"
+        android:paddingRight="@dimen/contextual_big_margin"
+        android:paddingTop="@dimen/contextual_small_margin">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical|right">
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginRight="@dimen/contextual_small_margin"
+                android:layout_marginTop="1dp"
+                android:src="@drawable/ic_customer_loyalty"
+                android:tint="@color/colorAccent" />
+
+            <TextView
+                android:id="@+id/customer_organization_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:lines="1"
+                android:textAppearance="@style/customerSearch" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical|right">
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginRight="@dimen/contextual_small_margin"
+                android:layout_marginTop="1dp"
+                android:src="@drawable/ic_customer_source"
+                android:tint="@color/colorAccent" />
+
+            <TextView
+                android:id="@+id/customer_source"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:lines="1"
+                android:textAppearance="@style/customerSearch" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

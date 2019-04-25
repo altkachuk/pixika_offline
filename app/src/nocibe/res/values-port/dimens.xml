@@ -1,0 +1,6 @@
+<resources>
+
+    <!-- toolbar height -->
+    <dimen name="product_suggestion_margin">@dimen/contextual_default_margin</dimen>
+
+</resources>

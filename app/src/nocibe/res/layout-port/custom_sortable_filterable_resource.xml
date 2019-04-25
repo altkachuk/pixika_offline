@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/resource_sort_filter_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@color/default_filter_sort_background"
+    android:visibility="gone">
+
+    <android.support.v7.widget.CardView
+        app:cardBackgroundColor="@android:color/white"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/search_and_sort_padding"
+        android:layout_marginTop="@dimen/search_and_sort_padding"
+        android:layout_marginBottom="@dimen/search_and_sort_padding"
+        android:layout_marginRight="@dimen/search_and_sort_half_padding"
+        android:layout_weight="4">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="1dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_sort_results"
+                android:paddingLeft="@dimen/contextual_default_margin"
+                />
+            <Spinner
+                android:id="@+id/resource_sort_spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/filter_button"
+        app:cardBackgroundColor="@android:color/white"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/search_and_sort_padding"
+        android:layout_marginRight="@dimen/search_and_sort_padding"
+        android:layout_marginBottom="@dimen/search_and_sort_padding"
+        android:layout_marginLeft="@dimen/search_and_sort_half_padding"
+        android:layout_weight="3">
+
+        <LinearLayout
+            android:id="@+id/filter_button_text_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="@dimen/contextual_default_margin"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_filter"
+                />
+
+            <TextView
+                android:id="@+id/filter_button_text"
+                android:layout_marginLeft="@dimen/contextual_small_margin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="marquee"
+                android:maxLines="1"
+                android:text="@string/filter"
+                android:textAllCaps="true"
+                android:textColor="@color/actionBarItem"
+                style="@style/TextAppearance.AppCompat.Subhead"
+                />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+</LinearLayout>

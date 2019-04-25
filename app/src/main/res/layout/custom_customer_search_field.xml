@@ -1,0 +1,48 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <EditText
+        android:id="@+id/field_value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/contextual_small_margin"
+        android:layout_weight="1"
+        android:background="@color/White"
+        android:hint="@string/customer_search_first_name"
+        android:imeOptions="flagNoExtractUi"
+        android:inputType="text|textCapWords|textNoSuggestions"
+        android:lines="1"
+        android:padding="@dimen/contextual_small_margin"
+        android:textColorHint="@color/search_gray"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/clear_button"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_gravity="right|center_vertical"
+        android:layout_marginRight="@dimen/contextual_default_margin"
+        android:background="@drawable/ic_clear_search"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/search_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/contextual_small_margin"
+        android:background="@drawable/bg_search_button"
+        android:clickable="true"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:padding="@dimen/contextual_small_margin"
+            android:src="@drawable/ic_action_search"
+            android:tint="@color/White" />
+    </LinearLayout>
+
+</LinearLayout>

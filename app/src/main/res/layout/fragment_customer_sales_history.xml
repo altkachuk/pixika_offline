@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<moshimoshi.cyplay.com.doublenavigation.ui.custom.LoadingView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:loadingView="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/resource_loading_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    loadingView:failed_ref="@+id/default_loadfailed_view"
+    loadingView:loaded_ref="@+id/customer_sales_history_container_view"
+    loadingView:loading_ref="@+id/default_loading_view"
+    loadingView:no_result_ref="@+id/default_noresult_view">
+
+    <LinearLayout
+        android:id="@+id/customer_sales_history_container_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/custom_sortable_filterable_resource" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/customer_sales_history_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:paddingTop="@dimen/contextual_small_margin" />
+    </LinearLayout>
+
+
+    <include layout="@layout/default_loading_view" />
+
+    <include layout="@layout/default_loadfailed_view" />
+
+    <include layout="@layout/default_noresult_view" />
+</moshimoshi.cyplay.com.doublenavigation.ui.custom.LoadingView>

@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1085435288138",
+    "firebase_url": "https://playretail-3ece7.firebaseio.com",
+    "project_id": "playretail-3ece7",
+    "storage_bucket": "playretail-3ece7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1085435288138:android:dd280c22ab89609f",
+        "android_client_info": {
+          "package_name": "moshimoshi.cyplay.com.doublenavigation.pixika.pp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1085435288138-a7qfcvq2d56u2u30a0qcjpq5b8l6bjku.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCBMMUsSj417UEZsvJVCI5tu9tCwl45Ee4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

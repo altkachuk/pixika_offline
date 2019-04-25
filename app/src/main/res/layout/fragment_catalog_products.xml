@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <android.support.v7.widget.CardView
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/contextual_default_margin"
+            android:layout_marginBottom="@dimen/contextual_default_margin"
+            android:layout_marginStart="@dimen/contextual_default_margin"
+            android:layout_marginEnd="@dimen/contextual_small_margin">
+            <LinearLayout
+                android:id="@+id/filters_catalog_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:clickable="true"
+                android:background="?android:attr/selectableItemBackground"
+                android:padding="@dimen/contextual_small_margin"
+                android:gravity="center">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_filter_list_black_24dp"
+                    android:layout_gravity="center"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/contextual_default_margin"
+                    android:text="Filters"
+                    style="@style/TextAppearance.AppCompat.Subhead"
+                    />
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/contextual_default_margin"
+            android:layout_marginBottom="@dimen/contextual_default_margin"
+            android:layout_marginStart="@dimen/contextual_small_margin"
+            android:layout_marginEnd="@dimen/contextual_default_margin">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:clickable="true"
+                android:background="?android:attr/selectableItemBackground"
+                android:padding="@dimen/contextual_small_margin"
+                android:gravity="center">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_filter_list_black_24dp"
+                    android:layout_gravity="center"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/contextual_default_margin"
+                    android:text="Trier"
+                    style="@style/TextAppearance.AppCompat.Subhead"
+                    />
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+
+    <moshimoshi.cyplay.com.doublenavigation.ui.custom.LoadingView
+        xmlns:loadingView="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/resource_loading_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        loadingView:failed_ref="@+id/default_loadfailed_view"
+        loadingView:loaded_ref="@+id/product_search_recycler_view"
+        loadingView:loading_ref="@+id/default_loading_view"
+        loadingView:no_result_ref="@+id/default_noresult_view">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/product_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </android.support.v7.widget.RecyclerView>
+
+        <include layout="@layout/default_loading_view" />
+        <include layout="@layout/default_loadfailed_view" />
+        <include layout="@layout/default_noresult_view" />
+
+        <LinearLayout
+            android:id="@+id/default_loading_more_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:gravity="center"
+            android:background="#88000000">
+
+            <ProgressBar
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/default_loading_view"
+                style="?android:attr/progressBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/White"
+                android:gravity="center_vertical"
+                android:text="@string/loading_more"
+                android:layout_marginLeft="@dimen/contextual_default_margin"
+                />
+
+        </LinearLayout>
+
+    </moshimoshi.cyplay.com.doublenavigation.ui.custom.LoadingView>
+
+</LinearLayout>

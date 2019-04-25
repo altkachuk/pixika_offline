@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/card_view"
+    android:layout_gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    card_view:cardElevation="2dp"
+    card_view:cardCornerRadius="4dp"
+    card_view:cardBackgroundColor="@android:color/transparent"
+    card_view:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/contextual_default_margin"
+        android:layout_marginRight="@dimen/contextual_default_margin"
+        android:layout_marginTop="@dimen/contextual_small_margin"
+        android:layout_marginBottom="@dimen/contextual_small_margin">
+
+        <TextView
+            android:id="@+id/basket_offer_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:maxLines="1"
+            android:ellipsize="end"
+            style="@style/Base.TextAppearance.AppCompat.Subhead.Inverse"/>
+
+        <TextView
+            android:id="@+id/basket_offer_remove"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/basket_remove"
+            android:textColor="@color/colorAccent"/>
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

@@ -1,0 +1,62 @@
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:layout_marginBottom="@dimen/contextual_small_margin"
+    android:layout_marginLeft="@dimen/contextual_default_margin"
+    android:layout_marginRight="@dimen/contextual_default_margin"
+    android:layout_marginTop="@dimen/contextual_small_margin"
+    app:cardBackgroundColor="@android:color/white"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/field_value"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/contextual_small_margin"
+            android:layout_weight="1"
+            android:background="@color/White"
+            android:drawableLeft="@drawable/ic_action_customer"
+            android:drawablePadding="@dimen/contextual_icon_size_margin"
+            android:hint="@string/customer_search_last_name"
+            android:inputType="text|textCapWords|textNoSuggestions"
+            android:lines="1"
+            android:padding="@dimen/contextual_small_margin"
+            android:textColorHint="@color/search_gray"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/clear_button"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="@dimen/contextual_default_margin"
+            android:background="@drawable/ic_clear_search" />
+
+        <LinearLayout
+            android:id="@+id/search_button"
+            android:layout_width="74dp"
+            android:layout_height="74dp"
+            android:background="@drawable/ripple_accent_color"
+            android:clickable="true"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/contextual_default_margin"
+                android:src="@drawable/ic_search_black_36dp"
+                android:tint="@color/White" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

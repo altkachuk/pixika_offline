@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorAccent">#d81c88</color>
+    <color name="default_brands_color">@color/colorAccent</color>
+    <color name="special_brands_color">#000000</color>
+    <color name="default_search_filter_sort_background">#E7E7E7</color>
+    <color name="default_filter_sort_background">#E7E7E7</color>
+
+    <color name="notify_low_stock">@android:color/transparent</color>
+    <color name="cell_text">#616161</color>
+
+    <color name="tab_layout_unselected_text_color">#9E9E9E</color>
+    <color name="tab_layout_selected_text_color">#000000</color>
+    <color name="tab_background_color">@color/grey</color>
+    <color name="tab_indicator_color">@color/colorAccent</color>
+    <color name="tab_underline_color">@color/colorAccent</color>
+    
+    <!-- Customer Info-->
+    <color name="cy_play_action_bar_color">@color/colorAccent</color>
+    <color name="cy_play_action_bar_text_color">@color/White</color>
+
+    <color name="default_window_background">#FAFAFA</color>
+    <color name="overriden_activity_background">#FAFAFA</color>
+    <color name="default_rfm_color">@android:color/transparent</color>
+    
+    <!-- Seller DashBoard-->
+    <color name="seller_dashboard_background">@android:color/transparent</color>
+    <!-- !Seller DashBoard-->
+
+    <!-- Catalog  -->
+    <color name="catalog_root_category_background">@color/colorAccent</color>
+    <color name="catalog_root_category_title">@color/White</color>
+    <!-- !Catalog  -->
+
+    <!-- Filters -->
+    <color name="active_filters_background">@color/colorAccent</color>
+    <color name="active_filters_text">@color/White</color>
+    <!-- !Filters -->
+
+    <color name="favorite_color">#e53935</color>
+</resources>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/parent_category_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/contextual_default_margin"
+        android:paddingRight="@dimen/contextual_default_margin"
+        android:paddingTop="@dimen/contextual_default_margin"
+        android:paddingBottom="@dimen/contextual_default_margin"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:background="@drawable/ripple_gray_to_white">
+
+        <ImageView
+            android:id="@+id/parent_category_icon"
+            android:layout_marginRight="@dimen/contextual_default_margin"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_right_arrow"
+            android:rotation="180"
+            android:alpha="0.5"
+            />
+
+        <TextView
+            android:id="@+id/parent_category_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|center_vertical"
+            style="@style/TextAppearance.AppCompat.Headline"
+            android:textColor="#212121"
+            android:lines="1"
+            android:maxLines="1"
+            android:ellipsize="end"
+            />
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/category_list_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+</LinearLayout>

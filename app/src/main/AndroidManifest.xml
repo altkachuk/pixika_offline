@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="moshimoshi.cyplay.com.doublenavigation">
+
+    <!-- Play Retail -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <!-- Payleven -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
+    <application
+        android:name=".app.PlayRetailApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <provider
+            android:authorities="${applicationId}.provider"
+            android:name="android.support.v4.content.FileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths"/>
+        </provider>
+
+        <activity
+            android:name=".ui.activity.SplashScreenActivity"
+            android:clearTaskOnLaunch="true"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.SplashTranslucent"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.activity.ImportActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.SplashTranslucent"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity
+            android:name=".ui.activity.SellerDashboardActivity"
+            android:label="@string/activity_home"
+            android:parentActivityName=".ui.activity.SellerTeamActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.activity.SellerTeamActivity" />
+        </activity>
+
+        <activity
+            android:name=".ui.activity.ScanActivity"
+            android:label="@string/activity_scan"
+            android:parentActivityName=".ui.activity.SellerDashboardActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.activity.SellerDashboardActivity" />
+        </activity>
+
+        <activity
+            android:name=".ui.activity.CalendarActivity"
+            android:label="@string/activity_calendar"
+            android:parentActivityName=".ui.activity.SellerDashboardActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.activity.SellerDashboardActivity" />
+        </activity>
+
+        <activity
+            android:name=".ui.activity.WishlistShareActivity"
+            android:label="@string/title_share_wishlist"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.activity.SellerDashboardActivity" />
+        </activity>
+
+        <activity
+            android:name=".ui.activity.CustomerSearchActivity"
+            android:label="@string/client_search_title"
+            android:parentActivityName=".ui.activity.SellerDashboardActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize|stateVisible">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.activity.SellerDashboardActivity" />
+        </activity>
+
+        <activity
+            android:name=".ui.activity.PopupCustomerSearchActivity"
+            android:label="@string/client_search_title"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize|stateVisible"/>
+
+        <activity
+            android:name=".ui.activity.DeviceRegistrationActivity"
+            android:label="@string/activity_device_registration"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize|stateAlwaysVisible" />
+
+        <activity
+            android:name=".ui.activity.CustomerActivity"
+            android:label="@string/activity_customer"
+            android:parentActivityName=".ui.activity.SellerDashboardActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.activity.SellerDashboardActivity" />
+        </activity>
+
+        <activity
+            android:name=".ui.activity.CatalogActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_item_list"
+            android:parentActivityName=".ui.activity.SellerDashboardActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.activity.SellerDashboardActivity" />
+        </activity>
+
+        <activity
+            android:name=".ui.activity.SalesHistoryActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_sales_history"
+            android:parentActivityName=".ui.activity.SellerDashboardActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.activity.SellerDashboardActivity" />
+        </activity>
+
+        <activity
+            android:name=".ui.activity.ConfigurationActivity"
+            android:label="@string/title_configuration"
+            android:parentActivityName=".ui.activity.SellerDashboardActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name=".ui.activity.SupportActivity"
+            android:label="@string/title_support"
+            android:parentActivityName=".ui.activity.SellerDashboardActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize"/>
+
+        <activity
+            android:name=".ui.activity.AdyenTerminalConfigurationActivity"
+            android:label="@string/title_adyen_configuration"
+            android:parentActivityName=".ui.activity.SellerDashboardActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name=".ui.activity.CustomerPaymentActivity"
+            android:label="@string/title_customer_payments"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name=".ui.activity.OffersActivity"
+            android:label="@string/title_offers"
+            android:parentActivityName=".ui.activity.SellerDashboardActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.activity.SellerDashboardActivity" />
+        </activity>
+
+        <activity
+            android:name=".ui.activity.OffersByTypeActivity"
+            android:label="@string/title_offers"
+            android:parentActivityName=".ui.activity.SellerDashboardActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.activity.SellerDashboardActivity" />
+        </activity>
+
+        <activity
+            android:name=".ui.activity.ProductsSearchActivity"
+            android:label="@string/activity_product_search"
+            android:parentActivityName=".ui.activity.SellerDashboardActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateVisible|adjustResize">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.activity.SellerDashboardActivity" />
+        </activity>
+
+        <activity
+            android:name=".ui.activity.BasketOffersActivity"
+            android:label="@string/title_offers_and_tickets_choice"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name=".ui.activity.ProductGalleryActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name=".ui.activity.ProductWithSelectorsActivity"
+            android:label="@string/title_product_activity"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name=".ui.activity.CustomerFormActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/activity_customer_form"
+            android:theme="@style/AppTheme.Translucent"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".ui.activity.CustomerAssociationFormActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/activity_customer_form"
+            android:theme="@style/AppTheme.Translucent"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".ui.activity.AddressFormActivity"
+            android:label="@string/activity_shipping_addres_form"
+            android:theme="@style/AppTheme.Translucent"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".ui.activity.BasketActivity"
+            android:label="@string/activity_basket"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".ui.activity.PaymentDeliveryStepsActivity"
+            android:label="@string/activity_payment_steps"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".ui.activity.CalendarReportActivity"
+            android:theme="@style/AppTheme.Translucent" />
+
+        <activity
+            android:name=".ui.activity.SellerTeamActivity"
+            android:label="@string/activity_seller_team"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name=".ui.activity.RendezVousInstitutWebViewActivity"
+            android:label="@string/activity_seller_team"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name=".ui.activity.ClickAndCollectWebviewActivity"
+            android:label="@string/activity_seller_team"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name=".ui.activity.SellerLogInActivity"
+            android:label="@string/activity_authentication"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan|stateAlwaysVisible" />
+
+        <activity
+            android:name=".ui.activity.SellerLoginWithTemporaryPasswordChangeActivity"
+            android:label="@string/activity_authentication"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan|stateAlwaysVisible" />
+
+        <activity
+            android:name=".ui.activity.FullScreenFilteringActivity"
+            android:label="@string/title_filters"
+            android:parentActivityName=".ui.activity.CatalogActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.activity.CatalogActivity" />
+        </activity>
+
+        <activity
+            android:name=".ui.activity.PanelFilteringActivity"
+            android:label="@string/title_filters"
+            android:theme="@style/AppTheme.Transparent" />
+
+        <activity
+            android:name=".ui.activity.CatalogWithMenuActivity"
+            android:label="@string/title_item_list"
+            android:parentActivityName=".ui.activity.SellerDashboardActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.activity.SellerDashboardActivity" />
+        </activity>
+
+        <activity
+            android:name=".ui.activity.RegisterApp"
+            android:label="@string/title_product_detail"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name=".ui.activity.FullScreenEditTextActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize|stateAlwaysVisible" />
+
+        <activity
+            android:name=".ui.activity.ItemPurchaseConfirmationActivity"
+            android:label="@string/activity_customer_form"
+            android:theme="@style/AppTheme.Transparent"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".ui.activity.SynchronizationActivity"
+            android:label="@string/title_synchronization"
+            android:parentActivityName=".ui.activity.SellerDashboardActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize"/>
+
+        <!-- Paylevel -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <service
+            android:name="de.payleven.payment.PaylevenCommunicationService"
+            android:exported="false"
+            android:process=":payleven" />
+
+        <!-- Required for bluetooth communication with the terminal -->
+        <receiver android:name="com.adyen.adyenpos.receiver.BluetoothState">
+            <intent-filter>
+                <action android:name="android.bluetooth.adapter.action.STATE_CHANGED" />
+                <action android:name="android.bluetooth.device.action.UUID" />
+            </intent-filter>
+        </receiver>
+
+        <receiver
+            android:name="com.google.android.gms.analytics.AnalyticsReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="com.google.android.gms.analytics.ANALYTICS_DISPATCH" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.google.android.gms.analytics.AnalyticsService"
+            android:enabled="true"
+            android:exported="false" />
+
+        <!-- Optionally, register CampaignTrackingReceiver and CampaignTrackingService to enable
+             installation campaign reporting -->
+        <receiver
+            android:name="com.google.android.gms.analytics.CampaignTrackingReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+        <service android:name="com.google.android.gms.analytics.CampaignTrackingService" />
+
+
+        <!-- Required for bluetooth communication with the terminal -->
+        <service android:name="com.adyen.adyenpos.service.TerminalConnectIntentService" />
+        <!-- !Paylevel -->
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="4cfd394062f59b07e25dd455289aa00fec3530ac" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyClq6oeoOy8RuKy41RWyGzYhi_mlk4Q8Rg" />
+    </application>
+
+</manifest>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--<style name="CellRecommendedProduct">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/colorAccent</item>
+    </style>
+
+
+    <style name="cell_ska_title">
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textColor">@color/cell_text</item>
+    </style>
+
+    <style name="cell_ska_body">
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:textColor">@color/cell_text</item>
+        <item name="android:textSize">17sp</item>
+    </style>
+
+    <style name="cell_ska_stock_label">
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textColor">@color/cell_text</item>
+    </style>
+
+    <style name="cell_ska_stock_value">
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textColor">@color/cell_text</item>
+        <item name="android:textStyle">bold</item>
+    </style>-->
+
+</resources>

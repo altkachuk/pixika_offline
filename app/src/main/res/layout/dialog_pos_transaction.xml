@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/pos_instructions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/LightGrey"
+        android:gravity="center"
+        android:padding="@dimen/contextual_big_margin"
+        android:text="@string/follow_instructions_on_pos"
+        android:textColor="@color/Black"
+        android:textSize="20sp" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/pos_instructions"
+        android:alpha="0.7"
+        android:padding="@dimen/contextual_very_big_margin"
+        android:scaleType="fitCenter"
+        android:src="@drawable/pos" />
+
+    <TextView
+        android:id="@+id/pos_status"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/pos_instructions"
+        android:gravity="center"
+        android:textColor="@color/Black"
+        android:textSize="22sp" />
+</RelativeLayout>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:padding="@dimen/contextual_default_margin">
+
+    <moshimoshi.cyplay.com.doublenavigation.ui.custom.StockIndicator
+        android:id="@+id/stock_indicator"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/product_collection_mode"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ellipsize="marquee"
+        android:maxLines="1"
+        android:paddingLeft="@dimen/contextual_small_margin"
+        android:paddingRight="@dimen/contextual_small_margin"
+        android:textAllCaps="true"
+        android:textColor="#212121"
+        android:textSize="16sp" />
+
+    <moshimoshi.cyplay.com.doublenavigation.ui.custom.StockLabel
+        android:id="@+id/stock_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/product_stock"
+        android:textAllCaps="true"
+        android:textSize="16sp" />
+
+
+    <TextView
+        android:id="@+id/stock_quantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/contextual_small_margin"
+        android:textColor="#212121"
+        android:textSize="16sp" />
+
+</LinearLayout>
+

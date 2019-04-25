@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <include layout="@layout/appbar" />
+
+        <LinearLayout
+            android:id="@+id/main_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="?attr/actionBarSize"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/default_filter_sort_background"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/contextual_small_margin"
+                android:paddingTop="@dimen/contextual_small_margin">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/contextual_small_margin"
+                        android:layout_marginLeft="@dimen/contextual_default_margin"
+                        android:layout_marginRight="@dimen/contextual_default_margin"
+                        android:layout_marginTop="@dimen/contextual_small_margin"
+                        android:layout_weight="1"
+                        app:cardBackgroundColor="@android:color/white"
+                        app:cardElevation="4dp">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <EditText
+                                android:id="@+id/customer_search"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/contextual_small_margin"
+                                android:layout_weight="1"
+                                android:background="@color/White"
+                                android:drawableLeft="@drawable/ic_action_customer"
+                                android:drawablePadding="@dimen/contextual_icon_size_margin"
+                                android:hint="@string/customer_search_last_name"
+                                android:imeOptions="actionSearch"
+                                android:inputType="text|textCapWords|textNoSuggestions"
+                                android:lines="1"
+                                android:padding="@dimen/contextual_small_margin"
+                                android:textColorHint="@color/search_gray"
+                                android:textSize="30sp" />
+
+                            <Button
+                                android:id="@+id/customer_search_clear"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:layout_gravity="right|center_vertical"
+                                android:layout_marginRight="@dimen/contextual_default_margin"
+                                android:background="@drawable/ic_clear_search" />
+
+                            <LinearLayout
+                                android:id="@+id/customer_search_button"
+                                android:layout_width="74dp"
+                                android:layout_height="74dp"
+                                android:background="@drawable/ripple_accent_color"
+                                android:clickable="true"
+                                android:gravity="center">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:padding="@dimen/contextual_default_margin"
+                                    android:src="@drawable/ic_search_black_36dp"
+                                    android:tint="@color/White" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/customer_search_error_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <View
+                    android:id="@+id/timeline_background_top"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/shape_customer_search_warning" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="4dp"
+                    android:background="@color/Red" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/GreyishBrown"
+                    android:gravity="center"
+                    android:padding="@dimen/contextual_default_margin">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginRight="@dimen/contextual_default_margin"
+                        android:src="@drawable/ic_customer_search_info" />
+
+                    <TextView
+                        android:id="@+id/customer_search_error"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/White"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <moshimoshi.cyplay.com.doublenavigation.ui.custom.LoadingView xmlns:loadingView="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/resource_loading_view"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                loadingView:failed_ref="@+id/default_loadfailed_view"
+                loadingView:loaded_ref="@+id/loaded_view"
+                loadingView:loading_ref="@+id/default_loading_view"
+                loadingView:no_result_ref="@+id/default_noresult_view">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/customer_search_results"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/overriden_activity_background"/>
+
+                <include layout="@layout/default_loading_view" />
+
+                <include layout="@layout/default_loadfailed_view" />
+
+                <include layout="@layout/default_noresult_view" />
+            </moshimoshi.cyplay.com.doublenavigation.ui.custom.LoadingView>
+
+        </LinearLayout>
+
+
+    </android.support.design.widget.CoordinatorLayout>
+
+    <include layout="@layout/drawer_left_layout" />
+
+    <!--<include layout="@layout/drawer_right_layout" />-->
+
+</android.support.v4.widget.DrawerLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/coordinator_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/White">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/VeryLightGrey"
+                android:textColor="#212121"
+                android:fontFamily="sans-serif-black"
+                android:padding="@dimen/contextual_big_margin"
+                android:textAllCaps="true"
+                android:text="@string/payment_mode_choice"
+                android:textSize="16sp" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/LightGrey"/>
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/payment_type_choice_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"/>
+
+            <moshimoshi.cyplay.com.doublenavigation.ui.custom.PaymentSummaryLayout
+                android:id="@+id/basket_summary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <ProgressBar
+                android:padding="@dimen/contextual_default_margin"
+                android:id="@+id/payment_progress_bar"
+                android:layout_width="match_parent"
+                android:layout_height="24dp"
+                android:max="100"
+                style="?android:attr/progressBarStyleHorizontal"/>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</android.support.design.widget.CoordinatorLayout>

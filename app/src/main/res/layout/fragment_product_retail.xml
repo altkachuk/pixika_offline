@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<moshimoshi.cyplay.com.doublenavigation.ui.custom.LoadingView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:loadingView="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/resource_loading_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    loadingView:failed_ref="@+id/default_loadfailed_view"
+    loadingView:loaded_ref="@+id/product_loaded"
+    loadingView:loading_ref="@+id/default_loading_view"
+    loadingView:no_result_ref="@+id/default_noresult_view">
+
+
+    <include layout="@layout/default_loading_view" />
+
+    <include layout="@layout/default_loadfailed_view" />
+
+    <include layout="@layout/default_noresult_view" />
+
+    <LinearLayout
+        android:id="@+id/product_loaded"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical">
+
+        <!-- Product Block -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <moshimoshi.cyplay.com.doublenavigation.ui.custom.VerticalViewPager
+                android:id="@+id/vertical_view_pager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/stock_container"
+                android:layout_margin="@dimen/contextual_default_margin" />
+
+            <com.viewpagerindicator.CirclePageIndicator
+                android:id="@+id/indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/contextual_default_margin"
+                app:fillColor="@color/colorAccent"
+                app:radius="6dp" />
+
+
+            <ImageView
+                android:id="@+id/product_gallery_shortcut"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_above="@+id/stock_container"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="@dimen/contextual_small_margin"
+                android:layout_marginRight="@dimen/contextual_default_margin"
+                android:visibility="gone"
+                android:src="@drawable/ic_magnifying_glass" />
+
+            <LinearLayout
+                android:id="@+id/stock_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="#CCFFFFFF"
+                android:clickable="true"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="invisible">
+
+                <TextView
+                    android:id="@+id/stock_loading"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:gravity="center"
+                    android:text="@string/stock_loading"
+                    android:textColor="@color/LightGrey"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/discount_indicator"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/contextual_very_big_margin"
+                android:layout_marginTop="@dimen/contextual_very_big_margin"
+                android:background="@drawable/product_discount_bg"
+                android:gravity="center"
+                android:textColor="@color/White"
+                android:textSize="24sp"
+                android:visibility="gone" />
+
+
+            <TextView
+                android:id="@+id/new_product_indicator"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="@dimen/contextual_very_big_margin"
+                android:layout_marginTop="@dimen/contextual_very_big_margin"
+                android:background="@drawable/product_new_bg"
+                android:gravity="center"
+                android:text="@string/new_product"
+                android:textColor="@color/White"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="false" />
+
+
+        </RelativeLayout>
+        <!-- !Product Block -->
+
+        <!-- Product Actions -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|end"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/product_bottom_spec_container"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:gravity="center_vertical|end"
+                android:orientation="horizontal" />
+
+            <Spinner
+                android:id="@+id/product_sku_spinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:background="@color/White"
+                android:gravity="center_vertical|end"
+                android:visibility="gone" />
+
+        </LinearLayout>
+        <!-- !Product Actions -->
+
+    </LinearLayout>
+
+</moshimoshi.cyplay.com.doublenavigation.ui.custom.LoadingView>

@@ -1,0 +1,195 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/VeryLightGrey"
+    android:orientation="horizontal"
+    android:padding="@dimen/contextual_default_margin">
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:paddingBottom="@dimen/contextual_default_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/product_count_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/summary_title_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fragment_basket_products_title"
+                    android:textColor="@color/summary_title"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/basket_product_count"
+                    style="@style/summary_number_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/contextual_default_margin"
+                    android:textColor="@color/text_black"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/summary_title_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fragment_basket_subtotal_title"
+                    android:textColor="@color/summary_title"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/basket_sub_total"
+                    style="@style/summary_number_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/contextual_default_margin"
+                    android:textColor="@color/text_black"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:paddingBottom="@dimen/contextual_default_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/product_offers_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:visibility="invisible"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/summary_title_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fragment_basket_offers_reduction"
+                    android:textColor="@color/summary_title"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/basket_offers_reduction"
+                    style="@style/summary_number_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/contextual_default_margin"
+                    android:textColor="@color/text_black"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/summary_title_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fragment_basket_delivery_title"
+                    android:textColor="@color/summary_title"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/basket_shipping_fees"
+                    style="@style/summary_number_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/contextual_default_margin"
+                    android:textColor="@color/text_black"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+
+            android:id="@+id/bottom_line_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/summary_title_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fragment_basket_payment_mode"
+                    android:textColor="@color/summary_title"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/transaction_means"
+                    style="@style/summary_number_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/contextual_default_margin"
+                    android:textColor="@color/text_black"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fragment_basket_total_title"
+                    android:textColor="@color/summary_title"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:id="@+id/basket_total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-black"
+                    android:paddingLeft="@dimen/contextual_default_margin"
+                    android:textColor="@color/text_black"
+                    android:textSize="22sp" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

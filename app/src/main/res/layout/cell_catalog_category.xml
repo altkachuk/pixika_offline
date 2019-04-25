@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="?attr/selectableItemBackground"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingTop="@dimen/contextual_small_margin"
+        android:paddingBottom="@dimen/contextual_small_margin">
+
+        <moshimoshi.cyplay.com.doublenavigation.ui.custom.PicturedBadge
+            android:layout_marginLeft="@dimen/contextual_default_margin"
+            android:id="@+id/category_badge"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/contextual_small_margin">
+
+            <TextView
+                android:id="@+id/catalog_category_name_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                />
+
+        </LinearLayout>
+
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/category_plus_icon"
+            android:layout_marginLeft="@dimen/contextual_default_margin"
+            android:layout_marginRight="@dimen/contextual_default_margin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_add_black_24dp"
+            />
+
+    </LinearLayout>
+
+</FrameLayout>

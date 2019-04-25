@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <Spinner xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/menu_customer_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/contextual_default_margin"
+        android:layout_marginRight="@dimen/contextual_default_margin"
+        android:backgroundTint="@color/colorAccent"
+        android:background="@drawable/ic_top_bar_customer"
+        android:layout_gravity="center"
+        android:overlapAnchor="false"/>
+</FrameLayout>

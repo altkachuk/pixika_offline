@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="@dimen/contextual_default_margin"
+    android:layout_marginBottom="@dimen/contextual_small_margin">
+
+    <TextView
+        android:id="@+id/label_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/Base.TextAppearance.AppCompat.Subhead"
+        android:textColor="@color/Black"
+        android:gravity="center_vertical|left"
+        android:layout_gravity="center_vertical|left"
+        android:lines="1"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/is_required_text_view"
+        android:paddingLeft="@dimen/contextual_very_small_margin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/Base.TextAppearance.AppCompat.Subhead"
+        android:textColor="@color/Black"
+        android:text="@string/form_required_label"
+        android:gravity="center_vertical|left"
+        android:layout_gravity="center_vertical|left"
+        android:textStyle="bold"
+        />
+
+</LinearLayout>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<moshimoshi.cyplay.com.doublenavigation.ui.custom.LoadingView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:loadingView="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/calendar_loading_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    loadingView:loading_ref="@+id/calendar_progressbar_view"
+    loadingView:loaded_ref="@+id/calendar_main_content_container"
+    loadingView:failed_ref="@+id/calendar_loadfailed_view">
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/calendar_main_content_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:baselineAligned="false">
+        <fragment
+            android:id="@+id/fragment_calendar_global"
+            android:layout_width="0dp"
+            android:layout_weight="0.48"
+            android:layout_height="match_parent"
+            android:name="moshimoshi.cyplay.com.doublenavigation.ui.fragment.CalendarBrowserFragment"
+            />
+        <fragment
+            android:id="@+id/fragment_event_list"
+            android:layout_width="0dp"
+            android:layout_weight="0.52"
+            android:layout_height="match_parent"
+            android:name="moshimoshi.cyplay.com.doublenavigation.ui.fragment.EventListFragment"
+            />
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/calendar_progressbar_view"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_centerInParent="true"/>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/calendar_loadfailed_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:visibility="visible">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/request_error_message"
+            style="@style/Base.TextAppearance.AppCompat.Subhead"
+            android:gravity="center"
+            />
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/reload_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/CustomButton"
+            android:text="@string/reload"
+            />
+    </LinearLayout>
+
+
+</moshimoshi.cyplay.com.doublenavigation.ui.custom.LoadingView>
+
+
+
+
+
+
+
+

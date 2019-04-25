@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/contextual_big_margin">
+
+        <moshimoshi.cyplay.com.doublenavigation.ui.custom.OfferItemCore
+            android:id="@+id/offer_item_core"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"/>
+
+
+        <android.support.v7.widget.SwitchCompat
+            android:id="@+id/customer_offer_switch_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/contextual_small_margin"/>
+
+        <ImageView
+            android:id="@+id/customer_offer_auto_selected_icon"
+            android:layout_width="40dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="@dimen/contextual_small_margin"
+            android:src="@drawable/ic_step_checked"
+            android:scaleType="center"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/cell_bottom_line_fill" />
+
+</LinearLayout>

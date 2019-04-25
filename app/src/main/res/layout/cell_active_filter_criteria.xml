@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center">
+    <TextView
+        android:id="@+id/criteria_name"
+        android:layout_marginLeft="@dimen/contextual_default_margin"
+        android:layout_marginTop="@dimen/contextual_big_margin"
+        android:layout_marginBottom="@dimen/contextual_big_margin"
+        android:textSize="20sp"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/critera_remove"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:scaleType="centerInside"
+        android:src="@android:drawable/ic_delete"
+        android:layout_margin="@dimen/contextual_big_margin"/>
+</LinearLayout>

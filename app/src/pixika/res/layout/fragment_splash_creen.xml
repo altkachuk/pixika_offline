@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    android:id="@+id/coordinator_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F1ECE9">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/logo_pixika"
+            android:layout_centerInParent="true"
+            />
+
+        <moshimoshi.cyplay.com.doublenavigation.ui.custom.LoadingView
+            xmlns:loadingView="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/state_loading_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            loadingView:loaded_ref="@+id/loaded_view"
+            loadingView:loading_ref="@+id/loading_view"
+            loadingView:failed_ref="@+id/reload_view"
+            loadingView:no_result_ref="@+id/default_noresult_view"
+            android:layout_centerInParent="true">
+
+            <View
+                android:id="@+id/loaded_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+
+            <FrameLayout
+                android:id="@+id/loading_view"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="10dp"
+                android:visibility="gone">
+                <ProgressBar
+                    style="?android:attr/progressBarStyleLarge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/reload_view"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="10dp"
+                android:visibility="gone">
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/reload_button"
+                    style="@style/CustomButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/reload"
+                    />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/debug_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="@dimen/contextual_default_margin"
+                style="@style/Base.TextAppearance.AppCompat.Caption"
+                android:gravity="center"
+                android:visibility="invisible"
+                android:text="I will be the debug text"
+                />
+
+            <!--<include layout="@layout/default_loading_view"/>-->
+            <!--<include layout="@layout/default_loadfailed_view"/>-->
+            <include layout="@layout/default_noresult_view"/>
+        </moshimoshi.cyplay.com.doublenavigation.ui.custom.LoadingView>
+    </RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>

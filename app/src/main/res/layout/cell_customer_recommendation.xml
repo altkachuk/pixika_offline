@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/product_cell_content"
+    android:transitionName="productPreviewContainerTransition"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/card_view_flat_border">
+    <moshimoshi.cyplay.com.doublenavigation.ui.custom.SquareLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/recommended_product_picture"
+            android:layout_width="match_parent"
+            android:scaleType="centerInside"
+            android:layout_height="match_parent"
+            />
+    </moshimoshi.cyplay.com.doublenavigation.ui.custom.SquareLayout>
+
+
+    <TextView
+        android:id="@+id/recommended_product_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        style="@style/TextAppearance.AppCompat.Subhead"
+        android:padding="@dimen/contextual_small_margin"
+        />
+
+</LinearLayout>
+
+

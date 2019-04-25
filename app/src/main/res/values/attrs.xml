@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="LoadingView">
+        <attr name="loading_ref" format="reference"/>
+        <attr name="loaded_ref" format="reference"/>
+        <attr name="failed_ref" format="reference"/>
+        <attr name="no_result_ref" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="PasscodeView">
+        <attr name="numDigits" format="integer"/>
+        <attr name="digitElevation" format="dimension"/>
+        <attr name="digitRadius" format="dimension"/>
+        <attr name="controlColor" format="color"/>
+        <attr name="controlColorActivated" format="color"/>
+        <attr name="digitColorFilled" format="color"/>
+        <attr name="digitColorBorder" format="color"/>
+    </declare-styleable>
+
+    <declare-styleable name="EmptyWithImageView">
+        <attr name="image_ref" format="reference"/>
+        <attr name="empty_text_string" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="InputFixEditText">
+        <attr name="input_number" format="integer"/>
+        <attr name="only_integer" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="BasketItemCore">
+        <attr name="mode" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="BasketSummary">
+        <attr name="needBottomLine" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="StepsProgressLayout">
+        <attr name="circle_radius" format="dimension" />
+        <attr name="lien_height" format="dimension"/>
+    </declare-styleable>
+</resources>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:loadingView="http://schemas.android.com/apk/res-auto"
+    xmlns:passcodeView="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal">
+
+    <View
+        android:id="@+id/login_top"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        app:layout_heightPercent="12%"
+        app:layout_widthPercent="100%" />
+
+    <LinearLayout
+        android:id="@+id/home_features_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/login_top"
+        android:layout_marginTop="64dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_heightPercent="88%"
+        app:layout_widthPercent="100%">
+
+        <moshimoshi.cyplay.com.doublenavigation.ui.custom.LoadingView
+            android:id="@+id/authentication_loading_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            loadingView:loaded_ref="@+id/authentication_pin_code_container"
+            loadingView:loading_ref="@+id/default_loading_view">
+
+            <LinearLayout
+                android:id="@+id/authentication_pin_code_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/pin_code_instructions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/contextual_default_margin"
+                    android:gravity="center"
+                    android:text="@string/enter_your_pin"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/Black" />
+
+                <!-- Hide edittext to be able to use keyboard on it
+                       (not editable if invisible or gone) -->
+                <moshimoshi.cyplay.com.doublenavigation.ui.custom.PinView
+                    android:id="@+id/authentication_pin_code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    passcodeView:numDigits="4" />
+            </LinearLayout>
+
+            <ProgressBar xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/default_loading_view"
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_centerHorizontal="true"
+                android:visibility="gone" />
+
+
+        </moshimoshi.cyplay.com.doublenavigation.ui.custom.LoadingView>
+
+
+        <!--android:ems="20"-->
+    </LinearLayout>
+
+    <!-- Profile block -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/login_top"
+        android:layout_marginTop="-56dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <moshimoshi.cyplay.com.doublenavigation.ui.custom.PicturedBadge
+            android:id="@+id/profile_view"
+            android:layout_width="128dp"
+            android:layout_height="128dp"
+            android:transitionName="sellerBadgeTransition" />
+
+    </LinearLayout>
+
+</android.support.percent.PercentRelativeLayout>

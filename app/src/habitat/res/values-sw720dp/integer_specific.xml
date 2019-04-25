@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Screen orientation UNSPECIFIED:-1:PORTRAIT:1 LANSCAPE:0   -->
+    <integer name="screen_orientation">-1</integer>
+    <integer name="screen_orientation_gallery">-1</integer>
+
+</resources>

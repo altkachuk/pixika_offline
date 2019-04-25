@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<moshimoshi.cyplay.com.doublenavigation.ui.custom.LoadingView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:loadingView="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/resource_loading_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    loadingView:failed_ref="@+id/default_loadfailed_view"
+    loadingView:loaded_ref="@+id/customer_wishlist_content"
+    loadingView:loading_ref="@+id/default_loading_view"
+    loadingView:no_result_ref="@+id/default_noresult_view">
+
+    <LinearLayout
+        android:id="@+id/customer_wishlist_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/cy_play_action_bar_color"
+            android:paddingBottom="@dimen/contextual_small_margin"
+            android:paddingTop="@dimen/contextual_small_margin"
+            android:gravity="center_vertical">
+            <TextView
+                android:id="@+id/wishlist_product_count"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textColor="@color/cy_play_action_bar_text_color"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_marginLeft="@dimen/contextual_big_margin" />
+
+            <LinearLayout
+                android:id="@+id/wishlist_share_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_cyplay_task_bar"
+                android:layout_marginRight="@dimen/contextual_small_margin"
+                android:gravity="center">
+                <ImageView
+                    android:id="@+id/wishlist_share_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/contextual_default_margin"
+                    android:tint="@color/colorAccent"
+                    android:src="@drawable/ic_action_share"/>
+                <TextView
+                    android:id="@+id/wishlist_share_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/share_wishlist"
+                    android:textColor="@color/colorAccent"
+                    android:textAllCaps="true"
+                    android:lines="1"
+                    android:gravity="center"
+                    android:paddingRight="@dimen/contextual_default_margin"
+                    android:textSize="20sp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/customer_wishlist_recycler_view"
+            android:padding="@dimen/contextual_small_margin"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+        </android.support.v7.widget.RecyclerView>
+
+    </LinearLayout>
+
+    <include layout="@layout/default_loading_view" />
+    <include layout="@layout/default_loadfailed_view" />
+
+    <RelativeLayout
+        android:id="@+id/noresult_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/overriden_activity_background"
+        android:visibility="gone">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/no_results"
+            />
+    </RelativeLayout>
+
+
+</moshimoshi.cyplay.com.doublenavigation.ui.custom.LoadingView>
+

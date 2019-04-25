@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/White"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:padding="@dimen/contextual_default_margin">
+
+    <ImageView
+        android:id="@+id/sku_selector_imageview"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:visibility="gone"
+        android:padding="8dp"
+        />
+
+    <TextView
+        android:id="@+id/sku_name_selector"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:textColor="@color/GreyishBrown"
+        android:textSize="22sp"
+        android:layout_marginLeft="@dimen/contextual_default_margin"
+        />
+
+    <TextView
+        android:id="@+id/sku_price_selector"
+        android:layout_width="wrap_content"
+        android:layout_height="64dp"
+        android:gravity="center_vertical"
+        android:textColor="@color/colorAccent"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        />
+
+    <ImageView
+        android:id="@+id/sku_selector_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bg_spinner"
+        android:layout_marginLeft="@dimen/contextual_default_margin"/>
+
+</LinearLayout>

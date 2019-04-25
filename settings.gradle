@@ -1,0 +1,4 @@
+include ':app', ':dblibrary'
+include ":apilibrary"
+project(":apilibrary").projectDir = file("../playretail_android_api/apilibrary")
+include ':androidLibraryDist'

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingTop="@dimen/contextual_small_margin"
+    android:paddingBottom="@dimen/contextual_small_margin"
+    android:gravity="center">
+
+    <ImageView
+        android:id="@+id/field_delete_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_delete_forever_black_24dp"
+        android:paddingLeft="@dimen/contextual_default_margin"
+        android:paddingRight="@dimen/contextual_default_margin"
+        />
+
+    <FrameLayout
+        android:id="@+id/repeated_field_container"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/contextual_default_margin"
+        />
+
+</LinearLayout>

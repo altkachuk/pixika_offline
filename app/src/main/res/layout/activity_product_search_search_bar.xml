@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_search"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:layout_marginLeft="@dimen/contextual_small_margin"
+    android:layout_marginRight="@dimen/contextual_small_margin"
+    android:layout_marginTop="@dimen/contextual_small_margin">
+
+    <EditText
+        android:id="@+id/product_search"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/contextual_small_margin"
+        android:layout_weight="1"
+        android:background="@color/White"
+        android:hint="@string/product_search_hint"
+        android:imeOptions="actionSearch"
+        android:inputType="text|textCapWords|textNoSuggestions"
+        android:lines="1"
+        android:paddingLeft="@dimen/contextual_default_margin"
+        android:textColorHint="@color/search_gray"
+        android:textSize="30sp" />
+
+    <ImageView
+        android:id="@+id/product_search_clear"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_gravity="right|center_vertical"
+        android:padding="@dimen/contextual_small_margin"
+        android:visibility="gone"
+        android:src="@drawable/ic_clear_search" />
+
+    <LinearLayout
+        android:id="@+id/product_search_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/contextual_small_margin"
+        android:background="@drawable/bg_search_button"
+        android:clickable="false"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:padding="@dimen/contextual_small_margin"
+            android:src="@drawable/ic_action_search"
+            android:tint="@color/White" />
+    </LinearLayout>
+
+</LinearLayout>

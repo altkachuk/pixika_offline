@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/coordinator_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <moshimoshi.cyplay.com.doublenavigation.ui.custom.LoadingView xmlns:loadingView="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/loading_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        loadingView:failed_ref="@+id/default_loadfailed_view"
+        loadingView:loaded_ref="@+id/loaded_container"
+        loadingView:loading_ref="@+id/default_loading_view"
+        loadingView:no_result_ref="@+id/default_noresult_view">
+
+        <include layout="@layout/default_loadfailed_view" />
+
+        <include layout="@layout/default_noresult_view" />
+
+        <LinearLayout
+            android:id="@+id/loaded_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/basket_delivery_mode_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <moshimoshi.cyplay.com.doublenavigation.ui.custom.BasketSummaryLayout
+                android:id="@+id/basket_summary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <TextView
+                android:id="@+id/delivery_mode_ok"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_positive_accent_color"
+                android:gravity="center"
+                android:padding="@dimen/contextual_default_margin"
+                android:text="@string/next"
+                android:textAllCaps="true"
+                android:textColor="@color/button_text_positive_accent_color"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/default_loading_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/window_black_translucent"
+            android:clickable="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ProgressBar
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center" />
+
+            <TextView
+                android:id="@+id/delivery_upgrading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/contextual_default_margin"
+                android:text="@string/delivery_upgrading_message"
+                android:textColor="@color/LightGrey" />
+
+
+        </LinearLayout>
+
+    </moshimoshi.cyplay.com.doublenavigation.ui.custom.LoadingView>
+
+
+</android.support.design.widget.CoordinatorLayout>

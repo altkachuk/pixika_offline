@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/contextual_big_margin"
+    android:layout_marginLeft="@dimen/contextual_default_margin"
+    android:layout_marginRight="@dimen/contextual_default_margin"
+    android:layout_marginTop="@dimen/contextual_small_margin"
+    android:orientation="vertical">
+
+    <include layout="@layout/form_required_label_view" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <Spinner
+            android:id="@+id/selector"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="8" />
+
+        <EditText
+            android:id="@+id/edit_text_for_error"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:enabled="false" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

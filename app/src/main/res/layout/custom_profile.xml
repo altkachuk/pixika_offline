@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+       xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/seller_image_view"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:civ_border_width="4dp"
+        app:civ_border_color="@color/colorPrimary"/>
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/seller_initiales_container"
+        android:visibility="gone">
+        <ProgressBar
+            android:id="@+id/badge_loading"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_widthPercent="100%"
+            app:layout_heightPercent="100%"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            />
+        <moshimoshi.cyplay.com.doublenavigation.ui.custom.SquareTextView
+            android:id="@+id/seller_initiales"
+            android:layout_width="match_parent"
+            app:layout_widthPercent="80%"
+            app:layout_heightPercent="80%"
+            android:layout_height="match_parent"
+            android:background="@drawable/seller_profile_shape"
+            android:gravity="center"
+            app:layout_marginLeftPercent="10%"
+            app:layout_marginTopPercent="10%"
+            android:textColor="@color/White"
+
+
+            />
+    </android.support.percent.PercentRelativeLayout>
+
+</merge>
+
+

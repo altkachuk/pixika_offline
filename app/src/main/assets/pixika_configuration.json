@@ -1,0 +1,2473 @@
+{
+	"configurations": [{
+		"id": "MAIN_CONFIGURATION",
+		"cache": {
+			"ws": {
+				"catalogue": "clear"
+			}
+		},
+		"feature": {
+			"additional_parameters": {
+				"image_service_prefix": "https://s3-eu-west-1.amazonaws.com/cy-play-clients/data/ea631551f5569f612dd702b900c596c2a99c0dfd/internal/play_retail_server/pictures3/",
+				"merchandising_file": "https:/s3-eu-west-1.amazonaws.com/cy-play-clients/data/ea631551f5569f612dd702b900c596c2a99c0dfd/internal/play_retail_server/merchandising.pdf",
+				"training_file": "https:/s3-eu-west-1.amazonaws.com/cy-play-clients/data/ea631551f5569f612dd702b900c596c2a99c0dfd/internal/play_retail_server/formation.pdf"
+			},
+			"formConfig": {
+				"forms": [
+					{
+						"tag": "customerUpdateForm",
+						"sectionsDescriptors": [
+							{
+								"tag": "profileSectionTag",
+								"permissions": 1
+							},
+							{
+								"tag": "professionalDetailsSectionTag",
+								"permissions": 1
+							},
+							{
+								"tag": "contactsSectionTag",
+								"permissions": 1
+							},
+							{
+								"tag": "addressSectionTag",
+								"permissions": 1
+							},
+							{
+								"tag": "commentSectionTag",
+								"permissions": 1
+							},
+							{
+								"tag": "mediaSectionTag",
+								"permissions": 1
+							}
+						],
+						"label": null
+					},
+					{
+						"tag": "customerCreationForm",
+						"sectionsDescriptors": [
+							{
+								"tag": "profileSectionTag",
+								"permissions": 1
+							},
+							{
+								"tag": "professionalDetailsSectionTag",
+								"permissions": 1
+							},
+							{
+								"tag": "contactsSectionTag",
+								"permissions": 1
+							},
+							{
+								"tag": "addressSectionTag",
+								"permissions": 1
+							},
+							{
+								"tag": "permissionSectionTag",
+								"permissions": 1
+							},
+							{
+								"tag": "commentSectionTag",
+								"permissions": 1
+							},
+							{
+								"tag": "mediaSectionTag",
+								"permissions": 1
+							}
+						],
+						"label": null
+					},
+					{
+						"tag": "customerShippingAddressCreationForm",
+						"sectionsDescriptors": [
+							{
+								"tag": "shippingCivilitySectionTag",
+								"permissions": 1
+							},
+							{
+								"tag": "shippingAddressSectionTag",
+								"permissions": 1
+							},
+							{
+								"tag": "shippingContactsSectionTag",
+								"permissions": 1
+							}
+						],
+						"label": null
+					}
+				],
+				"sections": [
+					{
+						"tag": "shippingCivilitySectionTag",
+						"label": "Civility",
+						"icon": null,
+						"rowsDescriptors": [
+							{
+								"tag": "last_name",
+								"permissions": 1
+							},
+							{
+								"tag": "first_name",
+								"permissions": 1
+							}
+						],
+						"templateRowDescriptor": null
+					},
+					{
+						"tag": "profileSectionTag",
+						"label": "profile_section",
+						"icon": "",
+						"rowsDescriptors": [
+							{
+								"tag": "details__gender",
+								"permissions": 0
+							},
+							{
+								"tag": "details__last_name",
+								"permissions": 1
+							},
+							{
+								"tag": "details__first_name",
+								"permissions": 1
+							}
+						],
+						"templateRowDescriptor": null
+					},
+					{
+						"tag": "professionalDetailsSectionTag",
+						"label": "organization_section",
+						"icon": "",
+						"rowsDescriptors": [
+							{
+								"tag": "professional_details__organization_name",
+								"permissions": 1
+							}
+						],
+						"templateRowDescriptor": null
+					},
+					{
+						"tag": "shippingAddressSectionTag",
+						"label": "Address",
+						"icon": "ic_perm_phone_msg.png",
+						"rowsDescriptors": [
+							{
+								"tag": "mail__address1",
+								"permissions": 0
+							},
+							{
+								"tag": "mail__address2",
+								"permissions": 0
+							},
+							{
+								"tag": "mail__address3",
+								"permissions": 0
+							},
+							{
+								"tag": "mail__address4",
+								"permissions": 0
+							},
+							{
+								"tag": "mail__zipcode",
+								"permissions": 0
+							},
+							{
+								"tag": "mail__city",
+								"permissions": 0
+							},
+							{
+								"tag": "mail__country",
+								"permissions": 1
+							}
+						],
+						"templateRowDescriptor": null
+					},
+					{
+						"tag": "contactsSectionTag",
+						"label": "contacts_section",
+						"icon": "",
+						"rowsDescriptors": [
+							{
+								"tag": "details__phone__mobile",
+								"permissions": 0
+							},
+							{
+								"tag": "details__email__professional",
+								"permissions": 1
+							}
+						],
+						"templateRowDescriptor": null
+					},
+					{
+						"tag": "shippingContactsSectionTag",
+						"label": "Contacts",
+						"icon": "",
+						"rowsDescriptors": [
+							{
+								"tag": "phone__mobile",
+								"permissions": 0
+							},
+							{
+								"tag": "email__personal",
+								"permissions": 1
+							}
+						],
+						"templateRowDescriptor": null
+					},
+					{
+						"tag": "addressSectionTag",
+						"label": "address_section",
+						"icon": "ic_perm_phone_msg.png",
+						"rowsDescriptors": [
+							{
+								"tag": "details__mail__address1",
+								"permissions": 0
+							},
+							{
+								"tag": "details__mail__address2",
+								"permissions": 0
+							},
+							{
+								"tag": "details__mail__zipcode",
+								"permissions": 0
+							},
+							{
+								"tag": "details__mail__city",
+								"permissions": 0
+							},
+							{
+								"tag": "details__mail__country",
+								"permissions": 1
+							}
+						],
+						"templateRowDescriptor": null
+					},
+					{
+						"tag": "permissionSectionTag",
+						"label": "permission_section",
+						"icon": "",
+						"rowsDescriptors": [
+							{
+								"tag": "details__creation_permission",
+								"permissions": 0
+							}
+						],
+						"templateRowDescriptor": null
+					},
+					{
+						"tag": "commentSectionTag",
+						"label": "comment_section",
+						"icon": "",
+						"rowsDescriptors": [
+							{
+								"tag": "details__comment",
+								"permissions": 0
+							}
+						],
+						"templateRowDescriptor": null
+					},
+					{
+						"tag": "mediaSectionTag",
+						"label": "media_section",
+						"icon": "",
+						"rowsDescriptors": [
+							{
+								"tag": "details__medias",
+								"permissions": 0
+							}
+						],
+						"templateRowDescriptor": null
+					},
+					{
+						"tag": "measurementSectionTag",
+						"label": "Measurement",
+						"icon": "",
+						"rowsDescriptors": [
+							{
+								"tag": "details__measurements__shoe_size__value",
+								"permissions": 0
+							},
+							{
+								"tag": "details__main_shop_id",
+								"permissions": 0
+							},
+							{
+								"tag": "details__contactability__email",
+								"permissions": 0
+							}
+						],
+						"templateRowDescriptor": null
+					}
+				],
+				"rows": [
+					{
+						"tag": "email__personal",
+						"label": "Email",
+						"placeholder": "Add an email",
+						"defaultValue": "",
+						"type": "email",
+						"values": [],
+						"values_source": null,
+						"validator": "^\\s*\\w+(?:\\.{0,1}[\\w-]+)*@[a-zA-Z0-9]+(?:[-.][a-zA-Z0-9]+)*\\.[a-zA-Z]+\\s*$"
+					},
+					{
+						"tag": "details__mail__country_ISO_3166_1_alpha_2",
+						"label": "Country",
+						"placeholder": null,
+						"defaultValue": "",
+						"type": "single_selector",
+						"values": [
+							{
+								"key": "FR",
+								"label": null
+							},
+							{
+								"key": "DE",
+								"label": null
+							},
+							{
+								"key": "IT",
+								"label": null
+							}
+						],
+						"values_source": null,
+						"validator": null
+					},
+					{
+						"tag": "phone__home",
+						"label": "Landline",
+						"placeholder": "Add a phone number",
+						"defaultValue": "",
+						"type": "phone",
+						"values": [],
+						"values_source": null,
+						"validator": null
+					},
+					{
+						"tag": "details__contactability__email",
+						"label": "I would like to receive special offers from TEXTO by email.",
+						"placeholder": null,
+						"defaultValue": "True",
+						"type": "boolean_checkbox",
+						"values": [],
+						"values_source": null,
+						"validator": null
+					},
+					{
+						"tag": "details__main_shop_id",
+						"label": "Main shop",
+						"placeholder": null,
+						"defaultValue": "",
+						"type": "single_selector",
+						"values": [],
+						"values_source": "shops",
+						"validator": null
+					},
+					{
+						"tag": "details__gender",
+						"label": "details_gender",
+						"placeholder": null,
+						"defaultValue": "F",
+						"type": "uniqueRadioChoice",
+						"values": [
+							{
+								"key": "F",
+								"label": "details_gender_female"
+							},
+							{
+								"key": "M",
+								"label": "details_gender_male"
+							}
+						],
+						"values_source": null,
+						"validator": null
+					},
+					{
+						"tag": "details__email__personal",
+						"label": "details_email_professional",
+						"placeholder": "details_email_professional_placeholder",
+						"defaultValue": "",
+						"type": "email",
+						"values": [],
+						"values_source": null,
+						"validator": "^\\s*\\w+(?:\\.{0,1}[\\w-]+)*@[a-zA-Z0-9]+(?:[-.][a-zA-Z0-9]+)*\\.[a-zA-Z]+\\s*$"
+					},
+					{
+						"tag": "details__email__professional",
+						"label": "details_email_professional",
+						"placeholder": "details_email_professional_placeholder",
+						"defaultValue": "",
+						"type": "email",
+						"values": [],
+						"values_source": null,
+						"validator": "^\\s*\\w+(?:\\.{0,1}[\\w-]+)*@[a-zA-Z0-9]+(?:[-.][a-zA-Z0-9]+)*\\.[a-zA-Z]+\\s*$"
+					},
+					{
+						"tag": "details__first_name",
+						"label": "details_first_name",
+						"placeholder": "details_first_name_placeholder",
+						"defaultValue": "",
+						"type": "string",
+						"values": [],
+						"values_source": null,
+						"validator": null
+					},
+					{
+						"tag": "details__middle_name",
+						"label": "Midlle Name",
+						"placeholder": "Middle name",
+						"defaultValue": "",
+						"type": "string",
+						"values": [],
+						"values_source": null,
+						"validator": null
+					},
+					{
+						"tag": "first_name",
+						"label": "First name",
+						"placeholder": "First name",
+						"defaultValue": "",
+						"type": "string",
+						"values": [],
+						"values_source": null,
+						"validator": null
+					},
+					{
+						"tag": "details__measurements__shoe_size__value",
+						"label": null,
+						"placeholder": null,
+						"defaultValue": "",
+						"type": "double",
+						"values": [],
+						"values_source": null,
+						"validator": null
+					},
+					{
+						"tag": "details__last_name",
+						"label": "details_last_name",
+						"placeholder": "details_last_name_placeholder",
+						"defaultValue": "",
+						"type": "string",
+						"values": [],
+						"values_source": null,
+						"validator": null
+					},
+					{
+						"tag": "last_name",
+						"label": "Last name",
+						"placeholder": "Ajouter un nom",
+						"defaultValue": "",
+						"type": "string",
+						"values": [],
+						"values_source": null,
+						"validator": null
+					},
+					{
+						"tag": "professional_details__organization_name",
+						"label": "professional_details_organization_name",
+						"placeholder": "professional_details_organization_name",
+						"defaultValue": "",
+						"type": "string",
+						"values": [],
+						"values_source": null,
+						"validator": null
+					},
+					{
+						"tag": "details__emails",
+						"label": "Emails",
+						"placeholder": "name@domain.com",
+						"defaultValue": "",
+						"type": "email",
+						"values": [],
+						"values_source": null,
+						"validator": "^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$"
+					},
+					{
+						"tag": "details__mail__address1",
+						"label": "details_mail_address1",
+						"placeholder": "details_mail_address1_placeholder",
+						"defaultValue": "",
+						"type": "address_auto_complete",
+						"values": [],
+						"values_source": null,
+						"validator": "^.{1,38}$"
+					},
+					{
+						"tag": "mail__address1",
+						"label": "Address 1",
+						"placeholder": "Address 1",
+						"defaultValue": "",
+						"type": "address_auto_complete",
+						"values": [],
+						"values_source": null,
+						"validator": "^.{1,38}$"
+					},
+					{
+						"tag": "details__mail__address2",
+						"label": "details_mail_address2",
+						"placeholder": "details_mail_address2_placeholder",
+						"defaultValue": "",
+						"type": "address2",
+						"values": [],
+						"values_source": null,
+						"validator": "^.{1,38}$"
+					},
+					{
+						"tag": "mail__address2",
+						"label": "Address 2",
+						"placeholder": "Address 2",
+						"defaultValue": "",
+						"type": "address2",
+						"values": [],
+						"values_source": null,
+						"validator": "^.{1,38}$"
+					},
+					{
+						"tag": "details__mail__address3",
+						"label": "Address 3",
+						"placeholder": "Address 3",
+						"defaultValue": "",
+						"type": "address3",
+						"values": [],
+						"values_source": null,
+						"validator": "^.{1,38}$"
+					},
+					{
+						"tag": "mail__address3",
+						"label": "Address 3",
+						"placeholder": "Address 3",
+						"defaultValue": "",
+						"type": "address3",
+						"values": [],
+						"values_source": null,
+						"validator": "^.{1,38}$"
+					},
+					{
+						"tag": "details__mail__address4",
+						"label": "Address 4",
+						"placeholder": "Les Vignes",
+						"defaultValue": "",
+						"type": "address4",
+						"values": [],
+						"values_source": null,
+						"validator": "^.{1,38}$"
+					},
+					{
+						"tag": "mail__address4",
+						"label": "Address 4",
+						"placeholder": "Address 4",
+						"defaultValue": "",
+						"type": "address4",
+						"values": [],
+						"values_source": null,
+						"validator": "^.{1,38}$"
+					},
+					{
+						"tag": "details__mail__zipcode",
+						"label": "details_mail_zipcode",
+						"placeholder": "details_mail_zipcode_placeholder",
+						"defaultValue": "",
+						"type": "postcode_auto_complete",
+						"values": [],
+						"values_source": null,
+						"validator": null
+					},
+					{
+						"tag": "mail__zipcode",
+						"label": "Zip code",
+						"placeholder": "Add a zipcode",
+						"defaultValue": "",
+						"type": "postcode_auto_complete",
+						"values": [],
+						"values_source": null,
+						"validator": null
+					},
+					{
+						"tag": "details__mail__city",
+						"label": "details_mail_city",
+						"placeholder": "details_mail_city_placeholder",
+						"defaultValue": "",
+						"type": "city_auto_complete",
+						"values": [],
+						"values_source": null,
+						"validator": null
+					},
+					{
+						"tag": "mail__city",
+						"label": "City",
+						"placeholder": "Add a city",
+						"defaultValue": "",
+						"type": "city_auto_complete",
+						"values": [],
+						"values_source": null,
+						"validator": null
+					},
+					{
+						"tag": "details__mail__country",
+						"label": "details_mail_country",
+						"placeholder": "details_mail_country_placeholder",
+						"defaultValue": "FRA",
+						"type": "single_selector",
+						"values": [{
+							"label": "France",
+							"key": "FRA",
+							"country-code": "250"
+						},{
+							"label": "United Kingdom of Great Britain and Northern Ireland",
+							"key": "GBR",
+							"country-code": "826"
+						}, {
+							"label": "Germany",
+							"key": "DEU",
+							"country-code": "276"
+						}, {
+							"label": "Afghanistan",
+							"key": "AFG",
+							"country-code": "004"
+						}, {
+							"label": "Åland Islands",
+							"key": "ALA",
+							"country-code": "248"
+						}, {
+							"label": "Albania",
+							"key": "ALB",
+							"country-code": "008"
+						}, {
+							"label": "Algeria",
+							"key": "DZA",
+							"country-code": "012"
+						}, {
+							"label": "American Samoa",
+							"key": "ASM",
+							"country-code": "016"
+						}, {
+							"label": "Andorra",
+							"key": "AND",
+							"country-code": "020"
+						}, {
+							"label": "Angola",
+							"key": "AGO",
+							"country-code": "024"
+						}, {
+							"label": "Anguilla",
+							"key": "AIA",
+							"country-code": "660"
+						}, {
+							"label": "Antarctica",
+							"key": "ATA",
+							"country-code": "010"
+						}, {
+							"label": "Antigua and Barbuda",
+							"key": "ATG",
+							"country-code": "028"
+						}, {
+							"label": "Argentina",
+							"key": "ARG",
+							"country-code": "032"
+						}, {
+							"label": "Armenia",
+							"key": "ARM",
+							"country-code": "051"
+						}, {
+							"label": "Aruba",
+							"key": "ABW",
+							"country-code": "533"
+						}, {
+							"label": "Australia",
+							"key": "AUS",
+							"country-code": "036"
+						}, {
+							"label": "Austria",
+							"key": "AUT",
+							"country-code": "040"
+						}, {
+							"label": "Azerbaijan",
+							"key": "AZE",
+							"country-code": "031"
+						}, {
+							"label": "Bahamas",
+							"key": "BHS",
+							"country-code": "044"
+						}, {
+							"label": "Bahrain",
+							"key": "BHR",
+							"country-code": "048"
+						}, {
+							"label": "Bangladesh",
+							"key": "BGD",
+							"country-code": "050"
+						}, {
+							"label": "Barbados",
+							"key": "BRB",
+							"country-code": "052"
+						}, {
+							"label": "Belarus",
+							"key": "BLR",
+							"country-code": "112"
+						}, {
+							"label": "Belgium",
+							"key": "BEL",
+							"country-code": "056"
+						}, {
+							"label": "Belize",
+							"key": "BLZ",
+							"country-code": "084"
+						}, {
+							"label": "Benin",
+							"key": "BEN",
+							"country-code": "204"
+						}, {
+							"label": "Bermuda",
+							"key": "BMU",
+							"country-code": "060"
+						}, {
+							"label": "Bhutan",
+							"key": "BTN",
+							"country-code": "064"
+						}, {
+							"label": "Bolivia (Plurinational State of)",
+							"key": "BOL",
+							"country-code": "068"
+						}, {
+							"label": "Bonaire, Sint Eustatius and Saba",
+							"key": "BES",
+							"country-code": "535"
+						}, {
+							"label": "Bosnia and Herzegovina",
+							"key": "BIH",
+							"country-code": "070"
+						}, {
+							"label": "Botswana",
+							"key": "BWA",
+							"country-code": "072"
+						}, {
+							"label": "Bouvet Island",
+							"key": "BVT",
+							"country-code": "074"
+						}, {
+							"label": "Brazil",
+							"key": "BRA",
+							"country-code": "076"
+						}, {
+							"label": "British Indian Ocean Territory",
+							"key": "IOT",
+							"country-code": "086"
+						}, {
+							"label": "Brunei Darussalam",
+							"key": "BRN",
+							"country-code": "096"
+						}, {
+							"label": "Bulgaria",
+							"key": "BGR",
+							"country-code": "100"
+						}, {
+							"label": "Burkina Faso",
+							"key": "BFA",
+							"country-code": "854"
+						}, {
+							"label": "Burundi",
+							"key": "BDI",
+							"country-code": "108"
+						}, {
+							"label": "Cabo Verde",
+							"key": "CPV",
+							"country-code": "132"
+						}, {
+							"label": "Cambodia",
+							"key": "KHM",
+							"country-code": "116"
+						}, {
+							"label": "Cameroon",
+							"key": "CMR",
+							"country-code": "120"
+						}, {
+							"label": "Canada",
+							"key": "CAN",
+							"country-code": "124"
+						}, {
+							"label": "Cayman Islands",
+							"key": "CYM",
+							"country-code": "136"
+						}, {
+							"label": "Central African Republic",
+							"key": "CAF",
+							"country-code": "140"
+						}, {
+							"label": "Chad",
+							"key": "TCD",
+							"country-code": "148"
+						}, {
+							"label": "Chile",
+							"key": "CHL",
+							"country-code": "152"
+						}, {
+							"label": "China",
+							"key": "CHN",
+							"country-code": "156"
+						}, {
+							"label": "Christmas Island",
+							"key": "CXR",
+							"country-code": "162"
+						}, {
+							"label": "Cocos (Keeling) Islands",
+							"key": "CCK",
+							"country-code": "166"
+						}, {
+							"label": "Colombia",
+							"key": "COL",
+							"country-code": "170"
+						}, {
+							"label": "Comoros",
+							"key": "COM",
+							"country-code": "174"
+						}, {
+							"label": "Congo",
+							"key": "COG",
+							"country-code": "178"
+						}, {
+							"label": "Congo (Democratic Republic of the)",
+							"key": "COD",
+							"country-code": "180"
+						}, {
+							"label": "Cook Islands",
+							"key": "COK",
+							"country-code": "184"
+						}, {
+							"label": "Costa Rica",
+							"key": "CRI",
+							"country-code": "188"
+						}, {
+							"label": "Côte d'Ivoire",
+							"key": "CIV",
+							"country-code": "384"
+						}, {
+							"label": "Croatia",
+							"key": "HRV",
+							"country-code": "191"
+						}, {
+							"label": "Cuba",
+							"key": "CUB",
+							"country-code": "192"
+						}, {
+							"label": "Curaçao",
+							"key": "CUW",
+							"country-code": "531"
+						}, {
+							"label": "Cyprus",
+							"key": "CYP",
+							"country-code": "196"
+						}, {
+							"label": "Czechia",
+							"key": "CZE",
+							"country-code": "203"
+						}, {
+							"label": "Denmark",
+							"key": "DNK",
+							"country-code": "208"
+						}, {
+							"label": "Djibouti",
+							"key": "DJI",
+							"country-code": "262"
+						}, {
+							"label": "Dominica",
+							"key": "DMA",
+							"country-code": "212"
+						}, {
+							"label": "Dominican Republic",
+							"key": "DOM",
+							"country-code": "214"
+						}, {
+							"label": "Ecuador",
+							"key": "ECU",
+							"country-code": "218"
+						}, {
+							"label": "Egypt",
+							"key": "EGY",
+							"country-code": "818"
+						}, {
+							"label": "El Salvador",
+							"key": "SLV",
+							"country-code": "222"
+						}, {
+							"label": "Equatorial Guinea",
+							"key": "GNQ",
+							"country-code": "226"
+						}, {
+							"label": "Eritrea",
+							"key": "ERI",
+							"country-code": "232"
+						}, {
+							"label": "Estonia",
+							"key": "EST",
+							"country-code": "233"
+						}, {
+							"label": "Eswatini",
+							"key": "SWZ",
+							"country-code": "748"
+						}, {
+							"label": "Ethiopia",
+							"key": "ETH",
+							"country-code": "231"
+						}, {
+							"label": "Falkland Islands (Malvinas)",
+							"key": "FLK",
+							"country-code": "238"
+						}, {
+							"label": "Faroe Islands",
+							"key": "FRO",
+							"country-code": "234"
+						}, {
+							"label": "Fiji",
+							"key": "FJI",
+							"country-code": "242"
+						}, {
+							"label": "Finland",
+							"key": "FIN",
+							"country-code": "246"
+						}, {
+							"label": "French Guiana",
+							"key": "GUF",
+							"country-code": "254"
+						}, {
+							"label": "French Polynesia",
+							"key": "PYF",
+							"country-code": "258"
+						}, {
+							"label": "French Southern Territories",
+							"key": "ATF",
+							"country-code": "260"
+						}, {
+							"label": "Gabon",
+							"key": "GAB",
+							"country-code": "266"
+						}, {
+							"label": "Gambia",
+							"key": "GMB",
+							"country-code": "270"
+						}, {
+							"label": "Georgia",
+							"key": "GEO",
+							"country-code": "268"
+						}, {
+							"label": "Ghana",
+							"key": "GHA",
+							"country-code": "288"
+						}, {
+							"label": "Gibraltar",
+							"key": "GIB",
+							"country-code": "292"
+						}, {
+							"label": "Greece",
+							"key": "GRC",
+							"country-code": "300"
+						}, {
+							"label": "Greenland",
+							"key": "GRL",
+							"country-code": "304"
+						}, {
+							"label": "Grenada",
+							"key": "GRD",
+							"country-code": "308"
+						}, {
+							"label": "Guadeloupe",
+							"key": "GLP",
+							"country-code": "312"
+						}, {
+							"label": "Guam",
+							"key": "GUM",
+							"country-code": "316"
+						}, {
+							"label": "Guatemala",
+							"key": "GTM",
+							"country-code": "320"
+						}, {
+							"label": "Guernsey",
+							"key": "GGY",
+							"country-code": "831"
+						}, {
+							"label": "Guinea",
+							"key": "GIN",
+							"country-code": "324"
+						}, {
+							"label": "Guinea-Bissau",
+							"key": "GNB",
+							"country-code": "624"
+						}, {
+							"label": "Guyana",
+							"key": "GUY",
+							"country-code": "328"
+						}, {
+							"label": "Haiti",
+							"key": "HTI",
+							"country-code": "332"
+						}, {
+							"label": "Heard Island and McDonald Islands",
+							"key": "HMD",
+							"country-code": "334"
+						}, {
+							"label": "Holy See",
+							"key": "VAT",
+							"country-code": "336"
+						}, {
+							"label": "Honduras",
+							"key": "HND",
+							"country-code": "340"
+						}, {
+							"label": "Hong Kong",
+							"key": "HKG",
+							"country-code": "344"
+						}, {
+							"label": "Hungary",
+							"key": "HUN",
+							"country-code": "348"
+						}, {
+							"label": "Iceland",
+							"key": "ISL",
+							"country-code": "352"
+						}, {
+							"label": "India",
+							"key": "IND",
+							"country-code": "356"
+						}, {
+							"label": "Indonesia",
+							"key": "IDN",
+							"country-code": "360"
+						}, {
+							"label": "Iran (Islamic Republic of)",
+							"key": "IRN",
+							"country-code": "364"
+						}, {
+							"label": "Iraq",
+							"key": "IRQ",
+							"country-code": "368"
+						}, {
+							"label": "Ireland",
+							"key": "IRL",
+							"country-code": "372"
+						}, {
+							"label": "Isle of Man",
+							"key": "IMN",
+							"country-code": "833"
+						}, {
+							"label": "Israel",
+							"key": "ISR",
+							"country-code": "376"
+						}, {
+							"label": "Italy",
+							"key": "ITA",
+							"country-code": "380"
+						}, {
+							"label": "Jamaica",
+							"key": "JAM",
+							"country-code": "388"
+						}, {
+							"label": "Japan",
+							"key": "JPN",
+							"country-code": "392"
+						}, {
+							"label": "Jersey",
+							"key": "JEY",
+							"country-code": "832"
+						}, {
+							"label": "Jordan",
+							"key": "JOR",
+							"country-code": "400"
+						}, {
+							"label": "Kazakhstan",
+							"key": "KAZ",
+							"country-code": "398"
+						}, {
+							"label": "Kenya",
+							"key": "KEN",
+							"country-code": "404"
+						}, {
+							"label": "Kiribati",
+							"key": "KIR",
+							"country-code": "296"
+						}, {
+							"label": "Korea (Democratic People's Republic of)",
+							"key": "PRK",
+							"country-code": "408"
+						}, {
+							"label": "Korea (Republic of)",
+							"key": "KOR",
+							"country-code": "410"
+						}, {
+							"label": "Kuwait",
+							"key": "KWT",
+							"country-code": "414"
+						}, {
+							"label": "Kyrgyzstan",
+							"key": "KGZ",
+							"country-code": "417"
+						}, {
+							"label": "Lao People's Democratic Republic",
+							"key": "LAO",
+							"country-code": "418"
+						}, {
+							"label": "Latvia",
+							"key": "LVA",
+							"country-code": "428"
+						}, {
+							"label": "Lebanon",
+							"key": "LBN",
+							"country-code": "422"
+						}, {
+							"label": "Lesotho",
+							"key": "LSO",
+							"country-code": "426"
+						}, {
+							"label": "Liberia",
+							"key": "LBR",
+							"country-code": "430"
+						}, {
+							"label": "Libya",
+							"key": "LBY",
+							"country-code": "434"
+						}, {
+							"label": "Liechtenstein",
+							"key": "LIE",
+							"country-code": "438"
+						}, {
+							"label": "Lithuania",
+							"key": "LTU",
+							"country-code": "440"
+						}, {
+							"label": "Luxembourg",
+							"key": "LUX",
+							"country-code": "442"
+						}, {
+							"label": "Macao",
+							"key": "MAC",
+							"country-code": "446"
+						}, {
+							"label": "Macedonia (the former Yugoslav Republic of)",
+							"key": "MKD",
+							"country-code": "807"
+						}, {
+							"label": "Madagascar",
+							"key": "MDG",
+							"country-code": "450"
+						}, {
+							"label": "Malawi",
+							"key": "MWI",
+							"country-code": "454"
+						}, {
+							"label": "Malaysia",
+							"key": "MYS",
+							"country-code": "458"
+						}, {
+							"label": "Maldives",
+							"key": "MDV",
+							"country-code": "462"
+						}, {
+							"label": "Mali",
+							"key": "MLI",
+							"country-code": "466"
+						}, {
+							"label": "Malta",
+							"key": "MLT",
+							"country-code": "470"
+						}, {
+							"label": "Marshall Islands",
+							"key": "MHL",
+							"country-code": "584"
+						}, {
+							"label": "Martinique",
+							"key": "MTQ",
+							"country-code": "474"
+						}, {
+							"label": "Mauritania",
+							"key": "MRT",
+							"country-code": "478"
+						}, {
+							"label": "Mauritius",
+							"key": "MUS",
+							"country-code": "480"
+						}, {
+							"label": "Mayotte",
+							"key": "MYT",
+							"country-code": "175"
+						}, {
+							"label": "Mexico",
+							"key": "MEX",
+							"country-code": "484"
+						}, {
+							"label": "Micronesia (Federated States of)",
+							"key": "FSM",
+							"country-code": "583"
+						}, {
+							"label": "Moldova (Republic of)",
+							"key": "MDA",
+							"country-code": "498"
+						}, {
+							"label": "Monaco",
+							"key": "MCO",
+							"country-code": "492"
+						}, {
+							"label": "Mongolia",
+							"key": "MNG",
+							"country-code": "496"
+						}, {
+							"label": "Montenegro",
+							"key": "MNE",
+							"country-code": "499"
+						}, {
+							"label": "Montserrat",
+							"key": "MSR",
+							"country-code": "500"
+						}, {
+							"label": "Morocco",
+							"key": "MAR",
+							"country-code": "504"
+						}, {
+							"label": "Mozambique",
+							"key": "MOZ",
+							"country-code": "508"
+						}, {
+							"label": "Myanmar",
+							"key": "MMR",
+							"country-code": "104"
+						}, {
+							"label": "Namibia",
+							"key": "NAM",
+							"country-code": "516"
+						}, {
+							"label": "Nauru",
+							"key": "NRU",
+							"country-code": "520"
+						}, {
+							"label": "Nepal",
+							"key": "NPL",
+							"country-code": "524"
+						}, {
+							"label": "Netherlands",
+							"key": "NLD",
+							"country-code": "528"
+						}, {
+							"label": "New Caledonia",
+							"key": "NCL",
+							"country-code": "540"
+						}, {
+							"label": "New Zealand",
+							"key": "NZL",
+							"country-code": "554"
+						}, {
+							"label": "Nicaragua",
+							"key": "NIC",
+							"country-code": "558"
+						}, {
+							"label": "Niger",
+							"key": "NER",
+							"country-code": "562"
+						}, {
+							"label": "Nigeria",
+							"key": "NGA",
+							"country-code": "566"
+						}, {
+							"label": "Niue",
+							"key": "NIU",
+							"country-code": "570"
+						}, {
+							"label": "Norfolk Island",
+							"key": "NFK",
+							"country-code": "574"
+						}, {
+							"label": "Northern Mariana Islands",
+							"key": "MNP",
+							"country-code": "580"
+						}, {
+							"label": "Norway",
+							"key": "NOR",
+							"country-code": "578"
+						}, {
+							"label": "Oman",
+							"key": "OMN",
+							"country-code": "512"
+						}, {
+							"label": "Pakistan",
+							"key": "PAK",
+							"country-code": "586"
+						}, {
+							"label": "Palau",
+							"key": "PLW",
+							"country-code": "585"
+						}, {
+							"label": "Palestine, State of",
+							"key": "PSE",
+							"country-code": "275"
+						}, {
+							"label": "Panama",
+							"key": "PAN",
+							"country-code": "591"
+						}, {
+							"label": "Papua New Guinea",
+							"key": "PNG",
+							"country-code": "598"
+						}, {
+							"label": "Paraguay",
+							"key": "PRY",
+							"country-code": "600"
+						}, {
+							"label": "Peru",
+							"key": "PER",
+							"country-code": "604"
+						}, {
+							"label": "Philippines",
+							"key": "PHL",
+							"country-code": "608"
+						}, {
+							"label": "Pitcairn",
+							"key": "PCN",
+							"country-code": "612"
+						}, {
+							"label": "Poland",
+							"key": "POL",
+							"country-code": "616"
+						}, {
+							"label": "Portugal",
+							"key": "PRT",
+							"country-code": "620"
+						}, {
+							"label": "Puerto Rico",
+							"key": "PRI",
+							"country-code": "630"
+						}, {
+							"label": "Qatar",
+							"key": "QAT",
+							"country-code": "634"
+						}, {
+							"label": "Réunion",
+							"key": "REU",
+							"country-code": "638"
+						}, {
+							"label": "Romania",
+							"key": "ROU",
+							"country-code": "642"
+						}, {
+							"label": "Russian Federation",
+							"key": "RUS",
+							"country-code": "643"
+						}, {
+							"label": "Rwanda",
+							"key": "RWA",
+							"country-code": "646"
+						}, {
+							"label": "Saint Barthélemy",
+							"key": "BLM",
+							"country-code": "652"
+						}, {
+							"label": "Saint Helena, Ascension and Tristan da Cunha",
+							"key": "SHN",
+							"country-code": "654"
+						}, {
+							"label": "Saint Kitts and Nevis",
+							"key": "KNA",
+							"country-code": "659"
+						}, {
+							"label": "Saint Lucia",
+							"key": "LCA",
+							"country-code": "662"
+						}, {
+							"label": "Saint Martin (French part)",
+							"key": "MAF",
+							"country-code": "663"
+						}, {
+							"label": "Saint Pierre and Miquelon",
+							"key": "SPM",
+							"country-code": "666"
+						}, {
+							"label": "Saint Vincent and the Grenadines",
+							"key": "VCT",
+							"country-code": "670"
+						}, {
+							"label": "Samoa",
+							"key": "WSM",
+							"country-code": "882"
+						}, {
+							"label": "San Marino",
+							"key": "SMR",
+							"country-code": "674"
+						}, {
+							"label": "Sao Tome and Principe",
+							"key": "STP",
+							"country-code": "678"
+						}, {
+							"label": "Saudi Arabia",
+							"key": "SAU",
+							"country-code": "682"
+						}, {
+							"label": "Senegal",
+							"key": "SEN",
+							"country-code": "686"
+						}, {
+							"label": "Serbia",
+							"key": "SRB",
+							"country-code": "688"
+						}, {
+							"label": "Seychelles",
+							"key": "SYC",
+							"country-code": "690"
+						}, {
+							"label": "Sierra Leone",
+							"key": "SLE",
+							"country-code": "694"
+						}, {
+							"label": "Singapore",
+							"key": "SGP",
+							"country-code": "702"
+						}, {
+							"label": "Sint Maarten (Dutch part)",
+							"key": "SXM",
+							"country-code": "534"
+						}, {
+							"label": "Slovakia",
+							"key": "SVK",
+							"country-code": "703"
+						}, {
+							"label": "Slovenia",
+							"key": "SVN",
+							"country-code": "705"
+						}, {
+							"label": "Solomon Islands",
+							"key": "SLB",
+							"country-code": "090"
+						}, {
+							"label": "Somalia",
+							"key": "SOM",
+							"country-code": "706"
+						}, {
+							"label": "South Africa",
+							"key": "ZAF",
+							"country-code": "710"
+						}, {
+							"label": "South Georgia and the South Sandwich Islands",
+							"key": "SGS",
+							"country-code": "239"
+						}, {
+							"label": "South Sudan",
+							"key": "SSD",
+							"country-code": "728"
+						}, {
+							"label": "Spain",
+							"key": "ESP",
+							"country-code": "724"
+						}, {
+							"label": "Sri Lanka",
+							"key": "LKA",
+							"country-code": "144"
+						}, {
+							"label": "Sudan",
+							"key": "SDN",
+							"country-code": "729"
+						}, {
+							"label": "Suriname",
+							"key": "SUR",
+							"country-code": "740"
+						}, {
+							"label": "Svalbard and Jan Mayen",
+							"key": "SJM",
+							"country-code": "744"
+						}, {
+							"label": "Sweden",
+							"key": "SWE",
+							"country-code": "752"
+						}, {
+							"label": "Switzerland",
+							"key": "CHE",
+							"country-code": "756"
+						}, {
+							"label": "Syrian Arab Republic",
+							"key": "SYR",
+							"country-code": "760"
+						}, {
+							"label": "Taiwan, Province of China",
+							"key": "TWN",
+							"country-code": "158"
+						}, {
+							"label": "Tajikistan",
+							"key": "TJK",
+							"country-code": "762"
+						}, {
+							"label": "Tanzania, United Republic of",
+							"key": "TZA",
+							"country-code": "834"
+						}, {
+							"label": "Thailand",
+							"key": "THA",
+							"country-code": "764"
+						}, {
+							"label": "Timor-Leste",
+							"key": "TLS",
+							"country-code": "626"
+						}, {
+							"label": "Togo",
+							"key": "TGO",
+							"country-code": "768"
+						}, {
+							"label": "Tokelau",
+							"key": "TKL",
+							"country-code": "772"
+						}, {
+							"label": "Tonga",
+							"key": "TON",
+							"country-code": "776"
+						}, {
+							"label": "Trinidad and Tobago",
+							"key": "TTO",
+							"country-code": "780"
+						}, {
+							"label": "Tunisia",
+							"key": "TUN",
+							"country-code": "788"
+						}, {
+							"label": "Turkey",
+							"key": "TUR",
+							"country-code": "792"
+						}, {
+							"label": "Turkmenistan",
+							"key": "TKM",
+							"country-code": "795"
+						}, {
+							"label": "Turks and Caicos Islands",
+							"key": "TCA",
+							"country-code": "796"
+						}, {
+							"label": "Tuvalu",
+							"key": "TUV",
+							"country-code": "798"
+						}, {
+							"label": "Uganda",
+							"key": "UGA",
+							"country-code": "800"
+						}, {
+							"label": "Ukraine",
+							"key": "UKR",
+							"country-code": "804"
+						}, {
+							"label": "United Arab Emirates",
+							"key": "ARE",
+							"country-code": "784"
+						}, {
+							"label": "United States of America",
+							"key": "USA",
+							"country-code": "840"
+						}, {
+							"label": "United States Minor Outlying Islands",
+							"key": "UMI",
+							"country-code": "581"
+						}, {
+							"label": "Uruguay",
+							"key": "URY",
+							"country-code": "858"
+						}, {
+							"label": "Uzbekistan",
+							"key": "UZB",
+							"country-code": "860"
+						}, {
+							"label": "Vanuatu",
+							"key": "VUT",
+							"country-code": "548"
+						}, {
+							"label": "Venezuela (Bolivarian Republic of)",
+							"key": "VEN",
+							"country-code": "862"
+						}, {
+							"label": "Viet Nam",
+							"key": "VNM",
+							"country-code": "704"
+						}, {
+							"label": "Virgin Islands (British)",
+							"key": "VGB",
+							"country-code": "092"
+						}, {
+							"label": "Virgin Islands (U.S.)",
+							"key": "VIR",
+							"country-code": "850"
+						}, {
+							"label": "Wallis and Futuna",
+							"key": "WLF",
+							"country-code": "876"
+						}, {
+							"label": "Western Sahara",
+							"key": "ESH",
+							"country-code": "732"
+						}, {
+							"label": "Yemen",
+							"key": "YEM",
+							"country-code": "887"
+						}, {
+							"label": "Zambia",
+							"key": "ZMB",
+							"country-code": "894"
+						}, {
+							"label": "Zimbabwe",
+							"key": "ZWE",
+							"country-code": "716"
+						}],
+						"values_source": "country",
+						"validator": null
+					},
+					{
+						"tag": "mail__country",
+						"label": "Country",
+						"placeholder": "Add a country",
+						"defaultValue": "FR",
+						"type": "single_selector",
+						"values": [
+							{
+								"key": "FR",
+								"label": null
+							},
+							{
+								"key": "DE",
+								"label": null
+							},
+							{
+								"key": "IT",
+								"label": null
+							}
+						],
+						"values_source": "country",
+						"validator": null
+					},
+					{
+						"tag": "details__phone__home",
+						"label": "Landline",
+						"placeholder": "Add a phone number",
+						"defaultValue": "",
+						"type": "phone",
+						"values": [],
+						"values_source": null,
+						"validator": null
+					},
+					{
+						"tag": "details__phone__mobile",
+						"label": "details_phone_mobile",
+						"placeholder": "details_phone_mobile_placeholder",
+						"defaultValue": "",
+						"type": "phone",
+						"values": [],
+						"values_source": null,
+						"validator": null
+					},
+					{
+						"tag": "phone__mobile",
+						"label": "Mobile",
+						"placeholder": "Add a mobile phone number",
+						"defaultValue": "",
+						"type": "phone",
+						"values": [],
+						"values_source": null,
+						"validator": null
+					},
+					{
+						"tag": "details__creation_permission",
+						"label": "details_creation_permission",
+						"placeholder": null,
+						"defaultValue": "True",
+						"type": "boolean_checkbox",
+						"values": [],
+						"values_source": null,
+						"validator": null
+					},
+					{
+						"tag": "details__comment",
+						"label": "details_comment",
+						"placeholder": "details_comment_placeholder",
+						"defaultValue": "",
+						"type": "string",
+						"values": [],
+						"values_source": null,
+						"validator": null
+					},
+					{
+						"tag": "details__medias",
+						"label": "details_medias",
+						"placeholder": "details_medias_placeholder",
+						"defaultValue": "",
+						"type": "images_base64",
+						"values": [],
+						"values_source": null,
+						"validator": null
+					}
+				],
+				"address_suggestion": {
+					"enable": true,
+					"partner": "GOOGLE_MAP",
+					"url_prefix": null
+				}
+			},
+			"displayConfig": {
+				"customerTabs": [
+					{
+						"label": "Profile",
+						"tag": "customerProfileTab",
+						"icon": "cutomerProfile",
+						"submodules": [],
+						"separator": null,
+						"showHeader": null,
+						"orientation": "portrait",
+						"showContacts": null
+					},
+					{
+						"label": "Whishlist",
+						"tag": "wishlistTab",
+						"icon": "wishlist",
+						"submodules": [],
+						"separator": null,
+						"showHeader": null,
+						"orientation": null,
+						"showContacts": null
+					}
+				],
+				"productTabs": [
+					{
+						"label": "Profil",
+						"tag": "productRetailProfileTab",
+						"icon": "productProfile",
+						"submodules": [],
+						"separator": null,
+						"showHeader": null,
+						"orientation": null,
+						"showContacts": null
+					},
+					{
+						"label": "Description",
+						"tag": "productInfosTab",
+						"icon": "productProfile",
+						"submodules": [],
+						"separator": null,
+						"showHeader": null,
+						"orientation": null,
+						"showContacts": null
+					}
+				],
+				"feedbackTabs": [
+					{
+						"label": "I have a problem",
+						"tag": "supportBugTab",
+						"icon": null,
+						"submodules": [],
+						"separator": null,
+						"showHeader": null,
+						"orientation": null,
+						"showContacts": null
+					},
+					{
+						"label": "I have a suggestion",
+						"tag": "supportSuggestionTab",
+						"icon": null,
+						"submodules": [],
+						"separator": null,
+						"showHeader": null,
+						"orientation": null,
+						"showContacts": null
+					},
+					{
+						"label": "Contact",
+						"tag": "supportContactTab",
+						"icon": null,
+						"submodules": [],
+						"separator": null,
+						"showHeader": null,
+						"orientation": null,
+						"showContacts": null
+					}
+				],
+				"sideBarItems": [
+					{
+						"label": "menu_item_home",
+						"tag": "home",
+						"icon": "ic_home",
+						"submodules": [],
+						"separator": null,
+						"showHeader": null,
+						"orientation": null,
+						"showContacts": null
+					},
+					{
+						"label": "menu_item_name",
+						"tag": "identified_customer",
+						"icon": "ic_action_customer",
+						"submodules": [],
+						"separator": null,
+						"showHeader": null,
+						"orientation": null,
+						"showContacts": null
+					},
+					{
+						"label": "menu_item_catalog",
+						"tag": "catalog",
+						"icon": "ic_catalog",
+						"submodules": [],
+						"separator": null,
+						"showHeader": null,
+						"orientation": null,
+						"showContacts": null
+					},
+					{
+						"label": "menu_item_search_client",
+						"tag": "search_client",
+						"icon": "ic_search_client",
+						"submodules": [],
+						"separator": null,
+						"showHeader": null,
+						"orientation": null,
+						"showContacts": null
+					},
+					{
+						"label": "menu_item_new_card",
+						"tag": "new_card",
+						"icon": "ic_new_client",
+						"submodules": [],
+						"separator": null,
+						"showHeader": null,
+						"orientation": null,
+						"showContacts": null
+					},
+					{
+						"label": "menu_item_search_product",
+						"tag": "search_product",
+						"icon": "ic_search_product",
+						"submodules": [],
+						"separator": null,
+						"showHeader": null,
+						"orientation": null,
+						"showContacts": null
+					},
+					{
+						"label": "menu_item_sales_history",
+						"tag": "sales_history",
+						"icon": "ic_sales_history",
+						"submodules": [],
+						"separator": null,
+						"showHeader": null,
+						"orientation": null,
+						"showContacts": null
+					},
+					{
+						"label": "menu_item_synchronization",
+						"tag": "synchronization",
+						"icon": "ic_export_data",
+						"submodules": [],
+						"separator": null,
+						"showHeader": null,
+						"orientation": null,
+						"showContacts": null
+					},
+					{
+						"label": "menu_item_logout",
+						"tag": "logout",
+						"icon": "ic_deconnexion",
+						"submodules": [],
+						"separator": null,
+						"showHeader": null,
+						"orientation": null,
+						"showContacts": null
+					}
+				],
+				"dashboardItems": [],
+				"topBar": {
+					"scan": {
+						"customer": false,
+						"product": false
+					},
+					"search": {
+						"customer": true,
+						"product": true
+					}
+				}
+			},
+			"appearanceConfig": null,
+			"modules": {
+				"tweets": {
+					"enabled": false
+				},
+				"scan": {
+					"enabled": false
+				},
+				"beacon": {
+					"enabled": false
+				},
+				"basket": {
+					"enabled": true
+				},
+				"mailing": {
+					"enabled": false
+				},
+				"calendar": {
+					"enabled": false
+				},
+				"autoComplete": {
+					"enabled": true
+				}
+			},
+			"calendarConfig": null,
+			"homeConfig": {
+				"grid": {
+					"tiles": [
+						{
+							"position": {
+								"x": 0,
+								"y": 0
+							},
+							"size": {
+								"w": 6,
+								"h": 4
+							},
+							"title": "search_product_item",
+							"background": {
+								"color": "#88FFFFFF",
+								"picture": ""
+							},
+							"icon": "ic_product_search_tile",
+							"action": "search_product",
+							"textColor": "#212121"
+						},
+						{
+							"position": {
+								"x": 6,
+								"y": 0
+							},
+							"size": {
+								"w": 6,
+								"h": 4
+							},
+							"title": "catalog_item",
+							"background": {
+								"color": "#88FFFFFF",
+								"picture": ""
+							},
+							"icon": "ic_catalog_tile",
+							"action": "catalog",
+							"textColor": "#212121"
+						},
+						{
+							"position": {
+								"x": 0,
+								"y": 4
+							},
+							"size": {
+								"w": 6,
+								"h": 4
+							},
+							"title": "new_customer_item",
+							"background": {
+								"color": "#88FFFFFF",
+								"picture": ""
+							},
+							"icon": "ic_new_customer_tile",
+							"action": "new_card",
+							"textColor": "#212121"
+						},
+						{
+							"position": {
+								"x": 6,
+								"y": 4
+							},
+							"size": {
+								"w": 6,
+								"h": 4
+							},
+							"title": "search_customer_item",
+							"background": {
+								"color": "#88FFFFFF",
+								"picture": ""
+							},
+							"icon": "ic_customer_search_tile",
+							"action": "search_client",
+							"textColor": "#212121"
+						}
+					],
+					"tiles_landscape": [
+						{
+							"position": {
+								"x": 0,
+								"y": 0
+							},
+							"size": {
+								"w": 6,
+								"h": 5
+							},
+							"title": "search_product_item",
+							"background": {
+								"color": "#F5F5F5",
+								"picture": ""
+							},
+							"icon": "group.png",
+							"action": "search_product",
+							"textColor": "#000000"
+						},
+						{
+							"position": {
+								"x": 6,
+								"y": 0
+							},
+							"size": {
+								"w": 6,
+								"h": 5
+							},
+							"title": "catalog_item",
+							"background": {
+								"color": "#F5F5F5",
+								"picture": ""
+							},
+							"icon": "group_10.png",
+							"action": "catalog",
+							"textColor": "#000000"
+						},
+						{
+							"position": {
+								"x": 0,
+								"y": 5
+							},
+							"size": {
+								"w": 6,
+								"h": 5
+							},
+							"title": "new_customer_item",
+							"background": {
+								"color": "#F5F5F5",
+								"picture": ""
+							},
+							"icon": "group_11.png",
+							"action": "search_client",
+							"textColor": "#000000"
+						},
+						{
+							"position": {
+								"x": 6,
+								"y": 5
+							},
+							"size": {
+								"w": 6,
+								"h": 5
+							},
+							"title": "search_customer_item",
+							"background": {
+								"color": "#F5F5F5",
+								"picture": ""
+							},
+							"icon": "group_14.png",
+							"action": "offers",
+							"textColor": "#000000"
+						}
+					]
+				}
+			},
+			"productConfig": {
+				"stock": {
+					"asynchronous": true,
+					"min_stock_display": 0,
+					"shortcuts_display": null,
+					"order_choices": [
+						{
+							"purchase_collection_mode": "shop_now",
+							"extra": 100,
+							"max": 100,
+							"min_real_stock": 1
+						}
+					]
+				},
+				"medias": {
+					"picture": "source"
+				},
+				"prices": {
+					"webprice": true,
+					"crossed_price": null,
+					"price_mapping": null
+				},
+				"search": {
+					"sort_by": [
+						{
+							"label": null,
+							"way": -1,
+							"field": null
+						},
+						{
+							"label": null,
+							"way": 1,
+							"field": "skus__availabilities__price"
+						},
+						{
+							"label": null,
+							"way": -1,
+							"field": "skus__availabilities__price"
+						}
+					],
+					"max_results_count": null,
+					"history": {
+						"enable": true
+					}
+				},
+				"catalog": {
+					"sort_by": [
+						{
+							"label": null,
+							"way": 1,
+							"field": "skus__availabilities__price"
+						},
+						{
+							"label": null,
+							"way": -1,
+							"field": "skus__availabilities__price"
+						}
+					],
+					"root_category_id": null
+				},
+				"autocomplete": {
+					"products": {
+						"enabled": true
+					},
+					"families": {
+						"enabled": true
+					},
+					"brands": {
+						"enabled": false
+					}
+				},
+				"specifications": {
+					"display": {
+						"sections": [
+							{
+								"section_id": "technical_info",
+								"title": "Technical informations"
+							}
+						],
+						"specs": [
+							{
+								"spec_id": "5",
+								"icon": null
+							},
+							{
+								"spec_id": "6",
+								"icon": null
+							},
+							{
+								"spec_id": "32",
+								"icon": null
+							},
+							{
+								"spec_id": "1000",
+								"icon": null
+							}
+						]
+					},
+					"default_selection": []
+				},
+				"reviews": null,
+				"shipping": null,
+				"fees": {
+					"exists": false
+				},
+				"thumbnail": {
+					"display_price": true
+				}
+			},
+			"paymentConfig": {
+				"customer_basket": true,
+				"seller_basket": true,
+				"purchase_collection": {
+					"available_modes": [
+						"shop_now"
+					]
+				},
+				"purchase_collection_to_store": {
+					"shop": {
+						"store_type": [
+							"web"
+						]
+					},
+					"home": {
+						"store_type": [
+							"web"
+						]
+					}
+				},
+				"display": null
+			},
+			"customerConfig": {
+				"rfm_indicators": [],
+				"fidelity_card": {
+					"reg_exp_card_number": "^[2][0-9]{7}$"
+				},
+				"wishlist": {
+					"sharing_modes": []
+				},
+				"editable": null,
+				"search": {
+					"max_results_count": null,
+					"history": {
+						"enable": true
+					}
+				},
+				"sales_history": null
+			},
+			"authenticationConfig": {
+				"automatic_log_out": {
+					"on_sleep": true,
+					"keep_session_with_password": true
+				},
+				"force_change_tmp_password": true,
+				"can_change_password": true
+			},
+			"webviewConfig": null,
+			"feedbackConfig": {
+				"screens": [
+					{
+						"id": 0,
+						"name": "Stock"
+					},
+					{
+						"id": 1,
+						"name": "Scan barcode"
+					},
+					{
+						"id": 2,
+						"name": "Customer offer"
+					},
+					{
+						"id": 3,
+						"name": "Product promotion"
+					},
+					{
+						"id": 4,
+						"name": "Product image"
+					},
+					{
+						"id": 5,
+						"name": "Product catalog"
+					},
+					{
+						"id": 6,
+						"name": "Product search filter"
+					},
+					{
+						"id": 7,
+						"name": "TPE"
+					},
+					{
+						"id": 8,
+						"name": "Shopping cart"
+					},
+					{
+						"id": 9,
+						"name": "Creation of customer card"
+					},
+					{
+						"id": 10,
+						"name": "Search customer"
+					},
+					{
+						"id": 11,
+						"name": "Battery pack"
+					},
+					{
+						"id": 12,
+						"name": "Wifi"
+					},
+					{
+						"id": 13,
+						"name": "Vendor Code"
+					},
+					{
+						"id": 14,
+						"name": "Others"
+					}
+				]
+			}
+		}
+	}],
+
+	"shops": [{
+		"id": "MOBILE",
+		"short_name": "Mobile",
+		"long_name": "Mobile",
+		"currency": {
+			"symbol": "�",
+			"label": "EUROS",
+			"iso4217": "EUR"
+		},
+		"mail": {
+			"address1": "32 Rue de Chemin vert",
+			"address2": "",
+			"address3": "",
+			"zipcode": "75011",
+			"city": "PARIS",
+			"country": "France"
+		},
+		"contact": {
+			"phone_number": "04 42 02 59 20",
+			"fax_number": "",
+			"email": "serge@pixika.com"
+		},
+		"opened_date": "2012-09-06T22:00:00.000Z",
+		"closed_date": null,
+		"geolocation": {
+			"type": "Point",
+			"coordinates": [
+				5.36108139999999,
+				43.4199647
+			]
+		},
+		"working_hours": null,
+		"shop_type": "regular",
+		"active": true,
+		"area": 13200000.0
+	}],
+
+	"devices" : [
+	{
+		"id" : "d8a7f164b1ec2f43",
+		"language" : "en",
+		"shop_id" : "MOBILE",
+		"date_updated" : "2018-01-16T14:43:18.372Z",
+		"os_version" : "24",
+		"app_version" : "1.3.3"
+	}
+
+	,
+	{
+		"id" : "55e50e5625497571",
+		"language" : "en",
+		"shop_id" : "MOBILE",
+		"date_updated" : "2017-12-21T15:40:45.889Z",
+		"os_version" : "22",
+		"app_version" : "1.4.3"
+	}
+
+	,
+	{
+		"id" : "72eddac9c244ffa3",
+		"language" : "en",
+		"shop_id" : "MOBILE",
+		"date_updated" : "2017-12-24T09:23:56.299Z",
+		"os_version" : "26",
+		"app_version" : "1.3.3"
+	}
+
+	,
+	{
+		"id" : "173b3aa54e4d8677",
+		"language" : "en",
+		"shop_id" : "MOBILE",
+		"date_updated" : "2018-01-19T12:56:53.436Z",
+		"os_version" : "24",
+		"app_version" : "1.3.3"
+	}
+
+	,
+	{
+		"id" : "f1da42cd5a092c1d",
+		"language" : "en",
+		"shop_id" : "MOBILE",
+		"date_updated" : "2018-01-29T15:21:59.117Z",
+		"os_version" : "22",
+		"app_version" : "1.3.3"
+	}
+
+	,
+	{
+		"id" : "2ffedf7a68748c12",
+		"language" : "en",
+		"shop_id" : "MOBILE",
+		"date_updated" : "2018-01-30T11:43:27.509Z",
+		"os_version" : "23",
+		"app_version" : "1.4.3"
+	}
+
+	,
+	{
+		"id" : "473b0fa79efba662",
+		"language" : "en",
+		"shop_id" : "MOBILE",
+		"date_updated" : "2018-01-30T11:46:59.676Z",
+		"os_version" : "23",
+		"app_version" : "1.4.3"
+	}
+
+	,
+	{
+		"id" : "50c8e7e1e101ca89",
+		"language" : "en",
+		"shop_id" : "MOBILE",
+		"date_updated" : "2018-01-30T11:59:23.349Z",
+		"os_version" : "22",
+		"app_version" : "1.4.3"
+	}
+
+	,
+	{
+		"id" : "71b934886b5edcd",
+		"language" : "en",
+		"shop_id" : "MOBILE",
+		"date_updated" : "2018-01-30T12:03:51.368Z",
+		"os_version" : "22",
+		"app_version" : "1.4.3"
+	}
+
+	,
+	{
+		"id" : "917ba69c59f8b9e4",
+		"language" : "en",
+		"shop_id" : "MOBILE",
+		"date_updated" : "2018-01-30T12:10:56.463Z",
+		"os_version" : "23",
+		"app_version" : "1.4.3"
+	}
+
+	,
+	{
+		"id" : "6f5e2d92c580dcb0",
+		"language" : "en",
+		"shop_id" : "MOBILE",
+		"date_updated" : "2018-01-30T12:13:56.012Z",
+		"os_version" : "23",
+		"app_version" : "1.4.3"
+	}
+
+	,
+	{
+		"id" : "81ddd3172af2a71a",
+		"language" : "en",
+		"shop_id" : "MOBILE",
+		"date_updated" : "2018-02-13T14:52:59.217Z",
+		"os_version" : "22",
+		"app_version" : "1.4.3"
+	}
+
+	,
+	{
+		"id" : "3259df9205bad026",
+		"language" : "en",
+		"shop_id" : "MOBILE",
+		"date_updated" : "2018-08-14T11:23:30.866Z",
+		"os_version" : "26",
+		"app_version" : "1.0.0"
+	}
+	],
+	"sellers" : [
+	{
+		"id" : "CP01",
+		"first_name": "PI",
+		"last_name": "XIKA",
+		"has_temp_password": false,
+		"password": "1234",
+		"basket" : {
+			"basket_offers" : [],
+			"creation_date" : "2017-12-21T15:06:01.883Z",
+			"shop_id" : "MOBILE",
+			"update_date" : "2018-08-14T13:50:28.970Z",
+			"total" : 0.0,
+			"total_discount" : 0.0,
+			"delivery_fees_amount" : 0.0,
+			"items_total_amount" : 0.0,
+			"currency_iso4217" : "EUR",
+			"items_quantity" : 0,
+			"delivery_items" : null
+		}
+	}
+	]
+
+}

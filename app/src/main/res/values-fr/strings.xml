@@ -1,0 +1,734 @@
+<resources>
+
+    <!-- General -->
+    <string name="sending_in_progress">Envoi en cours …</string>
+    <string name="error">Erreur</string>
+    <string name="success">Succès</string>
+    <string name="retry">Essayer à nouveau</string>
+    <string name="send">Envoyer</string>
+    <string name="period_from_to">Du %1$s \nau %2$s</string>
+    <string name="period_to">Jusqu\'au %s</string>
+    <string name="app_version_not_suppored">Cette version (%s) de l\'application n\'est plus supportée. Merci de faire une mise à jour.</string>
+    <string name="yes">Oui</string>
+    <string name="no">Non</string>
+    <string name="back">RETOUR</string>
+    <string name="display_password">Afficher le mot de passe</string>
+    <!-- !General -->
+
+    <!-- Menu -->
+    <string name="menu_home">Accueil</string>
+    <string name="menu_advice_a_client">Conseiller un client</string>
+    <string name="menu_scan_a_card">Scanner</string>
+    <string name="menu_search_for_a_name">Rechercher</string>
+    <string name="menu_new_client">Nouveau client</string>
+    <string name="menu_scan_a_new_card">Scanner une nouvelle carte</string>
+    <string name="menu_form">Formulaire</string>
+    <string name="menu_log_out">Déconnexion</string>
+    <string name="play_retail">PLAY RETAIL</string>
+    <!-- !Menu -->
+
+    <!-- SplashScreen -->
+    <string name="fragment_splash_subtitle">CLOSE TO YOUR CLIENTS TODAY\nCLOSER TOMORROW</string>
+    <string name="fragment_splash_title">Cy-Play</string>
+    <!-- !SplashScreen -->
+
+    <!-- Activity -->
+    <string name="activity_home">Accueil</string>
+    <string name="activity_customer">Fiche Client</string>
+    <string name="activity_seller_team">Equipe</string>
+    <string name="activity_calendar">Calendrier</string>
+    <string name="activity_authentication">Connexion</string>
+    <string name="activity_authentication_change_password">Changement de mot de passe</string>
+    <string name="activity_scan">Scan</string>
+    <string name="activity_product_search">Recherche produit</string>
+    <string name="activity_customer_form">Formulaire</string>
+    <string name="activity_shipping_addres_form">Formulaire adresse de livraison</string>
+    <string name="activity_basket">Panier</string>
+    <string name="activity_payment_steps">Finalisation de l\'achat</string>
+    <string name="activity_payment_delivery">paiement</string>
+    <string name="title_product_activity">Produit</string>
+    <string name="title_product_list">Produits</string>
+    <string name="title_product_detail">Détails produit</string>
+    <string name="title_filters">Filtres</string>
+    <string name="title_offers">Offres</string>
+    <string name="title_share_wishlist">Partage de la wishlist</string>
+    <string name="title_adyen_configuration">Terminaux de paiement</string>
+    <string name="title_configuration">Configuration</string>
+    <string name="title_delivery_choice">Retrait et livraison</string>
+    <string name="title_offers_and_tickets_choice">Offres et coupons</string>
+    <string name="title_institut_appointment">Rendez-vous institut</string>
+    <string name="title_click_and_collect">Click &amp; Collect</string>
+    <string name="title_customer_payments">Paiements</string>
+    <string name="title_synchronization">Synchronisation</string>
+    <!-- !Activity -->
+
+
+    <!-- !SellerDashboardActivity -->
+    <string name="back_logout">Presser à nouveau le bouton retour pour se déconnecter </string>
+    <string name="stats_display">Montrer les stats</string>
+    <string name="stats_hide">Cacher les stats</string>
+    <string name="events">Evénements</string>
+    <string name="customer_history">Historique Clients</string>
+    <!-- !SellerDashboardActivity  -->
+
+    <!-- Device Registration -->
+    <string name="activity_device_registration">Enregistrement</string>
+    <string name="registration_country">Choisir un pays</string>
+    <string name="registration_shop">Choisir un magasin</string>
+    <!-- !Device Registration -->
+
+    <!-- Product -->
+    <string name="product_tab_product">Produit</string>
+    <string name="product_tab_infos">Infos</string>
+    <string name="product_tab_related_product_title">Produits associés</string>
+    <string name="product_tab_related_product_skus_title">Sku(s) associés</string>
+    <string name="product_tab_availability_title">Disponibilités</string>
+    <string name="product_tab_substitution_title">Produits similaires</string>
+    <string name="product_opinion_title">Avis</string>
+    <string name="product_assortment_title">Gamme</string>
+    <string name="product_unit_price">Prix unitaire</string>
+    <string name="product_stocks">Stock : </string>
+    <string name="product_stock">Stock</string>
+    <string name="product_sold_out">Epuisé</string>
+    <string name="product_restocking">Réassort</string>
+    <string name="product_sku_variations">Variations</string>
+    <string name="product_description">Description</string>
+    <string name="product_not_available">Non disponible</string>
+    <string name="product_personalized_recommendations">Liées à l\'historique d\'achat</string>
+    <string name="product_restocking_recommendations">Réachat</string>
+    <string name="product_profile_recommendations">Liées au profil</string>
+
+    <string name="product_shop_price">Prix magasin</string>
+    <string name="product_web_price">Prix web</string>
+    <string name="product_shop_distance">%s km</string>
+
+    <string name="product_stock_error">Erreur lors de la récupération des stocks de produit</string>
+
+    <plurals name="products_filter">
+        <item quantity="zero">Filtrer %d déclinaison produit</item>
+        <item quantity="one">Filtrer %d déclinaison produit</item>
+        <item quantity="other">Filtrer %d déclinaisons produit</item>
+    </plurals>
+
+    <string name="filter_selection">Affiner votre sélection</string>
+    <string name="last_order">Commande</string>
+    <string name="last_order_date">%s</string>
+    <string name="last_order_quantity">%s</string>
+
+    <string name="extra_shipping_fees">Frais de livraison</string>
+    <string name="extra_preparation_fees">Frais de préparation</string>
+    <string name="extra_fees">Frais</string>
+    <string name="stock_loading">Chargement des stocks ...</string>
+    <string name="stock_failed">Echec du chargement des stocks ...</string>
+    <string name="new_product">NEW</string>
+    <string name="last_displayed_product">Derniers produits consultés</string>
+    <string name="last_displayed_customer">Derniers clients consultés</string>
+    <!-- !Product -->
+
+    <!-- Wishlist -->
+    <string name="share_wishlist_select_products">Sélectionner les produits à partager</string>
+
+    <plurals name="share_wishlist_send_products">
+        <item quantity="zero">Aucun produit sélectionné</item>
+        <item quantity="one">Envoyer le produit sélectionné</item>
+        <item quantity="other">Envoyer les %d produits sélectionnés</item>
+    </plurals>
+    <string name="free_email_address">Adresse e-mail libre</string>
+    <string name="choose_email_for_wishlist">Choisir une adresse e-mail d\'envoi</string>
+    <string name="type_email_for_wishlist">Saisir une adresse e-mail</string>
+    <string name="invalid_email">Adresse e-mail invalide</string>
+    <string name="select_items_of_wishlist">Sélectionner les produits à envoyer</string>
+
+    <!-- !Wishlist -->
+
+    <!-- Basket -->
+    <string name="fragment_basket_total_title">Total</string>
+    <string name="fragment_basket_subtotal_title">Sous-total</string>
+    <string name="fragment_basket_delivery_title">Livraison</string>
+    <string name="delivery_fee_not_specified">Hors frais de livraison</string>
+    <string name="fragment_basket_products_title">Produits</string>
+    <string name="fragment_basket_payment_mode">Moyen de paiement</string>
+    <string name="fragment_basket_offers_reduction">Réduction</string>
+    <string name="basket_update_success">Panier mis à jour</string>
+    <string name="basket_update_failed">Erreur de mise à jour du panier</string>
+    <string name="collection_and_delivery">Retrait et livraison</string>
+    <string name="offers_and_tickets">Sélectionner une offre ou un coupon</string>
+    <string name="credit_card_payment">Carte bancaire</string>
+    <string name="applied_offers">Offres appliquées</string>
+    <string name="offer_detail">Détail de l’offre</string>
+
+    <string name="basket_step_summary">Récapitulatif</string>
+    <string name="basket_step_payment_choice_type">Choix du mode de paiement</string>
+
+    <string name="basket_step_delivery">Adresse</string>
+    <string name="basket_step_delivery_mode">Retrait</string>
+
+    <string name="basket_step_payment">Paiement</string>
+    <string name="basket_step_paymnet_success">Succès</string>
+
+    <string name="delivery_mode_shop_delivery">Commande d’échantillons</string>
+    <string name="delivery_mode_shop_delivery_force_desc">Cette article est bien disponible en magasin. Forcer l\'ajout au panier</string>
+
+    <string name="delivery_mode_shop_collect">Livraison Boutique</string>
+    <string name="delivery_mode_shop_collect_desc">Commander cet article. Il pourra être rétiré dans ce magasin sous 48h </string>
+
+    <string name="delivery_mode_delivery">Livraison Domicile</string>
+    <string name="delivery_mode_delivery_desc">Commander cet article. Il sera envoyé chez le client sous 48h </string>
+
+    <string name="delivery_cancel_add_to_basket_desc">Ne pas acheter cet article</string>
+
+    <string name="apply_to_all_items_in_basket">Appliquer à tous les produits du panier</string>
+    <string name="add_a_shipping_address">Ajouter une adresse de livraison</string>
+    <string name="basket_add_error">Erreur lors de l\'ajout au panier</string>
+    <string name="basket_updating">Mise à jour du panier ...</string>
+    <string name="payment_summary">Récapitulatif</string>
+
+    <string name="email_needed_for_payment_message">Un e-mail valide est nécessaire pour finaliser l\'achat. Merci de mettre à jour les informations du client.</string>
+
+    <plurals name="product_count">
+        <item quantity="zero">(Produit %d)</item>
+        <item quantity="one">(Produit %d)</item>
+        <item quantity="other">(Produits %d)</item>
+    </plurals>
+
+
+    <string name="link_basket_to_customer_explanation">Le panier actuel n’est pas lié à un client.\nPour l’associer à un client, que souhaitez vous faire ?</string>
+    <string name="link_basket_to_an_existing_customer">Associer à un client existant</string>
+    <string name="create_new_customer">Créer un compte client</string>
+    <string name="basket_associate_error">Erreur lors de l\'association du panier au client</string>
+
+    <string name="update_empty_fields_explanation">Certains champs obligatoires du client sont vides. Veuillez mettre à jour les informations client et compléter la commande.</string>
+    <string name="update_customer">Mettre à jour les informations client</string>
+    <!-- !Basket -->
+
+    <!-- Payment -->
+    <string name="card_bank_payment">Paiement par carte bancaire</string>
+    <string name="shipping_fees">Montant de la livraison</string>
+    <string name="payment_mode_choice">Choisir un mode de paiement</string>
+    <string name="cancel_payment_warning">Voulez-vous vraiment quitter le processus de paiement ?</string>
+    <string name="cancel_transaction_warning">La transaction en cours peut être annulée uniquement depuis le terminal de paiement.\n\nVoulez-vous vraiment quitter ?</string>
+    <string name="payment_init">Initialisation du tunnel de paiement</string>
+    <!-- !Payment -->
+
+    <!-- Offer-->
+    <string name="shop_offer_type">Offre %s</string>
+    <string name="offer_to_date_filtering_asc">date d\'expiration croissante</string>
+    <string name="offer_to_date_filtering_desc">date d\'expiration</string>
+    <plurals name="offers_filter">
+        <item quantity="zero">Filtrer %d offre</item>
+        <item quantity="one">Filtrer %d offre</item>
+        <item quantity="other">Filtrer %d offres</item>
+    </plurals>
+    <!-- !Offer -->
+
+    <!-- Sales history -->
+    <string name="item_quantity">%d x</string>
+
+    <!-- Product Search -->
+    <string name="empty_product_search">Aucun resultat correspondant\na votre recherche</string>
+    <string name="product_search_hint">Produit</string>
+    <string name="product_categories_label">Catégories</string>
+    <string name="product_brands_label">Marques</string>
+    <string name="sort_by">%s</string>
+    <string name="filter">Filtrer</string>
+    <string name="filter_count">Filtrer (%d)</string>
+    <string name="brand_filtering_asc">Marques A-Z</string>
+    <string name="brand_filtering_desc">Marques Z-A</string>
+    <string name="price_filtering_asc">Prix croissants</string>
+    <string name="price_filtering_desc">Prix décroissants</string>
+    <string name="filtering_relevance">Pertinence</string>
+    <string name="no_results">Aucun résultat trouvé</string>
+    <string name="no_suggestions">Pas de suggestions</string>
+    <!-- !Product Search -->
+
+    <!-- !Product Filter -->
+    <string name="product_filter_prices">Prix</string>
+    <string name="product_filter_brands">Marques</string>
+    <string name="product_filter_assortments">Gammes</string>
+    <!-- Product Filter -->
+
+    <!-- Customer Search-->
+    <string name="customer_search_hint">Rechercher…</string>
+    <string name="customer_history_empty">Historique client vide\nCommencer à rechercher des clients</string>
+    <string name="customer_search_text">Texte de recherche</string>
+    <string name="customer_search_first_name">Prénom</string>
+    <string name="customer_search_last_name">Nom</string>
+    <string name="customer_search_organization_name">Nom de Société</string>
+    <string name="customer_search_zip_code">Code postal</string>
+    <string name="customer_search_email">E-mail</string>
+    <string name="customer_search_phone">Téléphone</string>
+    <string name="customer_search_loyalty_id">Numéro de carte de fidélite</string>
+
+    <plurals name="customer_search_fields_count_warning">
+        <item quantity="one">Merci de renseigner au minimum %d champ de recherche</item>
+        <item quantity="other">Merci de renseigner au minimum %d champs de recherche</item>
+    </plurals>
+    <string name="customer_search_specify">Seuls les %s premiers résultats sont affichés. Merci de préciser vos critères de recherche.</string>
+
+
+    <string name="basket_linking">Association du panier en cours ...</string>
+    <!-- !Customer Search-->
+
+    <!-- Customer Form -->
+    <string name="form_confirm_quit_dialog">Si vous quittez maintenant, toutes les modifications seront perdues</string>
+    <string name="form_required_error">Ce champ ne peut pas être vide</string>
+    <string name="form_regex_error">Ce champ est invalide</string>
+    <string name="form_update_error">Echec de mise à jour des informations client : %s</string>
+    <string name="form_create_error">Echec de création du profile client : %s</string>
+
+    <string name="form_shipping_address_update_error">Echec de mise à jour de l\'adresse de livraison : %s</string>
+    <string name="form_shipping_address_create_error">Echec de création de l\'adresse de livraison : %s</string>
+
+    <string name="form_mobile_phone">Téléphone portable</string>
+    <string name="form_landline_phone">Téléphone fixe</string>
+    <string name="form_professional_phone">Téléphone professionel</string>
+    <string name="form_shoesize">Pointure</string>
+    <string name="form_organization_name">Nom de Société</string>
+    <string name="form_organization_code">Code d\'organisation</string>
+    <string name="form_source">Source de contact</string>
+    <string name="form_badges">Badges</string>
+
+    <string name="form_day_input_hint">JJ</string>
+    <string name="form_month_input_hint">MM</string>
+    <string name="form_year_input_hint">AAAA</string>
+
+    <string name="selector_default_place_holder">Sélectionner une option</string>
+
+    <string name="want_to_remove_customer_badge">Êtes-vous sûr de vouloir supprimer le badge sélectionné?</string>
+    <!-- !Customer Form -->
+
+    <!-- Navigation Drawer -->
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <!-- !Navigation Drawer -->
+
+    <!-- Catalog -->
+    <string name="catalog">CATALOGUE</string>
+    <!-- !Catalog -->
+
+    <!-- Authentication -->
+    <string name="enter_your_pin">Saisir votre mot de passe</string>
+    <string name="enter_your_pin_after_change">Votre mot de passe a été mis à jour avec succès. Merci de le saisir à nouveau pour vous connecter.</string>
+    <string name="temporary_password_warning">Votre mot de passe actuel est temporaire. Merci de le saisir afin de pouvoir en choisir un autre.</string>
+    <string name="enter_your_new_pin_after_error">Erreur lors de la mise à jour du mot de passe. Merci de saisir votre nouveau mot de passe</string>
+    <string name="enter_your_new_pin">Saisir votre nouveau mot de passe</string>
+    <string name="enter_your_new_pin_again">Saisir à nouveau votre nouveau mot de passe</string>
+    <string name="change_my_password">Changer mon mot de passe</string>
+    <!-- !Authentication -->
+
+    <!-- Customer -->
+    <plurals name="customer_loyalty_points">
+        <item quantity="zero">%1$s • %2$s • %3$d point</item>
+        <item quantity="one">%1$s • %2$s • %3$d point</item>
+        <item quantity="other">%1$s • %2$s • %3$d points</item>
+    </plurals>
+    <string name="customer_loyalty_validity">Fin de validité : %1$s • %2$s</string>
+    <string name="customer_recommendation_title">Recommandations</string>
+    <string name="customer_wishlist_title">Wishlist</string>
+    <string name="customer_sales_history_title">Achats</string>
+    <string name="customer_offers_title">Offres</string>
+    <string name="customer_my_recommendations">Mes recommandations</string>
+    <string name="customer_wishlist">Wishlist</string>
+    <string name="customer_offers">Offres applicables</string>
+    <string name="customer_payments">Paiements</string>
+    <string name="customer_sales_history">Toutes les commandes</string>
+    <string name="add_to_basket">Ajouter au panier</string>
+    <string name="customer_offers_remove_from_basket">Retirer du panier</string>
+    <plurals name="products_count">
+        <item quantity="zero">Pas de produits </item>
+        <item quantity="one">%d produit</item>
+        <item quantity="other">%d produits</item>
+    </plurals>
+    <string name="customer_tweets">Annonces</string>
+
+    <string name="customer_edit_profile">Modifier profil</string>
+    <string name="customer_edit_contacts">Modifier contacts</string>
+    <string name="customer_edit_address">Modfier adresse</string>
+    <string name="customer_edit_customer">Modifier</string>
+
+    <string name="customer_contact_details">Coordonnées</string>
+
+    <string name="customer_id">Identifiant client</string>
+    <string name="loyalty">Carte de fidélité</string>
+    <string name="address">Adresse</string>
+    <string name="email">Email</string>
+    <string name="phone">Téléphone</string>
+    <string name="birthdate">Date de naissance</string>
+    <string name="receive_client_offers">Recevoir les offres %s</string>
+    <string name="receive_client_offers_email">Recevoir les offres %s par e-mail</string>
+    <string name="receive_partner_offers">Recevoir les offres partenaires</string>
+    <string name="receive_partner_offers_email">Recevoir les offres partenaires par e-mail</string>
+
+    <string name="sms">SMS</string>
+    <string name="newsletter">newsletter</string>
+    <string name="mail">courrier</string>
+    <string name="undefined_attribute">Non renseigné</string>
+    <string name="customer_update_success">Mise à jour du client réalisée avec succès</string>
+
+    <string name="customer_loyalty_active">Active</string>
+    <string name="customer_loyalty_expired">Expirée</string>
+    <string name="customer_loyalty_closed">Fermée</string>
+
+    <!-- !Customer -->
+
+    <!-- Sales -->
+    <string name="web_sales">Web</string>
+    <string name="shop_sales">Magasin</string>
+
+    <string name="purchase_date_filtering_asc">Du moins récent au plus récent</string>
+    <string name="purchase_date_filtering_desc">Du plus récent au moins récent</string>
+
+    <string name="purchase_items_quantity_filtering_asc">Quantité croissante</string>
+    <string name="purchase_items_quantity_filtering_desc">Quantité décroissante</string>
+    <plurals name="sales_filter">
+        <item quantity="zero">Filtrer %d vente</item>
+        <item quantity="one">Filtrer %d vente</item>
+        <item quantity="other">Filtrer %d ventes</item>
+    </plurals>
+    <!-- !Sales -->
+
+    <!-- Scan -->
+    <string name="add_newcustomer_popup_title">Carte vierge</string>
+    <string name="add_newcustomer_popup_text">Voulez vous ajouter ce client au programme de fidélité ?</string>
+
+    <string name="barcode_notfound_popup_title">Code inconnu</string>
+    <string name="barcode_notfound_popup_text">Ce code barre est inconnu</string>
+
+    <string name="scan_card_already_assigned_message">Cette carte est déjà associée à un client</string>
+    <string name="scan_card_already_assigned_title">Erreur</string>
+
+    <string name="scan_product_not_found_title">Pas de résultats</string>
+    <string name="scan_product_not_found_text">Aucun produit trouvé</string>
+
+    <string name="scan_customer_invalid_bar_code_title">Code barre invalide</string>
+    <string name="scan_customer_invalid_bar_code_text">Ce code barre ne correspond pas à un numéro de carte de fidélité</string>
+
+    <string name="scan_retrieving_product_data">Récupération des données du produit</string>
+    <string name="scan_retrieving_customer_data">Récupération des données du client</string>
+    <!-- !Scan -->
+
+    <!-- Menu -->
+    <string name="action_settings">Paramètres</string>
+    <string name="action_basket">Panier</string>
+    <string name="action_search">Rechercher</string>
+    <string name="action_catalog">Catalogue</string>
+    <string name="action_store">Magasin</string>
+    <string name="action_customer">Client</string>
+    <string name="action_scan">Scan</string>
+    <!-- !Menu -->
+
+    <!-- Basket -->
+    <string name="add_item_to_basket">Ajouter le produit au panier</string>
+    <string name="add_to_basket_out_of_stock_in_shop">Cet article semble indisponible dans votre magasin. Que souhaitez-vous faire ?</string>
+    <string name="out_of_stock_in_current_shop_warning">Non disponible en stock magasin</string>
+
+
+    <string name="continue_purchases">Ajouter et continuer les achats</string>
+    <string name="go_to_basket">Ajouter et accéder au panier</string>
+
+    <string name="payment_button">PAIEMENT</string>
+    <string name="validate_button">COMMANDER</string>
+    <string name="add_comment_button">AJOUTER UN COMMENTAIRE</string>
+    <string name="basket_remove">RETIRER</string>
+    <string name="empty_basket">Panier vide</string>
+    <string name="basket_checking_stocks">Vérification des stocks</string>
+    <string name="fragment_basket_comment">Commentaire</string>
+    <string name="basket_complete_warning">Votre commande a bien été enregistrée</string>
+
+    <string name="basket_offers_title_with_count">Offers %d</string>
+
+    <plurals name="offers_count">
+        <item quantity="zero">Offre (%d) </item>
+        <item quantity="one">Offre (%d)</item>
+        <item quantity="other">Offres (%d)</item>
+    </plurals>
+
+    <string name="basket_stock_failed_checked_warning">Erreur durant la vérification des stocks.</string>
+
+    <string name="clear_basket">Vider le panier</string>
+    <string name="clear_basket_error">Echec lors du vidage le panier</string>
+
+    <string name="want_to_clear_basket">Êtes-vous sur de vouloir vider le panier ?</string>
+    <string name="want_to_remove_selected_item_in_basket">Êtes-vous sur de vouloir supprimer les articles sélectionnés ?</string>
+    <!-- !Basket -->
+
+    <!-- Sale -->
+    <string name="want_to_remove_order">Êtes-vous sûr de vouloir supprimer la commande sélectionnée?</string>
+    <string name="want_to_change_order">Cette action supprimera la commande sélectionnée. Vous devez donc compléter la commande suivante. Êtes-vous sûr de vouloir changer l\'ordre sélectionné?</string>
+    <!-- !Sale -->
+
+    <!-- Utils/Pop-up -->
+    <string name="needed_action">Action requise</string>
+    <string name="loading">Chargement</string>
+    <string name="wait_serv_resp">En attente d\'une réponse du serveur &#8230;</string>
+    <string name="util_attention">Attention</string>
+    <string name="learn_more">LEARN MORE</string>
+    <string name="more">PLUS</string>
+    <string name="see_more">VOIR PLUS</string>
+    <string name="got_it">OK</string>
+    <string name="select">SELECTIONNER</string>
+    <string name="order">COMMANDER</string>
+    <string name="save">SAUVEGARDER</string>
+    <string name="done">DONE</string>
+    <string name="submit">SUBMIT</string>
+    <string name="report">REPORT</string>
+    <string name="reload">Essayer à nouveau</string>
+    <string name="valid">Valider</string>
+    <string name="reset">Réinitialiser</string>
+    <string name="leave">Quitter</string>
+    <string name="add">Ajouter</string>
+    <string name="share">Partager</string>
+    <string name="confirm">CONFIRM</string>
+    <string name="edit">Modifier</string>
+    <string name="delete">Supprimer</string>
+    <string name="delete_confirmation">Voulez vous vraiment supprimer cet élément ?</string>
+    <string name="connect">Connecter</string>
+    <string name="disconnect">Déconnecter</string>
+    <string name="apply_to_all">Appliquer à tous</string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut lobortis enim et justo blandit, ac tristique eros aliquet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque est metus, ullamcorper ac volutpat non, tristique sit amet orci. Donec massa justo, dictum commodo elit semper, placerat consectetur tortor. Sed aliquet odio id tellus dapibus, non semper nisl mattis. Donec elit tellus, tincidunt ac libero ut, dapibus tincidunt purus. Nullam finibus at neque vitae congue. Cras sem tellus, efficitur ut leo vel, gravida tristique neque. Duis in gravida nibh. Duis convallis, libero pulvinar varius varius, orci enim elementum libero, sit amet dictum metus orci a nunc. Morbi rutrum justo sed felis fermentum finibus. Praesent luctus lorem mauris, vitae aliquet dui euismod eu.</string>
+    <string name="reload_error_msg">Problème de connection au serveur</string>
+    <string name="loading_more">Chargement…</string>
+    <!-- !Utils/Pop-up -->
+
+    <!-- Catalog -->
+    <string name="catalog_best_sales">Meilleures ventes</string>
+    <string name="catalog_product_sub_title">Produits</string>
+    <string name="title_item_list">Catalogue</string>
+    <string name="title_item_detail">Catalogue</string>
+    <!-- !Catalog -->
+
+    <!-- Sales History -->
+    <string name="title_sales_history">Historique des commandes</string>
+    <!-- !Sales History -->
+
+    <!-- Client Search -->
+    <string name="client_search_title">Recherche client</string>
+    <string name="client_searched_history_title">Historique</string>
+    <!-- !Client Search -->
+
+    <!-- Messages -->
+    <string name="title_message_list">messages</string>
+    <string name="title_message_detail">Message Detail</string>
+    <!-- Messages -->
+
+    <!-- Action Bar -->
+    <string name="edit_customer">Editer le client</string>
+    <string name="end_session">Clore la session</string>
+    <string name="menu_scan_spinner_product">Scanner un produit</string>
+    <string name="menu_scan_spinner_customer">Scanner une carte client</string>
+    <string name="menu_search_product">Rechercher un produit</string>
+    <string name="menu_search_customer">Rechercher un client</string>
+    <!-- !Action Bar -->
+
+    <!-- Error messages-->
+    <string name="request_error_message">Ooops. Un problème technique est survenu.</string>
+    <string name="request_error_message_try_again">Ooops. Un problème technique est survenu. Essayer à nouveau.</string>
+    <string name="request_error_message_authentication">Erreur d\'authentification. Essayer à nouveau.</string>
+    <!-- !Error messages-->
+
+    <!-- Nocibe -->
+    <string name="client_search_generic_error">Veuillez entrer un %1$s de %2$d caractères minimum</string>
+    <string name="client_search_first_name">prénom</string>
+    <string name="client_search_last_name">nom</string>
+    <string name="client_search_zipcode">code postal</string>
+    <string name="client_search_email">e-mail</string>
+    <string name="client_search_loyalty_id">Numéro de carte de fidélité</string>
+    <string name="catalog_category_all_sub_categories">"Tous les produits : "</string>
+    <string name="form_required_label">*</string>
+    <string name="form_required_label_indication">champs obligatoires *</string>
+    <!-- !Nocibe -->
+
+    <!-- Shop -->
+    <string name="shop_type">Canal</string>
+    <string name="shop_type_regular">Magasin</string>
+    <string name="shop_type_web">Web</string>
+    <string name="shop_type_warehouse">Entrepôt</string>
+    <string name="offer_type">Type d\'offre</string>
+    <string name="offer_type_regular">Magasin</string>
+    <string name="offer_type_web">Web</string>
+    <string name="offer_type_customer">Client</string>
+    <string name="offer_type_product">Produit</string>
+    <string name="offer_type_basket">Panier</string>
+    <string name="close_shops">A proximité</string>
+    <!-- !Shop -->
+
+    <!-- Filter -->
+    <plurals name="items_filter">
+        <item quantity="zero">Filtrer %d élément</item>
+        <item quantity="one">Filtrer %d élément</item>
+        <item quantity="other">Filtrer %d éléments</item>
+    </plurals>
+    <!-- !Filter -->
+
+    <!-- POS -->
+    <string name="follow_instructions_on_pos">Merci de suivre les instructions sur le terminal de paiement</string>
+
+    <string name="payment_terminal">Terminaux de paiement</string>
+    <string name="marchant_configuration_title">Configuration du Marchand</string>
+    <string name="terminal_configuration_title">Configuration du terminal</string>
+    <string name="action_add_terminal">Ajouter un terminal</string>
+    <string name="action_register_merchant">Enregistrer un marchand</string>
+    <string name="merchant_account_hint">Compte Marchand</string>
+    <string name="username_hint">Nom d\'utilisateur</string>
+    <string name="password_hint">Mot de passe</string>
+
+    <string name="login_failed_title">Connexion impossible</string>
+    <string name="login_failed_message">Merci de vérifier les informations d\'authentification et essayer again</string>
+    <string name="login_error_badcredentials">Informations d\'authentification erronnées</string>
+    <string name="login_error_nonetwork">Problème réseau</string>
+    <string name="login_error_noroute">Accès aux serveurs d\'Adyen impossible</string>
+
+    <string name="no_default_pos_warning">Merci de choisir un terminal de paiement afin de continuer la transaction</string>
+    <string name="no_default_pos_chosen_warning">Aucun terminal de paiement choisi. Abandon de la transaction.</string>
+
+    <string name="transaction_error">Erreur de transaction</string>
+    <string name="transaction_declined">Transaction refusée</string>
+    <string name="transaction_cancelled">Transaction annulée</string>
+
+    <string name="terminal_connection_status_not_connected">Terminal non connecté</string>
+    <string name="terminal_connection_status_connected">Terminal %s connecté</string>
+    <string name="terminal_connection_status_connecting">Connexion au terminal %s</string>
+    <string name="terminal_connection_status_connecting_failed">Echec de connexion au terminal %s</string>
+
+    <string name="terminal_edit_text">Editer</string>
+
+    <string name="terminal_connected">Le terminal %s est connecté</string>
+    <string name="terminal_saved">Le terminal %s est enregistré</string>
+    <string name="terminal_problem">Le terminal %s a un problème de configuration</string>
+    <string name="terminal_delete">Le terminal %s est listé</string>
+    <string name="starting_transaction">Initialisation de la transaction...</string>
+    <!-- !POS -->
+
+    <!-- Review -->
+    <string name="review_comment_hint">Commentaire - Optionnel</string>
+    <!-- !Review -->
+
+    <!-- Delivery Address -->
+    <string name="create_new_delivery_address">Nouvelle adresse</string>
+    <string name="delivery_address">Adresse de livraison</string>
+    <string name="billing_address">Adresse de facturation</string>
+    <string name="delivery_address_incomplete_warring">Adresse incomplète</string>
+    <!-- !Delivery Address -->
+
+    <!-- Delivery Mode -->
+    <string name="delivery_shipping_time_title">Disponible sous </string>
+    <string name="delivery_shipping_time_day">%d j </string>
+    <string name="delivery_shipping_time_hour">%d h </string>
+    <string name="delivery_shipping_time_min">%d m</string>
+
+    <string name="delivery_update_error">Echec de mise à jour de la livraison</string>
+    <string name="delivery_upgrading_message">Mise à jour de la commande en cours</string>
+    <!-- Delivery Mode -->
+
+    <string name="next">SUIVANT</string>
+
+    <!-- Payment Summary -->
+    <string name="create_payment_share_error">Echec d\'envoi du ticket de caisse</string>
+    <string name="create_payment_share_success">Succès d\'envoi du ticket de caisse</string>
+    <string name="stay_or_leave_customer_context_dialog">Le ticket de caisse a bien été envoyé. Voulez-vous poursuivre la session client ?</string>
+    <string name="send_receipt_by_email">Ticket de caisse par e-mail : </string>
+    <string name="print_receipt_in_shop">Ticket de caisse imprimé en magasin</string>
+    <string name="modify_sending_parameters">Modifier les paramètres d\'envoi</string>
+    <string name="payment_share_sucess_leaving_customer_context">Succès d\'envoi du ticket de caisse.\n Vous allez quitter la session client dans %ds</string>
+    <string name="leave_customer_context_now">Clore la session client</string>
+    <string name="stay_in_customer_context">Continuer la session client</string>
+    <!-- Payment Summary -->
+
+    <string name="payment_started">Paiement initialisé</string>
+    <string name="payment_pending">Paiement en cours</string>
+    <string name="payment_canceled">Paiement annulé</string>
+    <string name="payment_failed">Echec du paiement</string>
+    <string name="payment_partial_paid">Paiement partiel</string>
+    <string name="payment_paid">Paiement effectué avec succès</string>
+    <string name="payment_succeeded">Achat terminé</string>
+
+    <string name="transaction_pending">Transaction en cours</string>
+    <string name="transaction_failed">Echec de la transaction</string>
+    <string name="transaction_canceled">Transaction annulée</string>
+    <string name="transaction_paid">Transaction terminée avec succès</string>
+
+    <string name="customer_offer_no_from_and_to_date"> - </string>
+    <string name="customer_offer_from_and_to_date">Du %1$s au %2$s</string>
+    <string name="product_discount_percent"> -%s</string>
+    <!-- Offers -->
+
+    <string name="offer_cannot_be_applied">Cette offre ne peut pas être appliquée</string>
+
+    <string name="product_already_in_basket">Ce produit est déjà présent dans le panier</string>
+
+    <string name="year_of_birth">année de naissance</string>
+
+
+    <string name="title_support">Support</string>
+
+    <string name="problem">Problème</string>
+    <string name="problem_list_title">Votre problème concerne&#046; &#046; &#046; </string>
+    <string name="suggestion">Suggestion</string>
+    <string name="feedback_input_hint">Écrire un commentaire</string>
+    <string name="send_feedback_success">Succès d\'envoi du retour d\'information!</string>
+    <string name="send_feedback_error">Echec d\'envoi des commentaires</string>
+
+    <string name="forget_password">Mot de passe oublié ?</string>
+    <string name="forget_password_message">Un nouveau mot de passe sera généré et vous sera transmis. Êtes-vous sûr de vouloir continuer ?</string>
+
+    <string name="forget_password_success">Demande transmise avec succès.</string>
+    <string name="forget_password_error">Échec de transmission de la demande.</string>
+
+    <string name="synchronize">Synchroniser</string>
+
+
+    <!-- Config -->
+    <string name="search_product_item">Recherche produit</string>
+    <string name="catalog_item">Catalogue</string>
+    <string name="new_customer_item">Nouveau client</string>
+    <string name="search_customer_item">Recherche client</string>
+    <string name="profile_section">Profil</string>
+    <string name="organization_section">Société</string>
+    <string name="contacts_section">Contacts</string>
+    <string name="address_section">Adresse</string>
+    <string name="permission_section">Autorisation </string>
+    <string name="comment_section">Commentaire</string>
+    <string name="media_section">Badges</string>
+    <string name="details_gender">Civilité </string>
+    <string name="details_gender_female">Mme</string>
+    <string name="details_gender_male">Mr</string>
+    <string name="details_last_name">Nom</string>
+    <string name="details_last_name_placeholder">Ajouter un nom</string>
+    <string name="details_first_name">Prénom</string>
+    <string name="details_first_name_placeholder">Ajouter un prénom </string>
+    <string name="professional_details_organization_name">Nom de Société </string>
+    <string name="professional_details_organization_name_placeholder">Ajouter un nom de société </string>
+    <string name="details_phone_mobile">Téléphone </string>
+    <string name="details_phone_mobile_placeholder">Ajouter un numéro de téléphone </string>
+    <string name="details_email_professional">Email</string>
+    <string name="details_email_professional_placeholder">Ajouter un email</string>
+    <string name="details_mail_address1">Adresse 1</string>
+    <string name="details_mail_address1_placeholder">Adresse 1</string>
+    <string name="details_mail_address2">Adresse 2</string>
+    <string name="details_mail_address2_placeholder">Adresse 2</string>
+    <string name="details_mail_zipcode">Code postal</string>
+    <string name="details_mail_zipcode_placeholder">Ajouter un code postal</string>
+    <string name="details_mail_city">Ville</string>
+    <string name="details_mail_city_placeholder">Ajouter une ville</string>
+    <string name="details_mail_country">Pays</string>
+    <string name="details_mail_country_placeholder">Ajouter un pays</string>
+    <string name="details_creation_permission">Créer un compte sur le site internet</string>
+    <string name="details_comment">Commentaire </string>
+    <string name="details_comment_placeholder">Ajouter un commentaire </string>
+    <string name="details_medias">Badges</string>
+    <string name="details_medias_placeholder">Ajouter un badge</string>
+    <string name="menu_item_home">Accueil</string>
+    <string name="menu_item_name">Nom Prénom</string>
+    <string name="menu_item_catalog">Catalogue</string>
+    <string name="menu_item_search_client">Recherche client</string>
+    <string name="menu_item_new_card">Nouveau client</string>
+    <string name="menu_item_search_product">Recherche produit</string>
+    <string name="menu_item_sales_history">Historique commandes</string>
+    <string name="menu_item_synchronization">Synchronisation</string>
+    <string name="menu_item_logout">Déconnexion</string>
+    <!-- Config -->
+
+    <string name="color">Couleur</string>
+    <string name="capacity">Contenance</string>
+
+</resources>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="right|center_vertical"
+        android:paddingBottom="@dimen/contextual_small_margin"
+        android:paddingTop="@dimen/contextual_small_margin"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            style="@style/ProductDescriptionTitle"
+            android:text="@string/product_description"
+            android:textAllCaps="true"
+            />
+
+        <ImageView
+            android:id="@+id/wishlist_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/contextual_small_margin"
+            android:src="@drawable/ic_favorite_border_black_24dp"
+            android:layout_marginRight="@dimen/contextual_small_margin"
+            />
+
+        <ImageView
+            android:id="@+id/share_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/contextual_small_margin"
+            android:src="@drawable/ic_share_black_24dp"
+            />
+
+    </LinearLayout>
+
+
+
+
+    <ScrollView
+        android:id="@+id/product_long_desc_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="0dp"
+        android:fillViewport="true">
+        <TextView
+            android:id="@+id/product_long_description"
+            android:layout_marginTop="@dimen/contextual_default_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingRight="24dp"
+            android:paddingLeft="24dp"
+            style="@style/TextAppearance.AppCompat.Body1"
+            />
+    </ScrollView>
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageButton
+            android:id="@+id/dislike_icon"
+            android:layout_weight="0.5"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_thumb_down_white_24dp"
+            android:background="@drawable/product_down_button"/>
+        <ImageButton
+            android:id="@+id/like_icon"
+            android:layout_weight="0.5"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_thumb_up_white_24dp"
+            android:background="@drawable/product_up_button"/>
+    </LinearLayout>
+</LinearLayout>

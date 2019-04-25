@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:loadingView="http://schemas.android.com/apk/res-auto"
+    xmlns:summary="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/coordinator_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <moshimoshi.cyplay.com.doublenavigation.ui.custom.LoadingView
+        android:id="@+id/resource_loading_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        loadingView:failed_ref="@+id/default_loadfailed_view"
+        loadingView:loaded_ref="@+id/loaded_basket"
+        loadingView:loading_ref="@+id/default_loading_view"
+        loadingView:no_result_ref="@+id/empty_basket_view">
+
+        <RelativeLayout
+            android:id="@+id/loaded_basket"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/basket_items_recycler_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/White" />
+
+
+                    <TextView
+                        android:id="@+id/empty_basket_warning"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/empty_basket"
+                        android:textColor="@color/Gray"
+                        android:textSize="16sp"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/cell_bottom_line_fill" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/cell_bottom_line_fill" />
+
+                <!-- Paiement-->
+                <moshimoshi.cyplay.com.doublenavigation.ui.custom.BasketSummaryLayout
+                    android:id="@+id/basket_summary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    summary:needBottomLine="false" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <include layout="@layout/default_loading_view" />
+
+        <include layout="@layout/default_loadfailed_view" />
+
+        <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/empty_basket_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/empty_basket"
+            android:visibility="gone" />
+
+    </moshimoshi.cyplay.com.doublenavigation.ui.custom.LoadingView>
+
+</android.support.design.widget.CoordinatorLayout>

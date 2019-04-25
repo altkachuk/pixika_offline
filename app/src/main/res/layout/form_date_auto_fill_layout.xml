@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:inputfix="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="@dimen/contextual_big_margin"
+    android:layout_marginLeft="@dimen/contextual_default_margin"
+    android:layout_marginRight="@dimen/contextual_default_margin"
+    android:layout_marginTop="@dimen/contextual_small_margin"
+    android:orientation="vertical">
+
+    <include layout="@layout/form_required_label_view" />
+
+    <LinearLayout
+        android:id="@+id/date_edit_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <moshimoshi.cyplay.com.doublenavigation.ui.custom.InputFixEditText
+            android:id="@+id/day_text_view"
+            style="@style/TextAppearance.AppCompat.Headline"
+            android:layout_width="65dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="@string/form_day_input_hint"
+            android:imeOptions="flagNoExtractUi"
+            android:lines="1"
+            android:maxLines="1"
+            inputfix:input_number="2"
+            inputfix:only_integer="true" />
+
+        <TextView
+            style="@style/TextAppearance.AppCompat.Headline"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="/" />
+
+        <moshimoshi.cyplay.com.doublenavigation.ui.custom.InputFixEditText
+            android:id="@+id/month_text_view"
+            style="@style/TextAppearance.AppCompat.Headline"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="@string/form_month_input_hint"
+            android:imeOptions="flagNoExtractUi"
+            android:lines="1"
+            android:maxLines="1"
+            inputfix:input_number="2"
+            inputfix:only_integer="true" />
+
+        <TextView
+            style="@style/TextAppearance.AppCompat.Headline"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="/" />
+
+        <moshimoshi.cyplay.com.doublenavigation.ui.custom.InputFixEditText
+            android:id="@+id/year_text_view"
+            style="@style/TextAppearance.AppCompat.Headline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="@string/form_year_input_hint"
+            android:imeOptions="flagNoExtractUi"
+            android:lines="1"
+            android:maxLines="1"
+            inputfix:input_number="4"
+            inputfix:only_integer="true" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

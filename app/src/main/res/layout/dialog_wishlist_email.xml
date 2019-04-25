@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="@dimen/contextual_big_margin">
+
+    <!-- TO SEND -->
+    <LinearLayout
+        android:id="@+id/to_send_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/contextual_big_margin">
+
+        <RadioButton
+            android:id="@+id/personal_email_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp" />
+
+        <RadioButton
+            android:id="@+id/professional_email_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/free_email_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/free_email"
+                style="@style/TextAppearance.AppCompat.Headline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/free_email_address"
+                android:inputType="textEmailAddress"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+        <TextView
+            android:id="@+id/email_error"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/invalid_email"
+            android:layout_marginTop="@dimen/contextual_small_margin"
+            android:textSize="16sp"
+            android:textColor="@color/Red"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <!-- SENDING -->
+    <ProgressBar
+        android:id="@+id/wishlist_sending_in_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/contextual_big_margin"
+        style="?android:attr/progressBarStyleLarge"/>
+
+    <!-- SENDING RESULT -->
+    <TextView
+        android:id="@+id/sending_status"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/contextual_big_margin"
+        android:visibility="gone" />
+
+</LinearLayout>

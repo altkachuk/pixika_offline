@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_marginTop="@dimen/contextual_small_margin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginLeft="@dimen/contextual_default_margin"
+    android:layout_marginBottom="@dimen/contextual_big_margin"
+    android:layout_marginRight="@dimen/contextual_default_margin">
+
+    <include layout="@layout/form_required_label_view" />
+
+    <RadioGroup
+        android:id="@+id/form_radio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+    </RadioGroup>
+
+</LinearLayout>

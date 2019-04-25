@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="product_id">Ref %s</string>
+    <string name="favorite">Favoris</string>
+    <string name="add_to_favorite">Ajouter\naux favoris</string>
+    <string name="remove_from_favorite">Supprimer\ndes favoris</string>
+    <string name="share_wishlist">Partager</string>
+
+    <!-- Wishlist -->
+    <string name="product_added_to_wishlist_success">Produit ajouté à la wishlist avec succès </string>
+    <string name="product_wishlist_failure">Echec de mise à jour de la wishlist</string>
+    <string name="product_removed_to_wishlist_success">Produit supprimé de la wishlist avec succès </string>
+    <string name="wishlist_sharing_failure">Echec du partage de la wishlist</string>
+    <string name="wishlist_sharing_success">Wishlist partagée avec succès</string>
+    <!-- !Wishlist -->
+
+    <!-- Availabilities -->
+    <string name="product_in_stock">%s</string>
+    <string name="product_out_of_stock">%s</string>
+    <!-- !Availabilities -->
+
+    <string name="price_thumbnail_from">à partir de</string>
+</resources>

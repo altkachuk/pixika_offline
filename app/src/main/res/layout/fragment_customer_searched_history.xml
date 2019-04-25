@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/customer_history_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:layout_marginTop="@dimen/contextual_small_margin"
+            android:layout_marginLeft="@dimen/default_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/client_searched_history_title"
+            style="@style/Base.TextAppearance.AppCompat.Subhead"
+            />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/customer_searched_history_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </android.support.v7.widget.RecyclerView>
+    </LinearLayout>
+
+    <moshimoshi.cyplay.com.doublenavigation.ui.custom.EmptyWithImageView
+        android:visibility="gone"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/customer_history_empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        app:image_ref="@drawable/ic_magnifying_glass_gray_96dp"
+        app:empty_text_string="@string/customer_history_empty">
+    </moshimoshi.cyplay.com.doublenavigation.ui.custom.EmptyWithImageView>
+
+</LinearLayout>

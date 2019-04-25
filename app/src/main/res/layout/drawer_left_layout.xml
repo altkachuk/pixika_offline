@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.NavigationView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/nav_view"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:layout_gravity="start"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/White"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/contextual_small_margin">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/statusbar_height"
+            android:background="@color/grey_secondary_2"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/contextual_default_margin"
+            android:paddingLeft="@dimen/contextual_small_margin"
+            android:paddingRight="@dimen/contextual_default_margin"
+            android:paddingTop="@dimen/contextual_default_margin">
+
+            <moshimoshi.cyplay.com.doublenavigation.ui.custom.PicturedBadge
+                android:id="@+id/profile_view"
+                android:layout_width="80dp"
+                android:layout_height="80dp" />
+
+            <TextView
+                android:id="@+id/profile_name"
+                style="@style/SubheaderNormalGrey1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"
+                android:layout_weight="1"
+                android:lines="1" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="@dimen/nav_view_width"
+            android:layout_height="1dp"
+            android:background="@color/grey_2" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/left_menu_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingRight="@dimen/contextual_default_margin">
+
+            <TextView
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingLeft="@dimen/contextual_default_margin"
+                android:text="@string/play_retail"
+                android:textColor="@color/grey_secondary_1"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/app_version"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:paddingLeft="@dimen/contextual_very_small_margin"
+                android:textColor="@color/grey_secondary_1"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/app_client_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/app_version"
+                android:gravity="center"
+                android:textColor="@color/grey_secondary_1"
+                android:textSize="12sp" />
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</android.support.design.widget.NavigationView>

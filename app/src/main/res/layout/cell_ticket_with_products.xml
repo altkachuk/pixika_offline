@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/contextual_default_margin"
+        android:paddingLeft="@dimen/contextual_default_margin"
+        android:paddingRight="@dimen/contextual_default_margin">
+        <TextView
+            android:id="@+id/customer_ticket_shop"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:lines="1"
+            android:ellipsize="end"
+            android:textSize="20sp"
+            android:textColor="@color/actionBarItem"/>
+        <TextView
+            android:id="@+id/customer_ticket_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/CellTicketDate"
+            android:textSize="20sp"
+            android:textColor="@color/actionBarItem"/>
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/customer_ticket_lines"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/contextual_small_margin">
+    </android.support.v7.widget.RecyclerView>
+
+</LinearLayout>
+
+

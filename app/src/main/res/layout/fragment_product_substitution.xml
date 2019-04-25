@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<moshimoshi.cyplay.com.doublenavigation.ui.custom.LoadingView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:loadingView="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/state_loading_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    loadingView:loading_ref="@+id/default_loading_view"
+    loadingView:loaded_ref="@+id/catalog_items_recycler_view"
+    loadingView:failed_ref="@+id/default_loadfailed_view"
+    loadingView:no_result_ref="@+id/default_noresult_view">
+    <android.support.v7.widget.RecyclerView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/product_substitution_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/fragment_horizontal_margin"
+        android:layout_marginRight="@dimen/fragment_horizontal_margin">
+    </android.support.v7.widget.RecyclerView>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
+        <include layout="@layout/default_loading_view"/>
+        <include layout="@layout/default_noresult_view"/>
+        <include layout="@layout/default_loadfailed_view"/>
+    </FrameLayout>
+
+</moshimoshi.cyplay.com.doublenavigation.ui.custom.LoadingView>

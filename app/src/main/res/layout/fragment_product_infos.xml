@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<moshimoshi.cyplay.com.doublenavigation.ui.custom.LoadingView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:loadingView="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/resource_loading_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    loadingView:failed_ref="@+id/default_loadfailed_view"
+    loadingView:loaded_ref="@+id/product_loaded"
+    loadingView:loading_ref="@+id/default_loading_view"
+    loadingView:no_result_ref="@+id/default_noresult_view">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/product_loaded"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/product_info_scrollview"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/product_ref"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/contextual_big_margin"
+                    android:textSize="20sp" />
+
+                <LinearLayout
+                    android:id="@+id/product_desc_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/cell_bottom_line_fill" />
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/header_background_fill"
+                        android:padding="@dimen/contextual_default_margin"
+                        android:text="@string/product_description"
+                        android:textColor="@color/header_title"
+                        android:textSize="20sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/cell_bottom_line_fill" />
+
+                    <TextView
+                        android:id="@+id/product_desc"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/contextual_big_margin"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/product_comp_desc"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/contextual_big_margin"
+                        android:textSize="20sp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/special_fees_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/cell_bottom_line_fill" />
+
+                    <TextView
+                        android:id="@+id/special_fees"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/header_background_fill"
+                        android:padding="@dimen/contextual_default_margin"
+                        android:text="@string/extra_fees"
+                        android:textColor="@color/header_title"
+                        android:textSize="20sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/cell_bottom_line_fill" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/extra_fees"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="@dimen/contextual_default_margin"
+                        android:paddingTop="@dimen/contextual_default_margin" />
+                </LinearLayout>
+
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/product_specs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/contextual_default_margin" />
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+
+    </LinearLayout>
+
+    <include layout="@layout/default_loading_view" />
+
+    <include layout="@layout/default_loadfailed_view" />
+
+    <include layout="@layout/default_noresult_view" />
+</moshimoshi.cyplay.com.doublenavigation.ui.custom.LoadingView>

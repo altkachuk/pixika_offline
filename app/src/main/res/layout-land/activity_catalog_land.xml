@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/coordinator_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <include layout="@layout/appbar" />
+
+        <FrameLayout
+            android:id="@+id/frameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <moshimoshi.cyplay.com.doublenavigation.ui.custom.LoadingView xmlns:loadingView="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/category_loading_view"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:layout_weight="1"
+                    loadingView:failed_ref="@+id/default_loadfailed_view"
+                    loadingView:loaded_ref="@+id/category_loaded_view"
+                    loadingView:loading_ref="@+id/default_loading_view"
+                    loadingView:no_result_ref="@+id/default_noresult_view">
+
+                    <include layout="@layout/default_loading_view" />
+
+                    <include layout="@layout/default_loadfailed_view" />
+
+                    <include layout="@layout/default_noresult_view" />
+
+
+                    <RelativeLayout
+                        android:id="@+id/category_loaded_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <FrameLayout
+                            android:id="@+id/category_container"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true" />
+
+                        <View
+                            android:id="@+id/disable_click"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+                </moshimoshi.cyplay.com.doublenavigation.ui.custom.LoadingView>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/LightGrey" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/default_filter_sort_background"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/catalog_category_products_count"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:ellipsize="end"
+                            android:fontFamily="sans-serif-black"
+                            android:gravity="center_vertical"
+                            android:maxLines="1"
+                            android:paddingLeft="@dimen/contextual_default_margin"
+                            android:textAllCaps="true"
+                            android:textColor="#9e9e9e"
+                            style="@style/TextAppearance.AppCompat.Subhead"
+                            android:visibility="invisible" />
+
+
+
+                        <FrameLayout
+                            android:id="@+id/catalog_sort_container"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                        <!--<fragment-->
+                        <!--android:id="@+id/fragment_filter_sort"-->
+                        <!--android:name="moshimoshi.cyplay.com.doublenavigation.ui.fragment.ProductFilterSortFragment"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content" />-->
+
+                    </LinearLayout>
+
+                    <FrameLayout
+                        android:id="@+id/catalog_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <!--<fragment-->
+                    <!--android:id="@+id/catalog_products_fragment"-->
+                    <!--android:name="moshimoshi.cyplay.com.doublenavigation.ui.fragment.FilterableSortableProductsFragment"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="0dp"-->
+                    <!--android:layout_weight="1" />-->
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+    </android.support.design.widget.CoordinatorLayout>
+
+    <include layout="@layout/drawer_left_layout" />
+
+</android.support.v4.widget.DrawerLayout>

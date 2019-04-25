@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:loadingView="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- Extra linearlayout in case of produt search-->
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="@integer/product_search_products_extra_margin">
+
+        <include layout="@layout/custom_product_search_extra_bottom" />
+
+    </RelativeLayout>
+    <!-- !Extra linearlayout in case of produt search -->
+
+    <!-- Product value RecyclerView START-->
+    <moshimoshi.cyplay.com.doublenavigation.ui.custom.LoadingView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/resource_loading_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        loadingView:failed_ref="@+id/default_loadfailed_view"
+        loadingView:loaded_ref="@+id/product_search_recycler_view"
+        loadingView:loading_ref="@+id/default_loading_view"
+        loadingView:no_result_ref="@+id/default_noresult_view">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/product_search_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/overriden_activity_background" />
+
+        <include layout="@layout/default_loading_view" />
+
+        <include layout="@layout/default_loadfailed_view" />
+
+        <include layout="@layout/default_noresult_view" />
+
+        <TextView
+            android:id="@+id/default_loading_more_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="#88000000"
+            android:gravity="center"
+            android:text="@string/loading_more"
+            android:textColor="@color/White"
+            android:visibility="gone" />
+    </moshimoshi.cyplay.com.doublenavigation.ui.custom.LoadingView><!-- Product value RecyclerView END-->
+
+</LinearLayout>
+

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<TextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/text1"
+    android:textColor="@color/actionBarItem"
+    android:paddingTop="@dimen/contextual_default_margin"
+    android:paddingRight="@dimen/contextual_default_margin"
+    android:paddingLeft="@dimen/contextual_default_margin"
+    android:paddingBottom="@dimen/contextual_default_margin"
+    style="@style/TextAppearance.AppCompat.Subhead"
+    android:background="@color/White"
+    android:maxLines="1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:ellipsize="marquee"/>

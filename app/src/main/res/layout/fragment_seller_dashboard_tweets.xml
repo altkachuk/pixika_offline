@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/White"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="@dimen/contextual_small_margin">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_bullhorn_black_24dp"
+                android:layout_marginLeft="@dimen/contextual_small_margin"
+                />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                style="@style/Title3"
+                android:text="@string/customer_tweets"
+                android:layout_marginLeft="@dimen/contextual_small_margin"
+                />
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/tweet_reconnecting_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Reconnecting"
+                    style="@style/Title3"
+                    android:textColor="@color/colorAccent"
+                    />
+
+                <ProgressBar
+                    style="?android:attr/progressBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_marginLeft="@dimen/contextual_small_margin"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:background="#cfd8dc"
+            android:layout_marginLeft="@dimen/seller_dashboard_margin"
+            />
+
+    </LinearLayout>
+
+    <moshimoshi.cyplay.com.doublenavigation.ui.custom.LoadingView
+        xmlns:loadingView="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/tweet_loading_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        loadingView:loading_ref="@+id/default_loading_view"
+        loadingView:loaded_ref="@+id/catalog_items_recycler_view"
+        loadingView:failed_ref="@+id/default_loadfailed_view"
+        loadingView:no_result_ref="@+id/default_noresult_view">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/catalog_items_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/seller_dashboard_margin">
+        </android.support.v7.widget.RecyclerView>
+        <include layout="@layout/default_loading_view"/>
+        <include layout="@layout/default_noresult_view"/>
+        <include layout="@layout/default_loadfailed_view"/>
+
+    </moshimoshi.cyplay.com.doublenavigation.ui.custom.LoadingView>
+
+</LinearLayout>

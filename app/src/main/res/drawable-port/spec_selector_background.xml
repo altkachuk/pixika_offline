@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/spec_selector_background_outer" />
+    <item
+        android:bottom="1dp"
+        android:drawable="@drawable/spec_selector_background_inner"
+        android:left="1dp"
+        android:top="1dp" />
+</layer-list>

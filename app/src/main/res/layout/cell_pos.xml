@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cell_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/terminal_state_information"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/White"
+        android:textSize="16sp" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:padding="@dimen/contextual_default_margin">
+
+            <TextView
+                android:id="@+id/name"
+                style="@style/terminal_configuration_name_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="10dp"
+                android:maxLines="1"
+                android:textColor="@color/Black" />
+
+            <TextView
+                android:id="@+id/hostname"
+                style="@style/terminal_configuration_hostname_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/Black" />
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progress"
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/contextual_default_margin"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/disconnect"
+            style="@style/terminal_configuration_btn_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/contextual_default_margin"
+            android:text="@string/disconnect"
+            android:textAllCaps="true"
+            android:textColor="@color/colorAccent"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/connect"
+            style="@style/terminal_configuration_btn_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/contextual_default_margin"
+            android:text="@string/connect"
+            android:textAllCaps="true"
+            android:textColor="@color/colorAccent"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/remove_device"
+            style="@style/terminal_configuration_btn_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/contextual_default_margin"
+            android:text="@string/delete"
+            android:textAllCaps="true"
+            android:textColor="@color/colorAccent" />
+
+        <TextView
+            android:id="@+id/choose_device"
+            style="@style/terminal_configuration_btn_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/contextual_default_margin"
+            android:text="@string/select"
+            android:textAllCaps="true"
+            android:textColor="@color/colorAccent" />
+    </LinearLayout>
+
+
+</LinearLayout>

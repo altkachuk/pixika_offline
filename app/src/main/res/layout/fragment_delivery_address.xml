@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/coordinator_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/main_content_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/basket_delivery_address_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <moshimoshi.cyplay.com.doublenavigation.ui.custom.BasketSummaryLayout
+            android:id="@+id/basket_summary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/delivery_address_ok"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_positive_accent_color"
+            android:enabled="false"
+            android:gravity="center"
+            android:padding="@dimen/contextual_default_margin"
+            android:text="@string/next"
+            android:textAllCaps="true"
+            android:textColor="@color/button_text_positive_accent_color"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

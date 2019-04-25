@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <include layout="@layout/appbar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginTop="?attr/actionBarSize">
+        <fragment
+            android:id="@+id/fragment_seller_login"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:name="moshimoshi.cyplay.com.doublenavigation.ui.fragment.SellerLogInFragment"
+            />
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>
+
+

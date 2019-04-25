@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Catalog -->
+    <integer name="catalog_columns_count">4</integer>
+
+    <!-- Offers -->
+    <integer name="offers_columns_count">4</integer>
+
+    <!-- Product Search -->
+    <integer name="product_search_columns_count">4</integer>
+
+    <!-- Product Suggestions -->
+    <integer name="product_suggestions_columns_count">4</integer>
+
+    <!-- Seller Team -->
+    <integer name="seller_team_columns_count">5</integer>
+
+    <!-- Wishlist -->
+    <integer name="wishlist_columns_count">3</integer>
+
+    <!-- Sales -->
+    <integer name="product_sales_columns_count">3</integer>
+
+    <!-- Configuration -->
+    <integer name="configuration_columns_count">3</integer>
+
+    <!-- Payment Type -->
+    <integer name="payment_type_count">2</integer>
+
+</resources>

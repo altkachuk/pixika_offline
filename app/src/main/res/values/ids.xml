@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="customer_info_shoe_size" type="id" />
+    <item name="product_info_brand" type="id" />
+    <item name="product_sku_id" type="id" />
+    <item name="favorite_product_container" type="id" />
+    <item name="favorite_product_text" type="id" />
+
+    <item name="customer_search_clear_zipcode" type="id" />
+    <item name="customer_search_zip_code" type="id" />
+
+    <item name="customer_search_clear_ean_card" type="id" />
+    <item name="customer_search_ean_card" type="id" />
+
+    <item name="customer_search_clear_phone" type="id" />
+    <item name="customer_search_phone" type="id" />
+
+    <item name="customer_search_clear_email" type="id" />
+    <item name="customer_search_email" type="id" />
+
+    <item name="ska_restocking" type="id" />
+
+    <item name="last_order_label" type="id" />
+    <item name="last_order_date" type="id" />
+    <item name="last_order_quantity" type="id" />
+    <item name="ska_shop_address_container" type="id" />
+    <item name="ska_landline_phone_container" type="id" />
+    <item name="product_brand" type="id" />
+    <item name="specify_customer_search" type="id" />
+
+    <item name="product_assortment" type="id" />
+
+    <item name="first_name_search" type="id" />
+    <item name="last_name_search" type="id" />
+
+    <item name="email_search" type="id" />
+    <item name="ean_search" type="id" />
+    <item name="zipcode_search" type="id" />
+    <item name="phone_search" type="id" />
+    <item name="product_name" type="id" />
+    <item name="item_brand" type="id" />
+
+    <item name="customer_info_fidelity" type="id" />
+    <item name="customer_info_partneroptin_email" type="id" />
+    <item name="customer_info_optin_email" type="id" />
+    <item name="customer_info_loyalty" type="id" />
+    <item name="customer_info_id" type="id" />
+    <item name="customer_contact_details_value_2" type="id"/>
+
+    <item name="sku_price_selector" type="id" />
+
+    <item name="customer_info_birthdate" type="id" />
+    <item name="customer_info_birthdate_texto" type="id" />
+
+
+
+</resources>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+   >
+
+    <!--android:layout_marginTop="?attr/actionBarSize"-->
+
+    <View
+        android:id="@+id/filter_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true" />
+    <LinearLayout
+        android:id="@+id/resources_filters_container"
+        android:layout_width="@dimen/filter_resources_width"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_alignParentRight="true">
+
+        <FrameLayout
+            android:id="@+id/filter_fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/resource_cancel_filtering"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_negative_accent_color"
+                android:textColor="@color/button_text_negative_accent_color"
+                android:padding="@dimen/contextual_default_margin"
+                android:gravity="center"
+                android:textAllCaps="true"
+                android:text="@string/cancel" />
+
+            <TextView
+                android:id="@+id/resource_validate_filtering"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_positive_accent_color"
+                android:textColor="@color/button_text_positive_accent_color"
+                android:padding="@dimen/contextual_default_margin"
+                android:gravity="center"
+                android:textAllCaps="true"
+                android:text="@string/valid" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
+
+
+

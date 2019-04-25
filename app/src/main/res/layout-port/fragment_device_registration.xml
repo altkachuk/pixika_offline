@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    android:id="@+id/coordinator_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:loadingView="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <moshimoshi.cyplay.com.doublenavigation.ui.custom.LoadingView
+        android:id="@+id/state_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        loadingView:loaded_ref="@+id/main_content_container"
+        loadingView:loading_ref="@+id/loading_view"
+        loadingView:failed_ref="@+id/reload_button"
+        loadingView:no_result_ref="@+id/default_noresult_view"
+        android:layout_centerInParent="true">
+
+        <LinearLayout
+            android:id="@+id/main_content_container"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerInParent="true"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/VeryDarkGray"
+                android:text="@string/registration_country"
+                style="@style/Base.TextAppearance.AppCompat.Headline"
+                />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/Black"
+                />
+            <Spinner
+                android:id="@+id/registration_countries_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/contextual_big_margin"
+                />
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/VeryDarkGray"
+                android:text="@string/registration_shop"
+                style="@style/Base.TextAppearance.AppCompat.Headline"
+                />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/Black"
+                />
+
+            <AutoCompleteTextView
+                android:id="@+id/registration_config_shops_spinner"
+                android:gravity="bottom"
+                android:layout_width="match_parent"
+                android:layout_height="?android:attr/listPreferredItemHeight"
+                android:imeOptions="flagNoExtractUi"
+                style="?android:attr/spinnerItemStyle"
+                android:textAppearance="?android:attr/textAppearanceLargePopupMenu"
+                />
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/loading_view"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="20dp"
+            android:visibility="gone"
+            />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/reload_button"
+            style="@style/CustomButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="20dp"
+            android:visibility="gone"
+            android:text="@string/reload"
+            />
+
+        <!--<include layout="@layout/default_loading_view"/>-->
+        <include layout="@layout/default_noresult_view"/>
+        <!--<include layout="@layout/default_loadfailed_view"/>-->
+
+    </moshimoshi.cyplay.com.doublenavigation.ui.custom.LoadingView>
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/stock_indicator"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginRight="@dimen/contextual_small_margin" />
+
+    <TextView
+        android:id="@+id/shop_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textAllCaps="true"
+        android:paddingRight="@dimen/contextual_default_margin"
+        android:textColor="#212121"/>
+
+</LinearLayout>

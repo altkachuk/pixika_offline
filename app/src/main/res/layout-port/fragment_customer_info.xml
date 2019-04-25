@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<moshimoshi.cyplay.com.doublenavigation.ui.custom.LoadingView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:loadingView="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/resource_loading_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    loadingView:failed_ref="@+id/default_loadfailed_view"
+    loadingView:loaded_ref="@+id/customer_info_loaded"
+    loadingView:loading_ref="@+id/default_loading_view"
+    loadingView:no_result_ref="@+id/default_noresult_view">
+
+
+    <LinearLayout
+        android:id="@+id/customer_info_loaded"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/customer_rfm_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/cy_play_action_bar_color"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/contextual_small_margin"
+            android:paddingLeft="@dimen/contextual_big_margin"
+            android:paddingRight="@dimen/contextual_small_margin"
+            android:paddingTop="@dimen/contextual_small_margin">
+
+            <TextView
+                android:id="@+id/customer_info_customer_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/cy_play_action_bar_text_color"
+                android:textSize="24sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_cyplay_task_bar"
+                android:gravity="center"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/customer_edit_form_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/contextual_default_margin"
+                    android:src="@drawable/ic_edit"
+                    android:tint="@color/colorAccent" />
+
+                <TextView
+                    android:id="@+id/customer_edit_form_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:lines="1"
+                    android:paddingRight="@dimen/contextual_default_margin"
+                    android:text="@string/edit"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+
+            <moshimoshi.cyplay.com.doublenavigation.ui.custom.CustomerInfo
+                android:id="@+id/customer_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/contextual_big_margin"
+                android:paddingLeft="@dimen/contextual_default_margin"
+                android:paddingRight="@dimen/contextual_default_margin"
+                android:paddingTop="@dimen/contextual_big_margin" />
+
+
+        </ScrollView>
+    </LinearLayout>
+
+
+    <include layout="@layout/default_loading_view" />
+
+    <include layout="@layout/default_loadfailed_view" />
+
+    <include layout="@layout/default_noresult_view" />
+</moshimoshi.cyplay.com.doublenavigation.ui.custom.LoadingView>
+
+
+

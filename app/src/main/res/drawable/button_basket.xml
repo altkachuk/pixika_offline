@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- enabled -->
+    <item android:state_activated="true" android:state_enabled="true">
+        <shape>
+            <solid android:color="@color/colorAccent" />
+        </shape>
+    </item>
+
+    <item android:state_activated="true" android:state_enabled="false">
+        <shape>
+            <solid android:color="@color/Gray" />
+        </shape>
+    </item>
+
+    <item android:state_activated="false">
+        <shape>
+            <solid android:color="@android:color/transparent" />
+            <stroke android:width="1dp" android:color="@color/basket_stroke_inactivated" />
+        </shape>
+    </item>
+
+
+</selector>

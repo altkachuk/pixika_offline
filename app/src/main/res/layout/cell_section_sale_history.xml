@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/ticket_store"
+        android:textColor="@color/actionBarItem"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:gravity="left"
+        style="@style/TextAppearance.AppCompat.Body1"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/contextual_default_margin"
+        android:layout_marginRight="@dimen/contextual_default_margin"
+        android:layout_marginTop="@dimen/contextual_small_margin"
+        android:layout_marginBottom="@dimen/contextual_small_margin"/>
+
+    <TextView
+        android:id="@+id/ticket_date"
+        android:textColor="@color/actionBarItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        style="@style/TextAppearance.AppCompat.Body1"
+        android:layout_marginLeft="@dimen/contextual_default_margin"
+        android:layout_marginRight="@dimen/contextual_default_margin"
+        android:layout_marginTop="@dimen/contextual_small_margin"
+        android:layout_marginBottom="@dimen/contextual_small_margin"
+        />
+
+</LinearLayout>

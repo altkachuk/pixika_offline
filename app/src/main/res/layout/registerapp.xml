@@ -1,0 +1,107 @@
+ <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_width="fill_parent"
+     android:layout_height="fill_parent"
+     android:layout_gravity="center_vertical">
+
+     <LinearLayout
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:orientation="vertical" android:weightSum="6" android:layout_gravity="center">
+
+		<ImageView
+		    android:layout_width="120dp"
+		    android:layout_weight="1"
+		    android:layout_height="60dp" android:layout_gravity="center"
+		    android:src="@drawable/arrow_down" />
+
+         <LinearLayout
+             android:layout_width="fill_parent"
+             android:layout_height="0dp"
+             android:layout_weight="3"
+             android:layout_marginLeft="18dip"
+             android:layout_marginRight="18dip"
+
+             android:orientation="vertical"
+             android:padding="2dip" android:weightSum="3" >
+
+             <EditText
+                 android:id="@+id/merchant"
+
+                 android:layout_width="fill_parent"
+                 android:layout_height="0dp"
+                 android:layout_weight="1"
+                 android:layout_margin="8dip"
+                 android:background="#f5f5f5"
+                 android:gravity="left"
+                 android:hint="merchant"
+                 android:inputType="textFilter|textNoSuggestions|textVisiblePassword"
+                 android:padding="3dip"
+                 android:textColor="#6b6f77"
+                 android:textColorHint="#b7b8bc" android:textSize="18sp">
+
+                 </EditText>
+
+             <EditText
+                 android:id="@+id/name"
+                 android:layout_width="fill_parent"
+                 android:layout_height="0dp"
+                 android:layout_weight="1"
+                 android:layout_margin="8dip"
+                 android:background="#f5f5f5"
+                 android:gravity="left"
+                 android:hint="name"
+                 android:inputType="textFilter|textNoSuggestions|textVisiblePassword"
+                 android:padding="3dip"
+                 android:textColor="#6b6f77"
+                 android:textColorHint="#b7b8bc" android:textSize="18sp"/>
+
+             <EditText
+                 android:id="@+id/password"
+                 android:layout_width="fill_parent"
+                 android:layout_height="0dp"
+                 android:layout_weight="1"
+                 android:layout_margin="8dip"
+                 android:background="#f5f5f5"
+                 android:gravity="left"
+                 android:hint="password"
+                 android:inputType="textPassword"
+                 android:padding="3dip"
+                 android:textColor="#6b6f77"
+                 android:textColorHint="#b7b8bc"
+                 android:typeface="normal" android:textSize="18sp"/>
+
+         </LinearLayout>
+
+         <Button
+             android:id="@+id/login"
+             android:layout_width="wrap_content"
+             android:layout_height="0dp"
+             android:layout_weight="1"
+             android:layout_gravity="center_horizontal"
+             android:layout_marginTop="10dip"
+             android:background="@drawable/button_bordered_pressed"
+             android:onClick="clickRegister"
+             android:paddingLeft="50dip"
+             android:paddingRight="50dip"
+
+             android:shadowDx="-0.3"
+             android:shadowDy="-0.3"
+             android:shadowRadius="0.2"
+             android:text="log_in"
+             android:textColor="@color/White"
+             android:textSize="13sp"
+             android:textStyle="bold" />
+
+         <TextView
+             android:id="@+id/signup"
+             android:clickable="true"
+             android:text="signup"
+             android:layout_marginTop="15dip"
+             android:layout_width="wrap_content"
+             android:layout_height="0dp"
+             android:layout_weight="1"
+             android:layout_gravity="center_horizontal"
+             android:textAppearance="?android:attr/textAppearanceMedium" />
+
+     </LinearLayout>
+ </ScrollView>

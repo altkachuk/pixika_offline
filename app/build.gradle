@@ -1,0 +1,330 @@
+buildscript {
+    repositories {
+        maven { url 'https://maven.fabric.io/public' }
+        maven { url "https://jitpack.io" }
+        google()
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.4.0'
+        classpath 'io.fabric.tools:gradle:1.+'
+    }
+}
+
+apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
+
+android {
+    compileSdkVersion 27
+    buildToolsVersion '28.0.3'
+
+    defaultConfig {
+        applicationId "moshimoshi.cyplay.com.playretail_android"
+        minSdkVersion 19
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+
+    }
+
+    android.applicationVariants.each { variant ->
+        variant.outputs.all { output ->
+            outputFileName = new File(
+                    output.outputFile.parent,
+                    outputFileName.replace(".apk", "-${variant.versionName}.apk"))
+        }
+    }
+
+    signingConfigs {
+        pp {
+            storeFile file("play_retail_key_store_pp.jks")
+            storePassword "cyplay"
+            keyAlias "cyplay"
+            keyPassword "cyplay"
+        }
+        release {
+            storeFile file("play_retail_key_store_release.jks")
+            storePassword "5Y8hyeck32nxdMb"
+            keyAlias "cyplay"
+            keyPassword "E55j5C78M522C5K"
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            //proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+            debuggable false
+        }
+
+        integ {
+            minifyEnabled false
+            applicationIdSuffix '.integ'
+            signingConfig signingConfigs.pp
+            debuggable true
+        }
+
+        pp {
+            minifyEnabled false
+            applicationIdSuffix '.pp'
+            signingConfig signingConfigs.pp
+            debuggable true
+        }
+
+        lintOptions {
+            disable 'InvalidPackage'
+        }
+    }
+
+    flavorDimensions "default"
+
+    productFlavors {
+        cyplay {
+            applicationId = "moshimoshi.cyplay.com.doublenavigation.cyplay"
+            resValue "string", "app_name", "Play Retail"
+
+            buildConfigField 'String', 'CLIENT_ID', '\"{\\"pp\\" : \\"\\",\\"integ\\" : \\"\\",\\"release\\": \\"\\",\\"debug\\":\\"gPWf8ibHzsssmawxpidQU1ludZopI6mexBGYQK4B\\"}\"'
+            buildConfigField 'String', 'CLIENT_SECRET', '\"{\\"pp\\" : \\"\\",\\"integ\\" : \\"\\",\\"release\\": \\"\\",\\"debug\\":\\"C2HxgxS4qTdVpFkON70OitzcbqGiojSdrsbS36QJEtulxCuxKb0Qym0Q7UIJqwwKST6PIe9tfYLxt4ojKHLGd7BET3Flr7htVIaYyZXPi27GkFO6igTE3ZUYjl8DKcx4\\"}\"'
+            buildConfigField 'String', 'HOST', '\"{\\"pp\\" : \\"\\",\\"integ\\" : \\"\\",\\"release\\": \\"\\",\\"debug\\":\\"https://pr-showroomdemo-api.cy-play.com/\\"}\"'
+
+            /*buildConfigField 'String', 'CLIENT_ID', '\"{\\"pp\\" : \\"\\",\\"integ\\" : \\"\\",\\"release\\": \\"\\",\\"debug\\":\\"V5KCwMW36075hAw5Y1lbewpaJxVMV42aKSvrmWvF\\"}\"'
+            buildConfigField 'String', 'CLIENT_SECRET', '\"{\\"pp\\" : \\"\\",\\"integ\\" : \\"\\",\\"release\\": \\"\\",\\"debug\\":\\"RWI7Tz3khHsQLNKrJ6B8TnAepHkgR9EsXBYKfBTyIZWwsh81O17sDLkFZwIxwsSL4Otb5as14lehi7ZaposSfBE3nMWmeuauvpCsbsm6Eyms58VsZ837x6ZB2HFazWI4\\"}\"'
+            buildConfigField 'String', 'HOST', '\"{\\"pp\\" : \\"\\",\\"integ\\" : \\"\\",\\"release\\": \\"\\",\\"debug\\":\\"https://playretail-democyplayv2.cy-play.com/\\"}\"'
+*/
+
+            buildConfigField 'String', 'CLIENT_NAME', '"Cy-Play"'
+            buildConfigField 'Boolean', 'VERIFY_HOST_NAME_CERTIFICATE', 'true'
+            dimension "default"
+        }
+
+        nocibe {
+            applicationId = "moshimoshi.cyplay.com.doublenavigation.nocibe"
+            resValue "string", "app_name", "NociTab"
+            versionCode 16
+            versionName "1.0.5"
+            buildConfigField 'String', 'CLIENT_ID', '\"{\\"pp\\" : \\"Ut9D1OzJxOzXcB03vuzLRvZx2wG3ZC7cZIL373vG\\",\\"integ\\" : \\"of2ZRwKptJf5tHMwKkA8KlSPTt5LE4PREOefzPNt\\",\\"release\\": \\"CCrltkcyStwFD1NQkGevpo7Wj7FhFveVM7nX9Vjo\\",\\"debug\\":\\"of2ZRwKptJf5tHMwKkA8KlSPTt5LE4PREOefzPNt\\"}\"'
+            buildConfigField 'String', 'CLIENT_SECRET', '\"{\\"pp\\" : \\"roPTTtMuGgaN64xnPEUUoF0wOwZviHFzevq7JiqSkuwbZexLFPJjZ5pzsLdeWeEb1bTaRhnrVtXiP8zwTciRyuquyJ5FaT6lMitE6yvOOWbZzc88lMvo0JkkYReq72Sz\\",\\"integ\\" : \\"te4RTfWlwT6n2oTckufIBjisak88PlptExESNjFBX3meHc4lTPl8ttl4iWcSl3iZvpxNsSquuvm691SSlQMeGOQCDh4WKLotuaIGLDOubB7NkQxz24AVP3lf6xSu389d\\",\\"release\\": \\"Pc4hLk7T3jS3C0YdRkUkInIxbtOpUD7Vd0F6IxsUZ2CxaFUIlEJI7Gs3uvLfjcZJLy9Rsrhe0zFlN8RIy5h7mKmHcDPSEDu9kD3HiUMebXQNKf9vbPjigMqkyFdxul0y\\",\\"debug\\":\\"te4RTfWlwT6n2oTckufIBjisak88PlptExESNjFBX3meHc4lTPl8ttl4iWcSl3iZvpxNsSquuvm691SSlQMeGOQCDh4WKLotuaIGLDOubB7NkQxz24AVP3lf6xSu389d\\"}\"'
+            //buildConfigField 'String', 'HOST', '\"{\\"pp\\" : \\"https://172.16.220.109:4443/\\",\\"integ\\" : \\"https://playretail-nocibeinteg.cy-play.com/\\",\\"release\\": \\"\\",\\"debug\\":\\"https://playretail-nocibeinteg.cy-play.com/\\"}\"'
+
+            // From VPN
+            //buildConfigField 'String', 'HOST', '\"{\\"pp\\" : \\"https://pr-nocibepp-internal.cy-play.com/\\",\\"integ\\" : \\"https://pr-nocibeinteg-internal.cy-play.com/\\",\\"release\\": \\"https://pr-nocibe-internal.cy-play.com/\\",\\"debug\\":\\"https://playretail-nocibeinteg.cy-play.com/\\"}\"'
+
+            //From Internet
+            buildConfigField 'String', 'HOST', '\"{\\"pp\\" : \\"https://pr-nocibepp-api.cy-play.com/\\",\\"integ\\" : \\"https://pr-nocibeinteg-api.cy-play.com/\\",\\"release\\": \\"https://pr-nocibe-api.cy-play.com/\\",\\"debug\\":\\"https://playretail-nocibeinteg.cy-play.com/\\"}\"'
+
+            //buildConfigField 'String', 'HOST', '\"{\\"pp\\" : \\"https://playretail-nocibepp.cy-play.com/\\",\\"integ\\" : \\"https://pr-nocibeinteg-api.cy-play.com:30982/\\",\\"release\\": \\"https://pr-nocibe-api.cy-play.com/\\",\\"debug\\":\\"https://playretail-nocibeinteg.cy-play.com/\\"}\"'
+
+            buildConfigField 'String', 'CLIENT_NAME', '"Nocibé"'
+            buildConfigField 'Boolean', 'VERIFY_HOST_NAME_CERTIFICATE', 'false'
+            dimension "default"
+        }
+
+        texto {
+            applicationId = "moshimoshi.cyplay.com.doublenavigation.texto"
+            resValue "string", "app_name", "Texto"
+            versionCode 29
+            versionName "1.3.2"
+            buildConfigField 'String', 'CLIENT_ID', '\"{\\"pp\\" : \\"QPz1bVNvq05aZKP1aUz5fiETP3LeuOfBui0HNXho\\",\\"integ\\" : \\"87TSPLDd1uMuBelWcuQbKPGZDjKY9MSzp4SyJPnw\\",\\"release\\": \\"KpuJ8DtLW690VW8DtctHZEdx15KQNcdh0QdXoD9W\\",\\"debug\\":\\"87TSPLDd1uMuBelWcuQbKPGZDjKY9MSzp4SyJPnw\\"}\"'
+            buildConfigField 'String', 'CLIENT_SECRET', '\"{\\"pp\\" : \\"UuhRaxhEuuaTH3Bnqt0QKv4YeJdZFKCnpcdh3614WmR6zaw3IFxtJ5FBo4hiu9yEEsvljjEBKO1YRQm1YW2KqDanWaTudi6acKUjYCOFx64mHmS4z0lgxkOoMZQHh14O\\",\\"integ\\" : \\"8l84DZdLzSLm1mv5ssQSXdFbHy1s0w1fevgUN7AIy7JK8xPU2ditoJ5aaH8KzKnokHcLZIfWt7nWQHy2UcSu1yX433la2aWYWL3pBV3mplnhjEf9kE42Au3FsWopRzAN\\",\\"release\\": \\"Lg7sAtAGd1aBCUBC2pO4kJrSYNCxFvpPAmUUnRAth8JqQV3W50uojBqKjt7gVkXThDx7qSolK1u7JFmOeVbQXVlczqqLH3ZxKhtYbvNhHVH40CpFoEqo4L1Dj7dVnRRr\\",\\"debug\\":\\"8l84DZdLzSLm1mv5ssQSXdFbHy1s0w1fevgUN7AIy7JK8xPU2ditoJ5aaH8KzKnokHcLZIfWt7nWQHy2UcSu1yX433la2aWYWL3pBV3mplnhjEf9kE42Au3FsWopRzAN\\"}\"'
+            //From Internet
+            buildConfigField 'String', 'HOST', '\"{\\"pp\\" : \\"https://pr-textopp-api.cy-play.com/\\",\\"integ\\" : \\"https://pr-textointeg-api.cy-play.com/\\",\\"release\\": \\"https://pr-texto-api.cy-play.com/\\",\\"debug\\":\\"http://192.168.1.37/\\"}\"'
+            buildConfigField 'String', 'CLIENT_NAME', '"Texto"'
+            buildConfigField 'Boolean', 'VERIFY_HOST_NAME_CERTIFICATE', 'true'
+            dimension "default"
+        }
+
+        pixika {
+            applicationId = "moshimoshi.cyplay.com.doublenavigation.pixika"
+            resValue "string", "app_name", "Pixika"
+            versionCode 1
+            versionName "1.0.0"
+            buildConfigField 'String', 'CLIENT_ID', '\"{\\"pp\\" : \\"W1mlxkyS1jPcGTPGW4Y3U4RGCQrvAlwhByQV4AJ7\\",\\"integ\\" : \\"\\",\\"release\\": \\"\\",\\"debug\\":\\"QPz1bVNvq05aZKP1aUz5fiETP3LeuOfBui0HNXho\\"}\"'
+            buildConfigField 'String', 'CLIENT_SECRET', '\"{\\"pp\\" : \\"vu3d4ayIqjbnuTfcLdKpGB4dZGkat7Corlf8PJAidqiZS4K3g7TdX86JpQt5evsHxrquFhRYLzq7hpqYYewd95sCVWbmSapSaLTtIAwSmJLYnDwz6JMF2z2l69Lzpvxi\\",\\"integ\\" : \\"\\",\\"release\\": \\"\\",\\"debug\\":\\"UuhRaxhEuuaTH3Bnqt0QKv4YeJdZFKCnpcdh3614WmR6zaw3IFxtJ5FBo4hiu9yEEsvljjEBKO1YRQm1YW2KqDanWaTudi6acKUjYCOFx64mHmS4z0lgxkOoMZQHh14O\\"}\"'
+            //From Internet
+            buildConfigField 'String', 'HOST', '\"{\\"pp\\" : \\"http://pxkapp.pixika.com/\\",\\"integ\\" : \\"\\",\\"release\\": \\"http://pxkapp.pixika.com/\\",\\"debug\\":\\"http://192.168.1.7:8000/\\"}\"'
+            buildConfigField 'String', 'CLIENT_NAME', '"Pixika"'
+            buildConfigField 'Boolean', 'VERIFY_HOST_NAME_CERTIFICATE', 'true'
+            dimension "default"
+        }
+
+        habitat {
+            applicationId = "moshimoshi.cyplay.com.doublenavigation.habitat"
+            resValue "string", "app_name", "Habitab"
+            versionCode 11
+            versionName "0.2.2"
+            buildConfigField 'String', 'CLIENT_ID', '\"{\\"pp\\" : \\"gGlpZv4aSB0aaVVyPKFIZStfL4Hc29DCU1Xb7bLO\\",\\"integ\\" : \\"jwmskc22a84iyeC4XzN7j9IGjpbwCYPu6kdhaAwE\\",\\"release\\": \\"KWiYRuUh9ztj4j5qr8fsrPUliUSB9bAbfO138vq4\\"}\"'
+            buildConfigField 'String', 'CLIENT_SECRET', '\"{\\"pp\\" : \\"Uhgp0L5BKhJvdXwlxuCEcDHFTRImIDc1S9UfVu7T1aFBpZkidKdOk5przCgU85gUsfRlmaQWE6DkabJCU8bKxeerYQM4Vy82FgMEW9SgPKp8XNqE2yeRszSoF3t4fHjc\\",\\"integ\\" : \\"iRhweDnVM9jmPtDR481P7BoQBJ2U3RZ3UzWepkaoFkg6Fc3JjXFzVRbHKpFG1qsf682JyplkN9LOBB8NFLOvwq5IdoaCKoNLXDHycLxSi9EJorNZXHAlqKwyThyF05eO\\",\\"release\\": \\"39S0ZhTjfo6b02hcFB77VftwzAi8Rkyn0uxxCCfo1vecnNv51WXnvukytl5YviniwBj3EVy7zQucqTKWEgzQ5IcmpQ7TEdV58JM3p3NYX3OUZ6GAaQnirK1WojGQpPZn\\"}\"'
+            //From Internet
+            buildConfigField 'String', 'HOST', '\"{\\"pp\\" : \\"https://pr-habitatpp-api.cy-play.com/\\",\\"integ\\" : \\"https://pr-habitatinteg-api.cy-play.com/\\",\\"release\\": \\"https://pr-habitat-api.cy-play.com/\\"}\"'
+            buildConfigField 'String', 'CLIENT_NAME', '"Habitat"'
+            buildConfigField 'Boolean', 'VERIFY_HOST_NAME_CERTIFICATE', 'true'
+            dimension "default"
+        }
+
+    }
+
+    dexOptions {
+        javaMaxHeapSize "6g"
+    }
+
+}
+
+repositories {
+    maven { url "https://jitpack.io" }
+    maven { url "https://oss.sonatype.org/content/repositories/snapshots" }
+    maven { url 'https://maven.fabric.io/public' }
+}
+
+allprojects {
+    repositories {
+        maven { url "https://jitpack.io" }
+        maven {
+            url 'https://maven.google.com/'
+            name 'Google'
+        }
+    }
+}
+
+dependencies {
+
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    // support libraries
+    implementation 'com.android.support:appcompat-v7:27.+'
+    implementation 'com.android.support:design:27.+' //4.2.1'
+    implementation 'com.android.support:percent:27.+' //4.2.1''
+    implementation 'com.android.support:support-v4:27.+' //4.2.1'
+    implementation 'com.android.support:recyclerview-v7:27.+' //4.2.1'
+    implementation 'com.android.support:cardview-v7:27.+' //4.2.1'
+    testImplementation 'junit:junit:4.12'
+
+    // Api project
+    implementation project(":apilibrary")
+    implementation project(":dblibrary")
+
+    // Api project
+    implementation project(":androidLibraryDist")
+
+    // Multi dex (64K limit)
+    implementation 'com.android.support:multidex:1.0.2'
+
+    // Pretty time for tweets
+    // Still used ??
+    implementation 'org.ocpsoft.prettytime:prettytime:3.2.6-SNAPSHOT'
+
+    // Dagger Dependency injection
+    implementation 'com.google.dagger:dagger:2.9'
+    annotationProcessor 'com.google.dagger:dagger-compiler:2.9'
+
+    implementation 'org.apache.commons:commons-lang3:3.7'
+
+    // Scan
+    implementation 'me.dm7.barcodescanner:zxing:1.9.2'
+
+    // Animator on RecyclerView
+    implementation 'jp.wasabeef:recyclerview-animators:2.3.0'
+
+    // Event bus
+    implementation 'org.greenrobot:eventbus:3.1.1'
+
+    // Circle Image with border
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+
+    // MP Android Chart
+    implementation 'com.github.PhilJay:MPAndroidChart:v2.2.4'
+
+    // Parceler
+    implementation 'com.google.guava:guava:23.3-android'
+
+    annotationProcessor 'org.parceler:parceler:1.1.10'
+    implementation('org.parceler:parceler-api:1.1.10') {
+        exclude group: 'com.google.guava', module: 'guava'
+    }
+
+    // Customizable floating action button
+    // Still used
+    implementation 'com.github.clans:fab:1.6.3'
+
+    // Image Rendering
+    implementation 'com.squareup.picasso:picasso:2.71828'
+
+    // XML to View's object mapping
+    compile 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+
+    // VPI
+    implementation 'fr.avianey.com.viewpagerindicator:library:2.4.1.1@aar'
+
+    // Calendar
+    // Still used
+    implementation 'com.prolificinteractive:material-calendarview:1.2.0'
+
+    // GPS
+    implementation 'org.gavaghan:geodesy:1.1.3'
+
+    //compile 'com.github.iammehedi:passcodeview:1.03'
+
+    //Use the specific library version here
+    //compile 'de.payleven.payment:mpos:1.1.0@jar'
+    //These are helper payleven libraries.
+    //compile 'de.payleven:psp-library:1.0.0@aar'
+    //compile 'de.payleven:psp-library-core:1.0.0'
+
+    // TO REMOVE (use advrecyclerview instead)
+    implementation('com.afollestad:sectioned-recyclerview:0.2.2') {
+        transitive = true
+    }
+    implementation('com.h6ah4i.android.widget.advrecyclerview:advrecyclerview:0.9.3@aar') {
+        transitive = true
+    }
+
+    implementation 'com.google.android:flexbox:0.2.3'
+
+    implementation 'com.googlecode.libphonenumber:libphonenumber:7.7.2'
+
+    implementation 'org.iban4j:iban4j:3.2.1'
+
+    // Crashlytics nowcalled  'Fabric'
+    implementation('com.crashlytics.sdk.android:crashlytics:2.8.0@aar') {
+        transitive = true;
+    }
+    // Answers (google Analytics alternative)
+    implementation('com.crashlytics.sdk.android:answers:1.3.10@aar') {
+        transitive = true;
+    }
+
+    implementation 'com.google.android.gms:play-services-analytics:11.8.0'
+
+
+
+    //photo view for zoom image
+    implementation 'com.github.chrisbanes:PhotoView:1.3.0'
+
+    implementation 'com.google.android.gms:play-services:11.8.0'
+    //calculate LatLngBounds
+    implementation 'com.google.maps.android:android-maps-utils:0.4.4'
+
+    implementation 'com.google.firebase:firebase-core:11.8.0'
+    implementation 'com.google.android.gms:play-services-location:11.8.0'
+    implementation 'com.google.firebase:firebase-auth:11.8.0'
+    implementation 'com.google.firebase:firebase-messaging:11.8.0'
+
+    implementation 'com.google.code.gson:gson:2.6.2'
+
+    implementation 'org.reflections:reflections:0.9.11'
+
+
+    // retrofit
+    implementation 'com.google.code.gson:gson:2.8.0'
+    implementation 'io.socket:socket.io-client:0.6.2'
+    implementation 'com.squareup.okhttp3:okhttp:3.8.0'
+    implementation 'com.squareup.okio:okio:1.3.0'
+    implementation 'com.squareup.retrofit:retrofit:1.9.0'
+    implementation 'com.google.firebase:firebase-core:11.6.2'
+    implementation 'com.google.firebase:firebase-database:11.6.2'
+
+    // Bouncy Castle Provider
+    implementation 'org.bouncycastle:bcprov-jdk15on:1.56'
+}
